@@ -73,6 +73,86 @@ public class Zajecia2 {
         System.out.println(floatVar + shortVar);        // zachodzi niejawna konwersja, nie ma bledu poneiwaz nie ma ryzyka utraty informacji
 
 
+
+
+
+        // Operatory matematyczne
+        // + - * / %
+        int resultOfSum = 10 + 40;
+        int anotherResult = resultOfSum + 100;
+        System.out.println(-1 + 4);
+        int substract = 40 - 10;
+        double doubleSub = 10.4 - 5.32;
+        System.out.println(doubleSub);
+
+        double doubleVar1 = ((5 + 10) / 4.0) * 2;
+        System.out.println(doubleVar1);
+
+        // operator modulo - operator reszty z dzielenia
+
+        System.out.println(5 % 3);      // 5/2 = 2.5 reszta 1 //////  4/2 = 2 , reszta 0        // 5/3 =... reszta z dzielenia to 2
+
+
+        // systemy matematyczne
+//        a) domyslnie jest to system dziesietny
+//        b) system osemkowy, przyklad int octalSystem = 010            // aby wywolac na poczatku zmiennej cyfra 0
+//        c) system heksadecymalny, przyklad int hexSys = 0xA10;        // aby wywolac na poczatku zmiennej 0x
+
+        int octalSy = 0130;      //     0 pomijane ... obliczamy 130 (osemkowo) 0 * 8^0 + 3 * 8^1 + 1 * 8^2 = 88
+        System.out.println(octalSy);
+
+        int hexSys = 0xA14; // 0x pomijane , to tylko info o danym systemie (hex)
+//        A = 10  , A jest na trzecim miejscu od prawej, 0,1,2     A * 16^2
+//        1 , drugie miejsce , wartosc wykaldnika 1,   1*16^1
+//        4, pierwsez miejsce, wartosc wykaldnika 0    4*16^0
+        System.out.println(hexSys);     // wartosc max to F ... 0-9 A-10, B-11, C- 12, D-13, E-14, F-15  ..............4* 16^0 + 1*16^1 + 10*16^2
+
+        // 0xF - 15 ........ 0x10
+        System.out.println(0xF + 10 + 010);     // 1* 8 ^1 bo miejsce jest drugie od prawej czyli wykladnik zmiejszony o 1 czyli 1 + 0* 8^0 bo ma miejsce pierwsze czyli wykladnik 0
+
+
+
+
+
+        // String jest typem referencyjnym to posiada tzw metody.
+        String text = "Hubert";
+        int numberOfCharsInMyName = text.length();  // aby wywolac metode na typie (obiektowym, referencyjnym, zlozonym ), (na prostym sie nie da) nalezy po nazwie zmiennej napisac kropke a dalej nazwe metody zakonczona nawiasami (pustymi lub nie)
+        System.out.println(numberOfCharsInMyName);
+//        length zwraca faktyczna dlugosc stringa
+//        litery w Stringu numerujemy od 0
+
+        char charAtIndex = text.charAt(3);
+        System.out.println(charAtIndex);
+//        H - 0
+//        u - 1
+//        b - 2
+//        e - 3
+//        r - 4
+//        t - 5
+
+        int indexOfCharE = text.indexOf('e');
+        System.out.println(indexOfCharE);
+
+//        Zadanie
+//        Napisz program w którym należy:
+//        a) stworzyć zmienną typu int "z2i", zainicjalizować ją jakąś wartością
+//        b) stworzyć zmienną typu String "z2str", zainicjalizować ją jakimś łańcuchem znaków (tekstem, literalem)
+//        c) stworzyć zmienną typu short "z2s", przypisać do niej długość Stringa "z2str"
+//        Uwaga, będzie trzeba użyć rzutowania (short)
+//        d) stworzyć zmienną typu char "z2c", przypisać do niej znak znajdujący się w stringu
+//        "z2str" stojący na pozycji o indeksie "z2i"
+//        e) wyświetlić wartości zmiennych "z2i", "z2str", "z2s", "z2c"
+
+
+
+
+
+
+
+
+
+
+
     }
 
 }
