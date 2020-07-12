@@ -1,5 +1,7 @@
 package weekend1;
 
+import java.util.Scanner;
+
 public class Zajecia2 {
     public static void main(String[] args) {
         System.out.println("Im in Zajecia2");
@@ -223,7 +225,94 @@ public class Zajecia2 {
         // b) jesli imie ma wiecej niz 5 znakow to wyswietl napis: Moje imie ma wiecej niz 5 znakow
         // c) jesli imie ma rowno 5 znakow to wyswietl napis: moje imie ma rowno 5 znakow
         // d) jesli imie ma mniej niz 15 i wiecej 3 znaki to wyswietl napis: Moje imie ma normalna dlugosc
-        // e) jesli imie ma mniej niz 3 znaki albo wiecej niz 15 to wyswietl napis: Moje imie jest dlugie
+        // e) jesli imie ma mniej niz 3 znaki albo wiecej niz 15 to wyswietl napis: Moje imie jest dziwne
+
+        String myMutableName = "Hubert";
+        int lengthOfName = myMutableName.length();
+
+
+        System.out.println("\n\n\nZadanko iff");
+        if (lengthOfName < 15 && lengthOfName > 3) {
+            if (lengthOfName > 5) {
+                System.out.println("Moje imie ma wiecej niz 5 znakow");
+            } else if (lengthOfName == 5) {
+                System.out.println("Moje imie ma dokladnie 5 znakow");
+            } else {
+                System.out.println("Moje imie ma normalna dlugosc");
+            }
+        } else {
+            System.out.println("Moje imie jest dziwne");
+        }
+
+        // instrukcje warunkowe cz. 2
+        // switch - troche jak if ale czasami skraca kod. UWAGA!!! swtich w swoich case przyjmuje tylko wartosci stale
+
+        String surname = "Kowalski";
+
+        switch (surname) {      // sprawdzaj przypadki w zalendzosci od zmiennej surname
+            case "Nowak":
+                System.out.println("Halo, jestem Nowak");
+                break;
+            // przrwij dzialanie danego bloku
+            case "Kowalski":
+                System.out.println("Jestem Kowalski");
+                break;
+            case "asd":
+                System.out.println("asd");
+            case "asdasdas":
+                System.out.println("asdasd");
+            default:
+                System.out.println("Moje nazwisko jest tajemnicze");
+        }
+
+        int var1 = 2;
+
+        switch (var1) {
+            case 1:                 // jako case M U S I  byc stala
+            case 2:                 // brak break co oznacza przejscie po nastepnych casach od miejsca wejscia w case np var =2 to case 2 , case 3 , case 4 az do break
+            case 3:
+            case 4:
+                System.out.println("Liczba ma wartosc 1 lub 2 lub 3 lub 4. Nie wiem dokladnie co, tak dziala switch");
+                break;              // zakocnzenie switcha
+            case 5:
+                System.out.println(" liczba wynosi 5");
+                break;
+            default:                        // zaden case nie pasuje
+                System.out.println("Cos innego");
+        }
+
+        // Wpisanie tekstu z klawiatury
+        Scanner dowolnaNazwa = new Scanner(System.in);       // linijka tworzaca "zmienna" odpowiedzialna za wyczytanie tesktu wpisanego z klawiatury
+
+        // wpis z klawy !!!
+        String inputFromKeyboard = dowolnaNazwa.nextLine();
+        System.out.println(inputFromKeyboard);
+
+//        .nextLine() odpowiada za zczytanie wartosci linii i konwersja jej do wartosci String
+//        .next() odpowiada za zczytanie wartosci linii ALE az do pierwszej spacji. Tez jeset to wartosc String
+//        System.out.println("Prosze wpisac imie");
+//        String name1111 = dowolnaNazwa.next();
+//        System.out.println(name1111);
+        // . nextInt(); odpowiada za zczytanie wartosci int i konwersje do typu int
+        // . nextDouble()...........
+        System.out.println("Prosze wpisac imie!!");
+        String name1111 = dowolnaNazwa.next();
+        int lengthOfName1111 = name1111.length();
+
+        switch (lengthOfName1111){
+            case 10:
+                System.out.println("Imie wpisane z klawiatury ma 10 znakow");
+                break;
+            case 4:
+                System.out.println(" -||- 4 znaki");
+                break;
+        }
+
+        // zadanie
+        // Stworzyc program ktory zczyta z kalwiwtury liczbe calkowita, przypisze ja, a nastepnie poprosi o zczytanie nastepnej liczby,
+        // tez ja przyspisze (stworzy) a na ekranie zostanie wyswietlona suma tych liczb
+
+
 
 
 
