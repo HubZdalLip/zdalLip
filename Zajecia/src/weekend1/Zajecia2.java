@@ -73,9 +73,6 @@ public class Zajecia2 {
         System.out.println(floatVar + shortVar);        // zachodzi niejawna konwersja, nie ma bledu poneiwaz nie ma ryzyka utraty informacji
 
 
-
-
-
         // Operatory matematyczne
         // + - * / %
         int resultOfSum = 10 + 40;
@@ -111,9 +108,6 @@ public class Zajecia2 {
         System.out.println(0xF + 10 + 010);     // 1* 8 ^1 bo miejsce jest drugie od prawej czyli wykladnik zmiejszony o 1 czyli 1 + 0* 8^0 bo ma miejsce pierwsze czyli wykladnik 0
 
 
-
-
-
         // String jest typem referencyjnym to posiada tzw metody.
         String text = "Hubert";
         int numberOfCharsInMyName = text.length();  // aby wywolac metode na typie (obiektowym, referencyjnym, zlozonym ), (na prostym sie nie da) nalezy po nazwie zmiennej napisac kropke a dalej nazwe metody zakonczona nawiasami (pustymi lub nie)
@@ -143,12 +137,84 @@ public class Zajecia2 {
 //        "z2str" stojący na pozycji o indeksie "z2i"
 //        e) wyświetlić wartości zmiennych "z2i", "z2str", "z2s", "z2c"
 
+        int z2i = 10;                           // a)
+        String z2str = "Mam na imie Hubert";    // b)
+        short z2s = (short) z2str.length();     // c)
+        char z2c = z2str.charAt(z2i);           // d)
+        System.out.println("Odpowiedzi:");
+        System.out.println("a) " + z2i);
+        System.out.println("b) " + z2str);
+        System.out.println("c) " + z2s);
+        System.out.println("d) " + z2c);
+
+//       Zadanie 2
+//       Napisz program w ktorym nalezy:
+//        a) stworzyc zmienne typu int i String oraz je zainicjalizowac
+//        b) stworzyc zmienna typu char i nadac jej jakis znak (jaki to zostanie wywnioskowane na podstawie pzoostalych pkt)
+//        c) dowiedziec sie na ktorym indeksie jest znak zadany w b) w stringu z podpkt a)
+//        d) przypisac ta wartosc ( c) ) do zmiennej typu int z pkt a)
+//        e) wyswietlic wartosci na ekranie
+//
+
+        int var = 10;   //a)
+        String text2 = "Jakis tam string "; //a)
+        char charFromText2 = 'i';   //b)
+        var = text2.indexOf(charFromText2); //c) i d)
+        System.out.println(var);    //e)
 
 
+        // Instrukcje warunkowe
+
+//        if else
+//        if (warunek (zmienna typu boolowskiego, prawda, lub falsz) ) { }
+
+        if (true) {
+            System.out.println("Prawda");
+        }
+        if (5 > 4) {
+            System.out.println("Prawda");
+        }
+
+        int i = 10;
+        boolean condition2 = (i == 10); //operator przyrownania
+        if (condition2) {
+            System.out.println("i jest rowne 10 ");
+        } else {
+            System.out.println("i nie jest rowne 10 ");
+        }
 
 
+        if (i > 5) {
+            System.out.println("i wieksze od 5");
+        } else if (i > 0) {
+            System.out.println("i jest chociaz wieksze od 0");
+        } else {
+            System.out.println("i nie jest nawet wieksze od 0 ");
+        }
 
+        // operatory logiczne && ( i ), || (albo) , ! (nie) , &, |
 
+        if (i > 5 && i < 10){   // koniunkcja czyli wszystkie warunki maja miec wartosc prawdziwa
+            System.out.println("i jest wieksze od 5 i mniejsze od 10");
+        }
+        if(i>5 || i<-100){
+            System.out.println("i jest wieksze od 5 lub mniejsze od -100");
+        }
+
+        i = 10;
+        boolean cond3 = i>5;
+        if(!cond3){
+            System.out.println("i nie jest wieksze od 5");
+        }else{
+            System.out.println("Blok else");
+            System.out.println("i jeset wieksze od 5");
+        }
+
+        if( i != 10 ){
+            System.out.println("i jest rozne od 10");
+        }else{
+            System.out.println("i jest rowne 10");
+        }
 
 
 
