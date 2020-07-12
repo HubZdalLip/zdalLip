@@ -1,4 +1,4 @@
-package zajecia1;
+package weekend1;
 
 public class Zajecia1 {
 
@@ -106,10 +106,20 @@ public class Zajecia1 {
         System.out.println("Cos tam \nponon");         // w javie wystepuja znaki ucieczki ktore poprzedzone sa backslashem. W literale nie mozna uzyc backslasha od tak
         System.out.println();
         System.out.print("Pan Nowak powiedzial: \"Jestem nowak\" ");          // backslash umozliwia ominiecie zdefiniowanego przez jave znaku np "", \ ,
-                                                            // \n,\r,
+        // \n,\r,
 
         //zadanko
         // a) Wyswietlic na konsoli napis Programming is easy uzywajac JEDNEJ metody print lub println w taki sposob aby kazdy wyraz byl w nowej linii, podpowiedz TRZEBA UZYC ZNAKU UCZIECKI
         // b) zadeklarowac zmienne typu String o nazwie computer, keyboard i zdefiniowac ich wartosc tesktowa NIE przy deklaracji. wyswietlic na ekranie
+
+        System.out.println("\nProgramming\nis\neasy");      //a
+
+        String computer, keyboard;                          //b
+        computer = "Lenovo";
+        keyboard = "Klawa";
+        System.out.println(computer);
+        System.out.println(keyboard);
+
+
     }
 }
