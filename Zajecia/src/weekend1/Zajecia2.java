@@ -1,5 +1,6 @@
 package weekend1;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Zajecia2 {
@@ -282,11 +283,11 @@ public class Zajecia2 {
         }
 
         // Wpisanie tekstu z klawiatury
-        Scanner dowolnaNazwa = new Scanner(System.in);       // linijka tworzaca "zmienna" odpowiedzialna za wyczytanie tesktu wpisanego z klawiatury
+        Scanner dowolnaNazwa = new Scanner(System.in).useLocale(Locale.ENGLISH);       // linijka tworzaca "zmienna" odpowiedzialna za wyczytanie tesktu wpisanego z klawiatury
 
-        // wpis z klawy !!!
-        String inputFromKeyboard = dowolnaNazwa.nextLine();
-        System.out.println(inputFromKeyboard);
+//        // wpis z klawy !!!
+//        String inputFromKeyboard = dowolnaNazwa.nextLine();
+//        System.out.println(inputFromKeyboard);
 
 //        .nextLine() odpowiada za zczytanie wartosci linii i konwersja jej do wartosci String
 //        .next() odpowiada za zczytanie wartosci linii ALE az do pierwszej spacji. Tez jeset to wartosc String
@@ -295,23 +296,31 @@ public class Zajecia2 {
 //        System.out.println(name1111);
         // . nextInt(); odpowiada za zczytanie wartosci int i konwersje do typu int
         // . nextDouble()...........
-        System.out.println("Prosze wpisac imie!!");
-        String name1111 = dowolnaNazwa.next();
-        int lengthOfName1111 = name1111.length();
-
-        switch (lengthOfName1111){
-            case 10:
-                System.out.println("Imie wpisane z klawiatury ma 10 znakow");
-                break;
-            case 4:
-                System.out.println(" -||- 4 znaki");
-                break;
-        }
+//        System.out.println("Prosze wpisac imie!!");
+//        String name1111 = dowolnaNazwa.next();
+//        int lengthOfName1111 = name1111.length();
+//
+//        switch (lengthOfName1111) {
+//            case 10:
+//                System.out.println("Imie wpisane z klawiatury ma 10 znakow");
+//                break;
+//            case 4:
+//                System.out.println(" -||- 4 znaki");
+//                break;
+//        }
 
         // zadanie
         // Stworzyc program ktory zczyta z kalwiwtury liczbe calkowita, przypisze ja, a nastepnie poprosi o zczytanie nastepnej liczby,
         // tez ja przyspisze (stworzy) a na ekranie zostanie wyswietlona suma tych liczb
 
+//        System.out.println("Prosze wpisac liczbe 1");
+//        int number1 = dowolnaNazwa.nextInt();
+//        System.out.println("Prosze wpisac liczbe 2");
+//        int number2 = dowolnaNazwa.nextInt();
+//        int sum = number1 + number2;
+//        System.out.println("Suma wynosi: " + sum);
+
+        System.out.println(dowolnaNazwa.nextDouble() - 5.0);
 
 
 
