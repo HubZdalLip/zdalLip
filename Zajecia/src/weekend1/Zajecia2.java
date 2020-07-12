@@ -168,23 +168,23 @@ public class Zajecia2 {
 //        if else
 //        if (warunek (zmienna typu boolowskiego, prawda, lub falsz) ) { }
 
-        if (true) {
+        if (true) {                                             // jesli prawda to sie wykona
             System.out.println("Prawda");
         }
-        if (5 > 4) {
+        if (5 > 4) {                                            // jest 5 jest wieksze od 4 to niejawnie wartosc boolowska wynosic bedzie prawda
             System.out.println("Prawda");
         }
 
         int i = 10;
-        boolean condition2 = (i == 10); //operator przyrownania
-        if (condition2) {
+        boolean condition2 = i > 0 && i < 10; // == operator przyrownania                 // wartosc typu boolean to prawda lub falsz ale moze ona byc obliczana dynamicznie
+        if (condition2) {                                                           // if (wartosc boolean jawna)
             System.out.println("i jest rowne 10 ");
-        } else {
+        } else {                                                                    // else wywola sie tylko jak wartosci wszystkich if (razem z else if , wykonuja sie one po kolei) jest falsz
             System.out.println("i nie jest rowne 10 ");
         }
 
 
-        if (i > 5) {
+        if (i > 5) {                                                                // wartosc boolean niejawna
             System.out.println("i wieksze od 5");
         } else if (i > 0) {
             System.out.println("i jest chociaz wieksze od 0");
@@ -194,28 +194,36 @@ public class Zajecia2 {
 
         // operatory logiczne && ( i ), || (albo) , ! (nie) , &, |
 
-        if (i > 5 && i < 10){   // koniunkcja czyli wszystkie warunki maja miec wartosc prawdziwa
+        if (i > 5 && i < 10) {   // koniunkcja czyli wszystkie warunki maja miec wartosc prawdziwa
             System.out.println("i jest wieksze od 5 i mniejsze od 10");
         }
-        if(i>5 || i<-100){
+        if (i > 5 || i < -100) {        // alternatynwa , jedno z wyrazen musi byc prawdziwe
             System.out.println("i jest wieksze od 5 lub mniejsze od -100");
         }
 
         i = 10;
-        boolean cond3 = i>5;
-        if(!cond3){
+        boolean cond3 = i > 5;
+        if (!cond3) {           // negacja, czyli prawda -> falsz .... falsz -> prawda
             System.out.println("i nie jest wieksze od 5");
-        }else{
+        } else {
             System.out.println("Blok else");
             System.out.println("i jeset wieksze od 5");
         }
 
-        if( i != 10 ){
+        if (i != 10) {          // jesli NIE jest rowne
             System.out.println("i jest rozne od 10");
-        }else{
+        } else {
             System.out.println("i jest rowne 10");
         }
 
+        // koniunkcja ma wyzszy priorytet od alternatywy
+
+        // Zadanie
+        // a) stworzyc zmienna String zaweirajaca imie
+        // b) jesli imie ma wiecej niz 5 znakow to wyswietl napis: Moje imie ma wiecej niz 5 znakow
+        // c) jesli imie ma rowno 5 znakow to wyswietl napis: moje imie ma rowno 5 znakow
+        // d) jesli imie ma mniej niz 15 i wiecej 3 znaki to wyswietl napis: Moje imie ma normalna dlugosc
+        // e) jesli imie ma mniej niz 3 znaki albo wiecej niz 15 to wyswietl napis: Moje imie jest dlugie
 
 
 
