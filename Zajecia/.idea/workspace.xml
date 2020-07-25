@@ -39,7 +39,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -109,7 +109,7 @@
       <workItem from="1594404581263" duration="863000" />
       <workItem from="1594413214168" duration="1106000" />
       <workItem from="1594451233720" duration="5944000" />
-      <workItem from="1595660080863" duration="14933000" />
+      <workItem from="1595660080863" duration="16529000" />
     </task>
     <servers />
   </component>

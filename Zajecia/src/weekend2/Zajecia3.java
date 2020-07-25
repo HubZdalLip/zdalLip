@@ -137,9 +137,9 @@ public class Zajecia3 {
 //                break;
 //        }
 
-        // tablice....
+        // tablice.... typy
         //pierwszy sposob deklaracji - pdoajemy na sztywno ilosc elementow
-        int[] arrayOfInts = new int[5];
+        int[] arrayOfInts = new int[5];     // 5 elementow
         arrayOfInts[0] = 5;
         arrayOfInts[1] = 4;
         arrayOfInts[2] = 6;
@@ -171,25 +171,75 @@ public class Zajecia3 {
 
 //        System.out.println(arrayOfDoubles[100]); // wyszlismy poza zakres - dostajemy wyjatek ArrayIndexOutOfBoundsException
 
-        String textCommon ="text";
+        String textCommon = "text";
         System.out.println(textCommon);
-        char[] textAsArray = {'t','e','x','t'};
+        char[] textAsArray = {'t', 'e', 'x', 't'};             // tablica charow.... 4 elementowa bo kompilator to policzyl
         System.out.print(textAsArray[0]);
         System.out.print(textAsArray[1]);
         System.out.print(textAsArray[2]);
         System.out.println(textAsArray[3]);
 
-        System.out.println(Arrays.toString(arrayOfInts));
+        System.out.println(Arrays.toString(arrayOfInts));   // instrukcja ktora pozwala wyswietlic dane na raz
 
-        int numberOfElementInIntsArray = arrayOfInts.length;
+        int numberOfElementInIntsArray = arrayOfInts.length;        //instrukcja ktora pozwala na uzyskanie ifnoramcji o dlugosci tablicy
         System.out.println(numberOfElementInIntsArray);
 
-        // zad
+//        zadania
 //        a) Stworzyc tablice intow (3 elementowa),
 //        b) wyswietlic na ekranie elementy
 //        c) wprowadz indeks od uzytkownika i wyswietl element o tym indeksie na ekranie. Uwazaj by nie przekroczyc zakresu....
 
-        
+//  a)
+        int[] array = new int[]{1, 2, 3};
+//  b)
+        System.out.println(array[0]);
+        System.out.println(array[1]);
+        System.out.println(array[2]);
+//        II -lepsza metoda
+        System.out.println(Arrays.toString(array));
+
+//        int intToReplace = 5;             // tablica intow to tak naprawde trzy inty w postaci jednej "zmiennej"
+//        array[0] = intToReplace;          //dlatego mozna na jej elmementach operowac dokladnie tak jak na zmiennych tego typu
+
+        //tablice maja statyczny rozmiar
+//        aby rozmiar byl dynamiczny nalezy uzyc kolekcji (o tym pozniej (duzo))
+
+//        rozmiar tablicy MUSI byc okreslony
+
+        //tablicy multiwymiarowe, moga one zawierac iles elementow wewnatrz jednego elementu
+//        rozmiar MUSI byc podany dla lewego indeksu, prawy nie musi byc znany
+        int[][] twoDimensionalArray = new int[3][5];
+        twoDimensionalArray[0][0] = 5;
+        twoDimensionalArray[0][1] = 6;
+        twoDimensionalArray[1][0] = 56;
+        twoDimensionalArray[1][1] = 63;
+        twoDimensionalArray[2][0] = 21;
+        twoDimensionalArray[2][1] = 0;
+
+//        [[5,6],[56,63],[21,0]]
+
+//        c) wprowadz indeks od uzytkownika i wyswietl element o tym indeksie na ekranie. Uwazaj by nie przekroczyc zakresu....
+
+//        Scanner input = new Scanner(System.in);
+//        int index = input.nextInt();
+//        if (index < array.length) {
+//            System.out.println(array[index]);
+//        }
+
+        // petla - moze wykonywac jakas instrukcje n razy
+
+        // for ( licznik petli ; warunek ; zwiekszsenie licznika){
+        //
+        // }
+
+        for (int i = 0; i < 10; i++) {          // deklaracja petli, licznik z wartoscia poczatkowa 0, dopoki licznik bedzie spelnial warunek to wykonaj, po wykonaniu zwikesz go
+            System.out.println("Iteracja: " + i + " .  Wartosc: " + i);
+        }
+//      i = 0 System.out.println("Iteracja: "+ 0+ " .  Wartosc: "+ 0);
+//        i=1 System.out.println("Iteracja: "+ 1+ " .  Wartosc: "+ 1);
+//        ...
+//        i =9 System.out.println("Iteracja: "+ 9+ " .  Wartosc: "+ 9);
+//        i=10 ale 10<10 dlatego KONIEC petli
 
 
     }
