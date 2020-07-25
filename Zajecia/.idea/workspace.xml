@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b96016b-5438-4016-b91a-61aa07524bc1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Zajecia/weekend1/Zajecia2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Zajecia/weekend1/Zajecia2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weekend1/Zajecia2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weekend1/Zajecia2.java" afterDir="false" />
     </list>
@@ -52,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Zajecia2">
+  <component name="RunManager" selected="Application.Zajecia3">
     <configuration name="Zajecia1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="weekend1.Zajecia1" />
       <module name="Zajecia" />
@@ -73,8 +74,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Zajecia3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend2.Zajecia3" />
+      <module name="Zajecia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="weekend2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Zajecia3" />
         <item itemvalue="Application.Zajecia2" />
         <item itemvalue="Application.Zajecia1" />
       </list>
@@ -94,6 +109,7 @@
       <workItem from="1594404581263" duration="863000" />
       <workItem from="1594413214168" duration="1106000" />
       <workItem from="1594451233720" duration="5944000" />
+      <workItem from="1595660080863" duration="9618000" />
     </task>
     <servers />
   </component>
