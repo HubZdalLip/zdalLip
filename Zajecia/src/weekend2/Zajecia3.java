@@ -209,7 +209,7 @@ public class Zajecia3 {
         //tablicy multiwymiarowe, moga one zawierac iles elementow wewnatrz jednego elementu
 //        rozmiar MUSI byc podany dla lewego indeksu, prawy nie musi byc znany
         int[][] twoDimensionalArray = new int[3][5];
-        twoDimensionalArray[0][0] = 5;
+        twoDimensionalArray[0][0] = 5;      // domyslnie wartosc int 0, boolean false, char ' ', stringa null
         twoDimensionalArray[0][1] = 6;
         twoDimensionalArray[1][0] = 56;
         twoDimensionalArray[1][1] = 63;
@@ -217,6 +217,7 @@ public class Zajecia3 {
         twoDimensionalArray[2][1] = 0;
 
 //        [[5,6],[56,63],[21,0]]
+        System.out.println(Arrays.deepToString(twoDimensionalArray)); //wyswietlanie wielowymiarowych tablic....
 
 //        c) wprowadz indeks od uzytkownika i wyswietl element o tym indeksie na ekranie. Uwazaj by nie przekroczyc zakresu....
 
@@ -233,16 +234,29 @@ public class Zajecia3 {
         // }
 
         for (int i = 0; i < 10; i++) {          // deklaracja petli, licznik z wartoscia poczatkowa 0, dopoki licznik bedzie spelnial warunek to wykonaj, po wykonaniu zwikesz go
-            System.out.println("Iteracja: " + i + " .  Wartosc: " + i);
+            System.out.println("Iteracja: " + i + ".  Wartosc: " + i);
         }
 //        i = 0 System.out.println("Iteracja: "+ 0+ " .  Wartosc: "+ 0);
 //        i = 1 System.out.println("Iteracja: "+ 1+ " .  Wartosc: "+ 1);
 //        ...
 //        i = 9 System.out.println("Iteracja: "+ 9+ " .  Wartosc: "+ 9);
-//        i = 10 ale 10<10 dlatego KONIEC petli
+//        i = 10 ale 10 < 10 dlatego KONIEC petli
 
 //        Zadanie:
 //        wyswietlic liczby parzyste od 0 do 50 (uzycie petli)
+
+        for (int i = 0; i <= 50; i++) {
+            if (i % 2 == 0) {
+                System.out.println("Liczba " + i + " jest podzielna przez 2");
+            }
+        }
+
+        // Zadanie:
+        // a) zgarnij od uzytkownika informacje ile chce elementow w tablicy
+        // b) zadeklaruj tablice typow String o ilosc elementow z a)
+        // c) w petli spytaj uzytkownika o napis i zapisz go do elementu tablicy
+        // d) wyswietl tablice
+        // e) (dla chetnych) wyswietl tablice za pomoca petli
 
     }
 }
