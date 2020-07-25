@@ -235,12 +235,14 @@ public class Zajecia3 {
         for (int i = 0; i < 10; i++) {          // deklaracja petli, licznik z wartoscia poczatkowa 0, dopoki licznik bedzie spelnial warunek to wykonaj, po wykonaniu zwikesz go
             System.out.println("Iteracja: " + i + " .  Wartosc: " + i);
         }
-//      i = 0 System.out.println("Iteracja: "+ 0+ " .  Wartosc: "+ 0);
-//        i=1 System.out.println("Iteracja: "+ 1+ " .  Wartosc: "+ 1);
+//        i = 0 System.out.println("Iteracja: "+ 0+ " .  Wartosc: "+ 0);
+//        i = 1 System.out.println("Iteracja: "+ 1+ " .  Wartosc: "+ 1);
 //        ...
-//        i =9 System.out.println("Iteracja: "+ 9+ " .  Wartosc: "+ 9);
-//        i=10 ale 10<10 dlatego KONIEC petli
+//        i = 9 System.out.println("Iteracja: "+ 9+ " .  Wartosc: "+ 9);
+//        i = 10 ale 10<10 dlatego KONIEC petli
 
+//        Zadanie:
+//        wyswietlic liczby parzyste od 0 do 50 (uzycie petli)
 
     }
 }
