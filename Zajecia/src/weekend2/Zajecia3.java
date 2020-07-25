@@ -53,6 +53,34 @@ public class Zajecia3 {
 
         //substring, toLowerCase,toUpperCase
 
+        //substring - dwie postaci - ucinanie stringow... zwraca nowego stringa....
+//       a) postac z jednym arg - ucina od podanego indeksu do konca stringa....
+//       b) postac z dwoma arg - ucina od podanego indeksu do podanego indeksu NIEwlacznie
+        String text2 = "JakasNazwa";
+        String text2Sub = text2.substring(5);           // postac a)
+        System.out.println(text2Sub);
+        text2Sub = text2.substring(5,9);                // postac b)
+        System.out.println(text2Sub);
+
+        // toLowerCase i toUpperCase
+//        a) toLowerCase wyswietla caly napis w małych literach
+//        b) toUpperCase wyswietla caly napis w postaci wielkich liter
+
+        String text2LowerCase = text2.toLowerCase();
+        System.out.println(text2LowerCase);
+
+        System.out.println(text2.toUpperCase());
+
+//         Zadanie
+//         a) stworz Stringa ktorego wartosc zostanie pobrana od uzytkownika
+//         b) jesli string bedzie rowny "upper" to wyswietl stringa w postaci wielkich liter
+//         c) jesli String bedzie rowny "lower" to wyswietl stringa w postaci malych liter
+//         d) jesli String bedzie zawieral wyrazenie "ok" ale nie bedzie się na nie konczyl to wyswietl napis: Zawieram wyrazenie ok ale nie na koncu. Zmodyfkijuj program tak aby mogl wyswietlic:
+//        Zawieram wyrazenie ale na poczatku
+//         e) jesli String bedzie rowny "find" to wtedy pozwol uzytkownikowi na wprowadzenie innego stringa, sprawdz czy on wystepuje w 1 stringu i od jakiego indeksu
+//         f) jesli String bedzie inny niz powyzsze przypadki to wtedy wyswietl go od polowy, bez dwoch ostatnich znakow
+
+
 
     }
 }
