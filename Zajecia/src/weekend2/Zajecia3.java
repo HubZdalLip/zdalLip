@@ -258,5 +258,22 @@ public class Zajecia3 {
         // d) wyswietl tablice
         // e) (dla chetnych) wyswietl tablice za pomoca petli
 
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj liczbe");
+        int numberOfElementsInArray = input.nextInt();  // a) liczba elementow od uzytkownika
+        input.nextLine();                               // a) cd. zgarnij entera...
+        String[] arrayOfStringEx = new String[numberOfElementsInArray];     // b)
+        for (int i = 0; i < numberOfElementsInArray; i++) {         // c)
+            System.out.println("Podaj " + i + " element");
+            arrayOfStringEx[i] = input.nextLine();
+        }
+        System.out.println(Arrays.toString(arrayOfStringEx));           // d)
+
+        for (int i = 0; i < arrayOfStringEx.length; i++) {              // e)
+            System.out.println(arrayOfStringEx[i]);
+        }
+
+
     }
 }
