@@ -94,12 +94,67 @@ public class Zajecia4 {
         // b) jesli wpisze 2 to od 1 do 50 ale tylko podzielne przez 10
         // c) jesli wpisze 3 to koniec programu....
 
-        for (int j = 0; j < 10; j++) {
-            for (int k = 0; k < 10; k++) {
-                System.out.println("Nadrzedny licznik j " + j);
-                System.out.println("    Podrzedny licznik k " + k);
+//        for (int j = 0; j < 10; j++) {
+//            for (int k = 0; k < 10; k++) {
+//                System.out.println("Nadrzedny licznik j " + j);
+//                System.out.println("    Podrzedny licznik k " + k);
+//            }
+//        }
+
+
+        Scanner input = new Scanner(System.in);
+        int numberFromUser;
+        do {
+            System.out.println("Jaki wybrac tryb: 1 , 2 , 3");
+            numberFromUser = input.nextInt();
+            if (numberFromUser == 1) {
+                for (int i = 1; i <= 10; i++) {             // petla wyswietlajaca liczby od 1 do 10
+                    System.out.println(i);
+                }
+            } else if (numberFromUser == 2) {
+//                for (int i = 10; i <= 50; i = i + 10) {
+//
+//                }
+                for (int i = 1; i <= 50; i++) {
+                    if (i % 10 == 0) {
+                        System.out.println(i);
+                    }
+                }
             }
-        }
+
+        } while (numberFromUser != 3);
+
+
+        //zadanie napisasc program ktory w petli bedzie pytal uzytkownika o tryb:
+//        a) jesli bedzie rowny "parzyste" to spyta o zakres gorny petli , np parzyste, 10 => 0,2,4,6,8,10
+//        b) jesli bedzie rowny "nieparzyste" to spyta o zakres gorny petli , np nieparzyste, 8 => 1,3,5,7
+//        c) jesli bedzie rowny exit/wyjdz/koniec to zakonczy dzialanie programu.... UWAGA! podpunkt c) powinien dzialac dla wyrazow takze z rozna wielkoscia znakow
+//                  ExiT, WYJDZ,kONiEc .... WSKAZOWKA: cofnac sie do zajec nr 3 i sprawdzic metody ktore wykorzsytywalismy ze stringami....
+//
+//        jesli wynik (tryb) jest inny, nie rob nic
+//
+//        algorytm
+        
+//        1. pytaj o tryb
+//        2. jesli tryb jest przypisany do jakiejs akcji to spytaj o gorny zakres petli, wywloaj inna petle
+//        3. spraw aby wybrany tryb zostal na poczatku zmodyfikowany tak, aby pasowal... jesli tryb bedzie rowny warunkom z c) to wyjdz....
+//        4. do innego trybu nie przypisuj nic, powrot do 1)
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // zadanie wyswietlic na ekranie liczby w petli :
+//        a) gdy uzytkownik wpisze parzyste to ma sie wyswiet
 
 
     }
