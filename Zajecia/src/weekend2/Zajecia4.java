@@ -141,18 +141,71 @@ public class Zajecia4 {
 //        4. do innego trybu nie przypisuj nic, powrot do 1)
 //
 
+//        Scanner inputFromUser = new Scanner(System.in);
+//        String selectedMode = "";       // poczatkowo wartosc domyslna....
+//        int upperLimit = 0;
+//        do {
+//            System.out.println("Podaj tryb");
+//            selectedMode = inputFromUser.next();    // wystarczy do znaku bialego zczytac....
+//            switch (selectedMode) {
+//                case "parzyste":
+//                    System.out.println("Podaj gorny limit");
+//                    upperLimit = inputFromUser.nextInt();
+//                    inputFromUser.nextLine();
+//                    for (int i = 0; i <= upperLimit; i++) {
+//                        if (i % 2 == 0) {
+//                            System.out.println(i);
+//                        }
+//                    }
+//                    break;
+//                case "nieparzyste":
+//                    System.out.println("Podaj gorny limit");
+//                    upperLimit = inputFromUser.nextInt();
+//                    inputFromUser.nextLine();
+//                    for (int i = 0; i <= upperLimit; i++) {
+//                        if (i % 2 != 0) {
+//                            System.out.println(i);
+//                        }
+//                    }
+//            }
+//            selectedMode = selectedMode.toLowerCase();
+//
+//        } while (!selectedMode.equals("exit") && !selectedMode.equals("wyjdz") && !selectedMode.equals("koniec"));
+
 
 //        Zadanie napisz program ktory bedzie w zaleznosci od trybu (String) :
 //        a) dodaj  => pytal o dwie liczby typu int i wyswietlil sume
 //        b) odejmij => pytal o dwie liczby typu int i wyswietlil roznice
 //        c) koniec => konczy dzialanie programu....
-        
-
 
 //        for (licznik; WARUNEK WYKONANIA PETLI => ile razy ma sie petla wykonac ??? nie implementowac logiki w tym miejscu; i++)
 
+        Scanner inputFromUser = new Scanner(System.in);
+        String selectedMode;
+        int number1, number2;
+        do {
+            System.out.println("Wybierz tryb");
+            selectedMode = inputFromUser.next();
+            switch (selectedMode) {
+                case "dodaj":
+                    System.out.println("Podaj liczbe 1");
+                    number1 = inputFromUser.nextInt();
+                    System.out.println("Podaj liczbe 2");
+                    number2 = inputFromUser.nextInt();
+                    inputFromUser.nextLine();
+                    System.out.println("Wynik to: " + (number1 + number2));
+                    break;
+                case "odejmij":
+                    System.out.println("Podaj liczbe 1");
+                    number1 = inputFromUser.nextInt();
+                    System.out.println("Podaj liczbe 2");
+                    number2 = inputFromUser.nextInt();
+                    inputFromUser.nextLine();
+                    System.out.println("Wynik to: " + (number1 - number2));
+            }
+        } while (!selectedMode.equals("koniec"));
 
-
+//        Zadanie napisz program ktory wyswietli liczby podzielne przez 2 lub 3 poczawszy od 707 a konczywszy na 1000
 
     }
 }
