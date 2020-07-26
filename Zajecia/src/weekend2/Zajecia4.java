@@ -373,10 +373,10 @@ public class Zajecia4 {
 //        output: zat
 //        input: a,b,c,false
 //        output: cba
-        String text = getCharsInSpecificWay('z', 'a', 't', true);   // nazwa metody staje sie tym co zwrocila czyli scalownym tekstem
-        System.out.println(text);
-        text = getCharsInSpecificWay('a', 'b', 'c', false);
-        System.out.println(text);
+//        String text = getCharsInSpecificWay('z', 'a', 't', true);   // nazwa metody staje sie tym co zwrocila czyli scalownym tekstem
+//        System.out.println(text);
+//        text = getCharsInSpecificWay('a', 'b', 'c', false);
+//        System.out.println(text);
 
         // zadanie
         // a) napisz metode o nazwie showNTimes
@@ -388,6 +388,18 @@ public class Zajecia4 {
         // I am in method.
         // I am in method.
         // I am in method.
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj liczbe wywolan");
+        int howManyTimes = input.nextInt();
+        showNTimes(howManyTimes);
+
+    }
+
+    private static void showNTimes(int howManyTimes) {
+        for (int i = 0; i < howManyTimes; i++) {
+            System.out.println("I am in method");
+        }
     }
 
     private static String getCharsInSpecificWay(char z1, char z2, char z3, boolean order) {
