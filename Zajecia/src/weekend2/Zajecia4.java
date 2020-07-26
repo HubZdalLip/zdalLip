@@ -180,32 +180,210 @@ public class Zajecia4 {
 
 //        for (licznik; WARUNEK WYKONANIA PETLI => ile razy ma sie petla wykonac ??? nie implementowac logiki w tym miejscu; i++)
 
-        Scanner inputFromUser = new Scanner(System.in);
-        String selectedMode;
-        int number1, number2;
-        do {
-            System.out.println("Wybierz tryb");
-            selectedMode = inputFromUser.next();
-            switch (selectedMode) {
-                case "dodaj":
-                    System.out.println("Podaj liczbe 1");
-                    number1 = inputFromUser.nextInt();
-                    System.out.println("Podaj liczbe 2");
-                    number2 = inputFromUser.nextInt();
-                    inputFromUser.nextLine();
-                    System.out.println("Wynik to: " + (number1 + number2));
-                    break;
-                case "odejmij":
-                    System.out.println("Podaj liczbe 1");
-                    number1 = inputFromUser.nextInt();
-                    System.out.println("Podaj liczbe 2");
-                    number2 = inputFromUser.nextInt();
-                    inputFromUser.nextLine();
-                    System.out.println("Wynik to: " + (number1 - number2));
-            }
-        } while (!selectedMode.equals("koniec"));
+//        Scanner inputFromUser = new Scanner(System.in);
+//        String selectedMode;
+//        int number1, number2;
+//        do {
+//            System.out.println("Wybierz tryb");
+//            selectedMode = inputFromUser.next();
+//            switch (selectedMode) {
+//                case "dodaj":
+//                    System.out.println("Podaj liczbe 1");
+//                    number1 = inputFromUser.nextInt();
+//                    System.out.println("Podaj liczbe 2");
+//                    number2 = inputFromUser.nextInt();
+//                    inputFromUser.nextLine();
+//                    System.out.println("Wynik to: " + (number1 + number2));
+//                    break;
+//                case "odejmij":
+//                    System.out.println("Podaj liczbe 1");
+//                    number1 = inputFromUser.nextInt();
+//                    System.out.println("Podaj liczbe 2");
+//                    number2 = inputFromUser.nextInt();
+//                    inputFromUser.nextLine();
+//                    System.out.println("Wynik to: " + (number1 - number2));
+//            }
+//        } while (!selectedMode.equals("koniec"));
 
-//        Zadanie napisz program ktory wyswietli liczby podzielne przez 2 lub 3 poczawszy od 707 a konczywszy na 1000
+
+//        Zadanie napisz program ktory wyswietli liczby podzielne przez 2 lub 3 poczawszy od 1 a konczywszy na 50
+        // break - wychodzi z instrukcji.... tyczy sie to rowniez petli
+        // continue - wychodzi z iteracji....
+
+//        for (int i = 0; i < 10; i++) {
+//            if (i == 5) { // 0,1,2,3,4 nie wchodzi do ifa
+//                break; // wymus zakonczenie petli
+//            }
+//            System.out.println(i);
+//        }
+//        System.out.println();
+//        for (int i = 0; i < 10; i++) {
+//            if (i == 5 || i == 7) { // gdy i = 5 to continue (anulowanie OBECNEJ (T Y L K O) iteracji
+//                continue;
+//            }
+//            System.out.println(i);
+////            System.out.println();
+////            System.out.println(
+////                    ddfgdfgdf                     // JAKIS DLUGI KOD
+////            );
+////            dfgdf
+////                    dgdfgdf
+////
+//        }
+
+//        Zadanie napisz program ktory wyswietli liczby podzielne przez 2 lub 3 poczawszy od 1 a konczywszy na 50
+
+//        for (int i = 1; i <= 50; i++) {
+//            if (i % 2 == 0) {
+//                System.out.println(i);
+//                continue;                         //unikanie podwojnych wywolac dla liczb podzielnych przez 2 i 3, np 6, 12...
+//            }
+//            if (i % 3 == 0) {
+//                System.out.println(i);
+//            }
+//        }
+
+        // zadanie napisz program gdzie zczytasz od uzytkownika liczbe w petli i ja wyswietlisz... Jesli bedzie rowna 5 to skoncz petle
+
+//        Scanner input = new Scanner(System.in);
+//
+//        while (true) {
+//            int number = input.nextInt();
+//            if (number == 5) {
+//                break;          // gdy wprowadzona liczba rowna 5 to anulujemy petle/isntrukcje....
+//            }
+//            System.out.println(number);
+//        }
+
+        //i++,i--
+//        i++ - postinkrementacja....
+//        i++ == i=i+1
+        int i = 0;
+        System.out.println(i);
+        System.out.println(i++);        // odwolaj sie do wartoscu aktualnej a NASTEPNIE ja zwieksz
+        System.out.println(i);
+
+        i = 0;
+//        i--   postdekrementacja... => wywolaj/odwolaj a nastpenei zmneijsz....
+        System.out.println(i--);
+        System.out.println(i--);
+        System.out.println(i);
+
+//       ++i preinkremetnacja  => zwieksz wartosc a nastepnie sie odwolaj
+//       --i predekrementacja => zmniejsz wartosc => odwolaj sie
+
+        i = 0;
+        System.out.println(i);
+        System.out.println(++i);
+        System.out.println(--i);
+
+//       i = i+1;           NIE ISTNIEJE takie cos jak i+1=i    /=       ++i
+//       i = i+2;
+        i = 0;
+        i = i + 2;  // mozna uproscic....
+        System.out.println(i);
+        i += 2;     // mozna uznac ze to to samo co i=i+2
+        System.out.println(i);
+
+        i -= 2; // to samo co i=i-2
+        System.out.println(i);
+
+        i *= 3; // to samo co i=i*2
+        System.out.println(i);
+
+        i /= 6; // to samo co i=i/6
+        System.out.println(i);
+
+        i = +1; // poniewaz wskazujemy (nie wiadomo po co tak naprawde...) ze liczba jest dodatnia... samo wskazania 1 juz kompilaotrowi wystarcza....
+        System.out.println(i);
+
+        //metody - co to?
+//      powiedzmy mamy sytuacje ze tworzymy skomplikowany algorytm wykonujacy jakas operacje.... zajmuje on 500 linii kodu....
+//      poweidzmy mamy 3 ify gdzie z niego korzystami....
+//        mozna wydzielic ten algorytm do metody.....
+//        i = 1;
+//        if (i==1){
+//            doSthVeryComplexAlgorithm();
+//        }else if(i==2){
+//            doSthVeryComplexAlgorithm();
+//        }else if(i==3){
+//            doSthVeryComplexAlgorithm();
+//        }
+
+//        printHelloWorld5Times();
+//        printHelloWorld5Times();
+//        printHelloWorld5Times();
+//        printHelloWorld5Times();
+//        printHelloWorld5Times();
+
+//        skladnia
+//        nazwa metody => zawiera duzo czasownikow
+//        typ dostepu   static/NIC (poki co static zawszse)    typ_zwracany     nazwa_metody (zestaw_agrumentow => 1 argument, 2 arguemnt.... n argument){
+//
+//    return // opcjonalny....
+//    }
+//
+//    void - typ ktory NIC nie zwraca.... po prostu wykonuje swoje....
+//    typ zwracany to jest typ podstawowy/obiektowy....
+
+//        przyklad.... napisz metode ktora zwroci liczbe 100
+        int number100 = getNumber100();  // ta metoda po zwroceniu bedzie tym co zwroci... => 100
+        System.out.println(number100);
+
+        int sum = addTwoNumbersInVeryComplexWay(6, 8);  // wysylamy do metody parametry nieformalne == aktualne
+        System.out.println(sum);
+        System.out.println(addTwoNumbersInVeryComplexWay(10, 50));
+        addTwoNumbersInVeryComplexWay(10, 0);
+        System.out.println(addTwoNumbersInVeryComplexWay(1, 10));
+
+//        przyklad... podaj imie do metody... zwroc napis Witaj (imie)
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Podaj imie");
+            String name = scanner.next();   //czytamy imie
+            if (name.equals("Koniec")) {
+                break;
+            }
+            System.out.println(getWelcomeInformation(name));    // parametr aktualny... //wysylamy do metody imie , TERAZ BEDZIEMY W METODZIE.... znowu jestemy w metodzie main... teraz ta metoda sie staje tym co zwrocilismy....
+        }
+
+        // zadanie
+        // a) stworz metode getInfoAboutUser
+        // b) ma ona przyjmowac parametr typu int okreslajacy wiek oraz String okreslajacy imie
+        // c) ma ona zwracac napis: Mam (wiek) lat. Moje imie to (imie).
+        // d) wywolac metode dla 3 zestawow paratrow..
+
 
     }
+
+    private static String getWelcomeInformation(String formalName) {  //parametr formalny...    //PRZJEMUJEMY PARAMETR...
+        return "Hello " + formalName;                           //zwracamy co chcemy
+    }
+
+    private static int addTwoNumbersInVeryComplexWay(int number1, int number2) {        // arguemnty formalne
+        System.out.println(number1);
+        System.out.println(number2);
+        return number1 + number2;
+    }
+
+    private static int getNumber100() {
+        return 100;
+    }
+
+    public static void doSthVeryComplexAlgorithm() {
+        System.out.println("Bardzo dlugie obliczenia");
+    }
+
+    public static void printHelloWorld5Times() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Hello World");
+        }
+    }
+//    public static void indexOf(){
+//
+//    }
+//    public static void equals(){
+//
+//    }
 }
