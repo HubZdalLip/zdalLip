@@ -67,18 +67,39 @@ public class Zajecia4 {
 //
 ////        zadanie napisac program ktory bedzie wyswietlal na ekranie napis "Hello" do chwili gdy uzytkownik wpisze 1, jesli wpisze co innego kontynuowac
 //
-        Scanner input = new Scanner(System.in);
-        int x1;
-        do {
-            System.out.println("Hello");
-            System.out.println("Czy chcesz kontynuowac??");
-            x1 = input.nextInt();   // tutaj uzytkownik wpisuje swoja wartosc... jesli 1 to w while 1!=1, jesli 2 != 1
-        } while (x1 != 1);  // czy 1 rozne od 1 ??? falsz...
-        System.out.println("Wyszedlem z petli");
+//        Scanner input = new Scanner(System.in);
+//        int x1;
+//        do {
+//            System.out.println("Hello");
+//            System.out.println("Czy chcesz kontynuowac??");
+//            x1 = input.nextInt();   // tutaj uzytkownik wpisuje swoja wartosc... jesli 1 to w while 1!=1, jesli 2 != 1
+//        } while (x1 != 1);  // czy 1 rozne od 1 ??? falsz...
+//        System.out.println("Wyszedlem z petli");
+
+//
+//        // zadanie napisac program ktory bedzie wyswietlal kolejne liczby naturalne do chwili gdy uzytkownik wpisze koniec lub exit....
+//        Scanner input = new Scanner(System.in);
+//        int i = 0;
+//        String text;                // nadrzednie tworze i oraz text poniewaz z koncem klamry niewidoczny bylby text(tyczy sie to zakresu)
+//        do {
+//            System.out.println(i);  //wyswietlamy liczbe natualrana
+//            i = i + 1;              //zwiekszamy ja o 1
+//            System.out.println("Czy chcesz zakonczyc");     //pytamy czy zakocnzycy
+//            text = input.next();        //sciagamy od uzytkwonika wartosc
+//        } while (!text.equals("koniec") && !text.equals("exit"));       //sprawdzamy czy nie rowna jest ona koniec i czy nierowna jest ona exit
 
 
-        // zadanie napisac program ktory bedzie wyswietlal kolejne liczby naturalne do chwili gdy uzytkownik wpisze koniec lub exit....
-        
+        // zadanie napisac program ktory bedzie wyswietlal liczby w odpwoeidnim trybie:
+        // a) jesli uzytkownik wpisze liczbe 1 to wyswietla mu sie liczby od 1 do 10        - (uzyc for) wewnatrz jednej iteracji nalezy wywolac petle ktora wyswietli liczby....
+        // b) jesli wpisze 2 to od 1 do 50 ale tylko podzielne przez 10
+        // c) jesli wpisze 3 to koniec programu....
+
+        for (int j = 0; j < 10; j++) {
+            for (int k = 0; k < 10; k++) {
+                System.out.println("Nadrzedny licznik j " + j);
+                System.out.println("    Podrzedny licznik k " + k);
+            }
+        }
 
 
     }
