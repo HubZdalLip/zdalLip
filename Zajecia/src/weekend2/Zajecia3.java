@@ -261,10 +261,10 @@ public class Zajecia3 {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Podaj liczbe");
-        int numberOfElementsInArray = input.nextInt();  // a) liczba elementow od uzytkownika
-        input.nextLine();                               // a) cd. zgarnij entera...
-        String[] arrayOfStringEx = new String[numberOfElementsInArray];     // b)
-        for (int i = 0; i < numberOfElementsInArray; i++) {         // c)
+        int numberOfElementsInArray = input.nextInt();                  // a) liczba elementow od uzytkownika
+        input.nextLine();                                               // a) cd. zgarnij entera...
+        String[] arrayOfStringEx = new String[numberOfElementsInArray]; // b)
+        for (int i = 0; i < numberOfElementsInArray; i++) {             // c)
             System.out.println("Podaj " + i + " element");
             arrayOfStringEx[i] = input.nextLine();
         }
@@ -273,6 +273,8 @@ public class Zajecia3 {
         for (int i = 0; i < arrayOfStringEx.length; i++) {              // e)
             System.out.println(arrayOfStringEx[i]);
         }
+
+
 
 
     }

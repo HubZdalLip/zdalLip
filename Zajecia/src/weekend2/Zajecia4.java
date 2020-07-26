@@ -1,0 +1,51 @@
+package weekend2;
+
+public class Zajecia4 {
+    public static void main(String[] args) {
+        //petle cd.
+
+        for (int i = 50; i > 0; i = i - 3) {
+            System.out.println(i);
+        }
+
+        //i-- , i++                         //rownoznaczne
+        // i=i-1,  i=i+1
+        //10 = 10 -1      10=10+1
+//        i=9              i=11
+
+        //zadanie wyswietlic na ekranie liczby od 100 do 0 z krokiem rownym 20
+
+        for (int i = 100; i >= 0; i = i - 20) {                 // konwencja, nazwa moze byc teoretycznie dowolna ale w malych petlach zaleca sie uzywac indeksow
+            // i, j, k , l, index
+            System.out.println(i);
+        }
+
+        //zakres danych
+
+        int x;                  // zmienna stworzona w danym bloku istnieje tylko w tym bloku i w blokach bardziej zagniezdzonych
+        if (true) {
+            x = 0;
+        }
+
+        System.out.println(x);
+
+        // petla II rodzaj
+//        while(){
+//
+//        }
+        //skladnia
+//        while(warunek){}
+        System.out.println();
+        System.out.println("To jest petla while");
+        int i = 10;
+        while (i > 0) {
+            System.out.println(i);          // i = 10; i = 9
+            i--;                // tutaj UWAGA (do wyjasnienia) i = 10, i = 9
+            // i = 9;   , i = 8;
+        }
+
+        // zadanie wyswietlic liczby od 30 do 20 z krokiem 2 za pomoca petli while
+
+
+    }
+}
