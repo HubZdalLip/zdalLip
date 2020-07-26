@@ -327,37 +327,61 @@ public class Zajecia4 {
 //    typ zwracany to jest typ podstawowy/obiektowy....
 
 //        przyklad.... napisz metode ktora zwroci liczbe 100
-        int number100 = getNumber100();  // ta metoda po zwroceniu bedzie tym co zwroci... => 100
-        System.out.println(number100);
-
-        int sum = addTwoNumbersInVeryComplexWay(6, 8);  // wysylamy do metody parametry nieformalne == aktualne
-        System.out.println(sum);
-        System.out.println(addTwoNumbersInVeryComplexWay(10, 50));
-        addTwoNumbersInVeryComplexWay(10, 0);
-        System.out.println(addTwoNumbersInVeryComplexWay(1, 10));
-
-//        przyklad... podaj imie do metody... zwroc napis Witaj (imie)
-
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("Podaj imie");
-            String name = scanner.next();   //czytamy imie
-            if (name.equals("Koniec")) {
-                break;
-            }
-            System.out.println(getWelcomeInformation(name));    // parametr aktualny... //wysylamy do metody imie , TERAZ BEDZIEMY W METODZIE.... znowu jestemy w metodzie main... teraz ta metoda sie staje tym co zwrocilismy....
-        }
+//        int number100 = getNumber100();  // ta metoda po zwroceniu bedzie tym co zwroci... => 100
+//        System.out.println(number100);
+//
+//        int sum = addTwoNumbersInVeryComplexWay(6, 8);  // wysylamy do metody parametry nieformalne == aktualne
+//        System.out.println(sum);
+//        System.out.println(addTwoNumbersInVeryComplexWay(10, 50));
+//        addTwoNumbersInVeryComplexWay(10, 0);
+//        System.out.println(addTwoNumbersInVeryComplexWay(1, 10));
+//
+////        przyklad... podaj imie do metody... zwroc napis Witaj (imie)
+//
+//        Scanner scanner = new Scanner(System.in);
+//        while (true) {
+//            System.out.println("Podaj imie");
+//            String name = scanner.next();   //czytamy imie
+//            if (name.equals("Koniec")) {
+//                break;
+//            }
+//            System.out.println(getWelcomeInformation(name));    // parametr aktualny... //wysylamy do metody imie , TERAZ BEDZIEMY W METODZIE.... znowu jestemy w metodzie main... teraz ta metoda sie staje tym co zwrocilismy....
+//        }
 
         // zadanie
         // a) stworz metode getInfoAboutUser
         // b) ma ona przyjmowac parametr typu int okreslajacy wiek oraz String okreslajacy imie
         // c) ma ona zwracac napis: Mam (wiek) lat. Moje imie to (imie).
-        // d) wywolac metode dla 3 zestawow paratrow..
+        // d) wywolac metode dla 3 zestawow parametrow..
 
+
+        String takenInfo1 = getInfoAboutUser(10,"Marek");
+        String takenInfo2 = getInfoAboutUser(15,"Piotrek");
+        String takenInfo3 = getInfoAboutUser(25,"Natalia");
+        System.out.println(takenInfo1);
+        System.out.println(takenInfo2);
+        System.out.println(takenInfo3);
+
+        // zadanie
+        // a) stworz metode getCharsInSpecificWay
+        // b) metoda musi przyjac 4 argumenty... pierwsze trzy arguemnty do znaki, ostatni argument to zmienna typu boolean
+        // c) zwroc i przypisz do Stringa wynik metody => wynik ma byc scaleniem trzech znakow, typ boolean okresli kolejnosc
+        //  true to kolejnosc znak1+xznak+2znak3
+        //  false to kolejnosc ODWROTNA
+        //  wskazowka automatyczne castowanie charow na stringa odbywa sie gdy doda sie pusty cudzyslow....
+//        input: z,a,t,true
+//        output: zat
+//        input: a,b,c,false
+//        output: cba
 
     }
 
+    private static String getInfoAboutUser(int age, String name) {
+        return "Mam " + age + " lat. Moje imie to " + name;
+    }
+
     private static String getWelcomeInformation(String formalName) {  //parametr formalny...    //PRZJEMUJEMY PARAMETR...
+
         return "Hello " + formalName;                           //zwracamy co chcemy
     }
 
