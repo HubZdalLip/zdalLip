@@ -102,30 +102,30 @@ public class Zajecia4 {
 //        }
 
 
-        Scanner input = new Scanner(System.in);
-        int numberFromUser;
-        do {
-            System.out.println("Jaki wybrac tryb: 1 , 2 , 3");
-            numberFromUser = input.nextInt();
-            if (numberFromUser == 1) {
-                for (int i = 1; i <= 10; i++) {             // petla wyswietlajaca liczby od 1 do 10
-                    System.out.println(i);
-                }
-            } else if (numberFromUser == 2) {
-//                for (int i = 10; i <= 50; i = i + 10) {
-//
+//        Scanner input = new Scanner(System.in);
+//        int numberFromUser;                 // liczba od usera
+//        do {
+//            System.out.println("Jaki wybrac tryb: 1 , 2 , 3");
+//            numberFromUser = input.nextInt();               //wybranie trybu
+//            if (numberFromUser == 1) {                      //podpunkt a)
+//                for (int i = 1; i <= 10; i++) {             // petla wyswietlajaca liczby od 1 do 10
+//                    System.out.println(i);
 //                }
-                for (int i = 1; i <= 50; i++) {
-                    if (i % 10 == 0) {
-                        System.out.println(i);
-                    }
-                }
-            }
+//            } else if (numberFromUser == 2) {               //podpunkt b)
+////                for (int i = 10; i <= 50; i = i + 10) {       //alternatywa...
+////
+////                }
+//                for (int i = 1; i <= 50; i++) {
+//                    if (i % 10 == 0) {
+//                        System.out.println(i);
+//                    }
+//                }
+//            }
+//
+//        } while (numberFromUser != 3);                  // jesli liczba od usera rowna 3 to falsz bo 3 nie jest rozne od 3
 
-        } while (numberFromUser != 3);
 
-
-        //zadanie napisasc program ktory w petli bedzie pytal uzytkownika o tryb:
+//        zadanie napisasc program ktory w petli bedzie pytal uzytkownika o tryb:
 //        a) jesli bedzie rowny "parzyste" to spyta o zakres gorny petli , np parzyste, 10 => 0,2,4,6,8,10
 //        b) jesli bedzie rowny "nieparzyste" to spyta o zakres gorny petli , np nieparzyste, 8 => 1,3,5,7
 //        c) jesli bedzie rowny exit/wyjdz/koniec to zakonczy dzialanie programu.... UWAGA! podpunkt c) powinien dzialac dla wyrazow takze z rozna wielkoscia znakow
@@ -134,7 +134,7 @@ public class Zajecia4 {
 //        jesli wynik (tryb) jest inny, nie rob nic
 //
 //        algorytm
-        
+
 //        1. pytaj o tryb
 //        2. jesli tryb jest przypisany do jakiejs akcji to spytaj o gorny zakres petli, wywloaj inna petle
 //        3. spraw aby wybrany tryb zostal na poczatku zmodyfikowany tak, aby pasowal... jesli tryb bedzie rowny warunkom z c) to wyjdz....
@@ -142,19 +142,16 @@ public class Zajecia4 {
 //
 
 
+//        Zadanie napisz program ktory bedzie w zaleznosci od trybu (String) :
+//        a) dodaj  => pytal o dwie liczby typu int i wyswietlil sume
+//        b) odejmij => pytal o dwie liczby typu int i wyswietlil roznice
+//        c) koniec => konczy dzialanie programu....
+        
 
 
+//        for (licznik; WARUNEK WYKONANIA PETLI => ile razy ma sie petla wykonac ??? nie implementowac logiki w tym miejscu; i++)
 
 
-
-
-
-
-
-
-
-        // zadanie wyswietlic na ekranie liczby w petli :
-//        a) gdy uzytkownik wpisze parzyste to ma sie wyswiet
 
 
     }
