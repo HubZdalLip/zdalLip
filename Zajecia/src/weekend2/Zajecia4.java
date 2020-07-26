@@ -1,5 +1,6 @@
 package weekend2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Zajecia4 {
@@ -389,11 +390,56 @@ public class Zajecia4 {
         // I am in method.
         // I am in method.
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Podaj liczbe wywolan");
-        int howManyTimes = input.nextInt();
-        showNTimes(howManyTimes);
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Podaj liczbe wywolan");
+//        int howManyTimes = input.nextInt();
+//        showNTimes(howManyTimes);
 
+        int[] array = {4, 3, 3, 10, -5};
+        System.out.println(showAverage(array));
+
+        int[] takenArr = getArray(4, 6, 3);
+        System.out.println(takenArr[1]);
+
+        // typ... (np. int... ) moze wystapic TYLKO w definicji metody jako arg formalny, oznacza on NIEOKRESLONA liczbe elementow (np. int). Autoamtycznie staje to tablica.....
+        int[] array1 = getArray2(4);
+        int[] array2 = getArray2(5,4,6,8);
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+
+
+    }
+
+    private static int[] getArray2(int... arr){
+        // w tym miejscu java patrzy na ilosc argumnetow wyslanych do metody...
+        // nastepnie tworzy tablice stworzona z tych elementow
+        // teraz arr oznacza to samo wlasciwie co int[]
+        return arr; // zwracamy tablice (!)
+    }
+
+    private static int[] getArray(int n1, int n2, int n3) {
+        int[] array = new int[3];
+        array[0] = n1;
+        array[1] = n2;
+        array[2] = n3;
+        return array;// tablice zwracamy odwolujac sie jedynie do jej nazwy...
+    }
+
+    private static double showAverage(int[] array) {
+        System.out.println(Arrays.toString(array)); // tablica tutaj jest!
+        int sum = 0;
+        double averageValue;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+            System.out.println("Teraz suma wynosi : " + sum);
+            // sum =sum +array[0] (4) => 0 = 0 +4  => sum =4
+            // 4 = 4 + array[1] => 4=4+3  => sum = 7
+            // 7 = 7 +array[2] => sum = 9
+        }
+
+        double numberOfElements = array.length;
+        averageValue = sum / numberOfElements;      // liczmy srednia : suma/ilosc elementow
+        return averageValue;
     }
 
     private static void showNTimes(int howManyTimes) {
