@@ -318,7 +318,7 @@ public class Zajecia4 {
 
 //        skladnia
 //        nazwa metody => zawiera duzo czasownikow
-//        typ dostepu   static/NIC (poki co static zawszse)    typ_zwracany     nazwa_metody (zestaw_agrumentow => 1 argument, 2 arguemnt.... n argument){
+//        modyfikator dostepu   static/NIC (poki co static zawszse)    typ_zwracany     nazwa_metody (zestaw_agrumentow => 1 argument, 2 arguemnt.... n argument){
 //
 //    return // opcjonalny....
 //    }
@@ -355,9 +355,9 @@ public class Zajecia4 {
         // d) wywolac metode dla 3 zestawow parametrow..
 
 
-        String takenInfo1 = getInfoAboutUser(10,"Marek");
-        String takenInfo2 = getInfoAboutUser(15,"Piotrek");
-        String takenInfo3 = getInfoAboutUser(25,"Natalia");
+        String takenInfo1 = getInfoAboutUser(10, "Marek");
+        String takenInfo2 = getInfoAboutUser(15, "Piotrek");
+        String takenInfo3 = getInfoAboutUser(25, "Natalia");
         System.out.println(takenInfo1);
         System.out.println(takenInfo2);
         System.out.println(takenInfo3);
@@ -366,14 +366,38 @@ public class Zajecia4 {
         // a) stworz metode getCharsInSpecificWay
         // b) metoda musi przyjac 4 argumenty... pierwsze trzy arguemnty do znaki, ostatni argument to zmienna typu boolean
         // c) zwroc i przypisz do Stringa wynik metody => wynik ma byc scaleniem trzech znakow, typ boolean okresli kolejnosc
-        //  true to kolejnosc znak1+xznak+2znak3
+        //  true to kolejnosc znak1+znak2+znak3
         //  false to kolejnosc ODWROTNA
-        //  wskazowka automatyczne castowanie charow na stringa odbywa sie gdy doda sie pusty cudzyslow....
+        //  wskazowka automatyczne castowanie charow ( i nie tylko ) na stringa odbywa sie gdy doda sie pusty cudzyslow....
 //        input: z,a,t,true
 //        output: zat
 //        input: a,b,c,false
 //        output: cba
+        String text = getCharsInSpecificWay('z', 'a', 't', true);   // nazwa metody staje sie tym co zwrocila czyli scalownym tekstem
+        System.out.println(text);
+        text = getCharsInSpecificWay('a', 'b', 'c', false);
+        System.out.println(text);
 
+        // zadanie
+        // a) napisz metode o nazwie showNTimes
+        // b) metoda przyjmie parametr ilosci wywolac
+        // c) metoda wyswietli napis "I am in method." tyle razy ile wynosi parametr
+        // wskazowka - uwazaj na typ zwracany => void
+        // input: 3
+        // Output:
+        // I am in method.
+        // I am in method.
+        // I am in method.
+    }
+
+    private static String getCharsInSpecificWay(char z1, char z2, char z3, boolean order) {
+        String text;    // deklaracja wynika, wartosc poczatkowa null
+        if (order) {    // jesli order == true to kolejnosc rosnaca
+            text = "" + z1 + z2 + z3;
+        } else {        // jesli order == false to kolejnosc odwrotna
+            text = "" + z3 + z2 + z1;
+        }
+        return text;    // zwracanie...
     }
 
     private static String getInfoAboutUser(int age, String name) {
