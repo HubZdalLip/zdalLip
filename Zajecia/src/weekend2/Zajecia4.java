@@ -46,6 +46,26 @@ public class Zajecia4 {
 
         // zadanie wyswietlic liczby od 30 do 20 z krokiem 2 za pomoca petli while
 
+        i = 30; //nadpisanie
+        while (i >= 20) {
+            System.out.println(i);
+            i = i - 2;
+        }
+        //jesli chodzi o petle while to warunek sprawdzany jest NA POCZATKU
+
+        //roznica miedzy do-while a while jest taka ze sa one IDENTYCZNE oprocz tego ze do while wykona sie MINIMUM RAZ
+        // roznica druga - po napisaniu while musi byc srednik!!!!
+
+
+        do {
+            // operacje jakies
+            // jesli chcesz kontynuowac to nacisnij 1
+        } while (i > 0); // <- srednik
+
+
+//        zadanie napisac program ktory bedzie wyswietlal na ekranie napis "Hello" do chwili gdy uzytkownik wpisze 1, jesli wpisze co innego kontynuowac
+//
+
 
     }
 }
