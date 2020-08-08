@@ -3,8 +3,11 @@ package weekend2;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 public class Zajecia4 {
     public static void main(String[] args) {
+
+
         //petle cd.
 //
 //        for (int i = 50; i > 0; i = i - 3) {
@@ -259,44 +262,44 @@ public class Zajecia4 {
         //i++,i--
 //        i++ - postinkrementacja....
 //        i++ == i=i+1
-        int i = 0;
-        System.out.println(i);
-        System.out.println(i++);        // odwolaj sie do wartoscu aktualnej a NASTEPNIE ja zwieksz
-        System.out.println(i);
-
-        i = 0;
-//        i--   postdekrementacja... => wywolaj/odwolaj a nastpenei zmneijsz....
-        System.out.println(i--);
-        System.out.println(i--);
-        System.out.println(i);
-
-//       ++i preinkremetnacja  => zwieksz wartosc a nastepnie sie odwolaj
-//       --i predekrementacja => zmniejsz wartosc => odwolaj sie
-
-        i = 0;
-        System.out.println(i);
-        System.out.println(++i);
-        System.out.println(--i);
-
-//       i = i+1;           NIE ISTNIEJE takie cos jak i+1=i    /=       ++i
-//       i = i+2;
-        i = 0;
-        i = i + 2;  // mozna uproscic....
-        System.out.println(i);
-        i += 2;     // mozna uznac ze to to samo co i=i+2
-        System.out.println(i);
-
-        i -= 2; // to samo co i=i-2
-        System.out.println(i);
-
-        i *= 3; // to samo co i=i*2
-        System.out.println(i);
-
-        i /= 6; // to samo co i=i/6
-        System.out.println(i);
-
-        i = +1; // poniewaz wskazujemy (nie wiadomo po co tak naprawde...) ze liczba jest dodatnia... samo wskazania 1 juz kompilaotrowi wystarcza....
-        System.out.println(i);
+//        int i = 0;
+//        System.out.println(i);
+//        System.out.println(i++);        // odwolaj sie do wartoscu aktualnej a NASTEPNIE ja zwieksz
+//        System.out.println(i);
+//
+//        i = 0;
+////        i--   postdekrementacja... => wywolaj/odwolaj a nastpenei zmneijsz....
+//        System.out.println(i--);
+//        System.out.println(i--);
+//        System.out.println(i);
+//
+////       ++i preinkremetnacja  => zwieksz wartosc a nastepnie sie odwolaj
+////       --i predekrementacja => zmniejsz wartosc => odwolaj sie
+//
+//        i = 0;
+//        System.out.println(i);
+//        System.out.println(++i);
+//        System.out.println(--i);
+//
+////       i = i+1;           NIE ISTNIEJE takie cos jak i+1=i    /=       ++i
+////       i = i+2;
+//        i = 0;
+//        i = i + 2;  // mozna uproscic....
+//        System.out.println(i);
+//        i += 2;     // mozna uznac ze to to samo co i=i+2
+//        System.out.println(i);
+//
+//        i -= 2; // to samo co i=i-2
+//        System.out.println(i);
+//
+//        i *= 3; // to samo co i=i*2
+//        System.out.println(i);
+//
+//        i /= 6; // to samo co i=i/6
+//        System.out.println(i);
+//
+//        i = +1; // poniewaz wskazujemy (nie wiadomo po co tak naprawde...) ze liczba jest dodatnia... samo wskazania 1 juz kompilaotrowi wystarcza....
+//        System.out.println(i);
 
         //metody - co to?
 //      powiedzmy mamy sytuacje ze tworzymy skomplikowany algorytm wykonujacy jakas operacje.... zajmuje on 500 linii kodu....
@@ -355,15 +358,15 @@ public class Zajecia4 {
         // c) ma ona zwracac napis: Mam (wiek) lat. Moje imie to (imie).
         // d) wywolac metode dla 3 zestawow parametrow..
 
-
-        String takenInfo1 = getInfoAboutUser(10, "Marek");
-        String takenInfo2 = getInfoAboutUser(15, "Piotrek");
-        String takenInfo3 = getInfoAboutUser(25, "Natalia");
-        System.out.println(takenInfo1);
-        System.out.println(takenInfo2);
-        System.out.println(takenInfo3);
-
-        // zadanie
+//
+//        String takenInfo1 = getInfoAboutUser(10, "Marek");
+//        String takenInfo2 = getInfoAboutUser(15, "Piotrek");
+//        String takenInfo3 = getInfoAboutUser(25, "Natalia");
+//        System.out.println(takenInfo1);
+//        System.out.println(takenInfo2);
+//        System.out.println(takenInfo3);
+//
+//        // zadanie
         // a) stworz metode getCharsInSpecificWay
         // b) metoda musi przyjac 4 argumenty... pierwsze trzy arguemnty do znaki, ostatni argument to zmienna typu boolean
         // c) zwroc i przypisz do Stringa wynik metody => wynik ma byc scaleniem trzech znakow, typ boolean okresli kolejnosc
@@ -395,22 +398,248 @@ public class Zajecia4 {
 //        int howManyTimes = input.nextInt();
 //        showNTimes(howManyTimes);
 
-        int[] array = {4, 3, 3, 10, -5};
-        System.out.println(showAverage(array));
+//        int[] array = {4, 3, 3, 10, -5};
+//        System.out.println(showAverage(array));
+//
+//        int[] takenArr = getArray(4, 6, 3);
+//        System.out.println(takenArr[1]);
+//
+//        // typ... (np. int... ) moze wystapic TYLKO w definicji metody jako arg formalny, oznacza on NIEOKRESLONA liczbe elementow (np. int). Autoamtycznie staje to tablica.....
+//        int[] array1 = getArray2(4);
+//        int[] array2 = getArray2(5,4,6,8);
+//        System.out.println(Arrays.toString(array1));
+//        System.out.println(Arrays.toString(array2));
 
-        int[] takenArr = getArray(4, 6, 3);
-        System.out.println(takenArr[1]);
+        //wywolania do pracy domowej....
 
-        // typ... (np. int... ) moze wystapic TYLKO w definicji metody jako arg formalny, oznacza on NIEOKRESLONA liczbe elementow (np. int). Autoamtycznie staje to tablica.....
-        int[] array1 = getArray2(4);
-        int[] array2 = getArray2(5,4,6,8);
-        System.out.println(Arrays.toString(array1));
-        System.out.println(Arrays.toString(array2));
+//        zad5Mod1();
+//        zad2Mod2();
+//        zad4Mod2();
+//        zad5Mod2();
+//        zad2Mod3();
+//        zad5Mod3();
+//        zad1Mod4();
+        zad2Mod4(); // malejaco....
 
 
     }
 
-    private static int[] getArray2(int... arr){
+    private static void zad2Mod4() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe n");       //  a)
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("Podaj element o " + i + " indeksie...");
+            array[i] = scanner.nextInt();
+        }
+        int[] sortedArray = sortArray(array);
+        System.out.println(Arrays.toString(sortedArray));
+
+    }
+
+    private static int[] sortArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 1; j < array.length; j++) {
+                if (array[j] > array[j - 1]) {
+                    int temp = array[j];
+                    array[j] = array[j - 1];
+                    array[j - 1] = temp;
+                }
+            }
+            System.out.println(Arrays.toString(array));
+            // [1,4,6,2,8] => [4,6,1,8,2] => [6,4,8,2,1] => [6,8,4,2,1] => [8,6,4,2,1]
+        }
+        return array;
+    }
+
+    private static void zad1Mod4() {
+//        Napisz metodę, która przyjmie argument będący ilością elementów w tablicy.
+//        Następnie zwróci tablicę typu int wypełnioną wybranymi przez Ciebie różnymi od siebie wartościami.
+//        Następnie napisz kolejną metodę pozwalającą wypisać najmniejszy i największy element tablicy
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe n");       //  a)
+        int n = scanner.nextInt();
+
+        int[] array = createArray(n);
+        System.out.println(Arrays.toString(array));
+
+
+    }
+
+    private static int[] createArray(int n) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("Podaj element o " + i + " indeksie...");
+            array[i] = scanner.nextInt();
+        }
+        System.out.println("Element max to " + max(array));
+        System.out.println("Element min to " + min(array));
+        return array;
+    }
+
+    private static int min(int[] array) {
+        int min = Integer.MAX_VALUE; //stala....
+        //array={1,2,5,2,7}
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        return min;
+
+    }
+
+    private static int max(int[] array) {
+        int max = Integer.MIN_VALUE; //stala....
+        //array={1,2,5,2,7}
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    private static void zad5Mod3() {
+//        Napisz metodę, która pobiera n i wyświetla tablicę o n elementach. Elementy w tablicy powinny spełniać równanie tab[i] = iEi
+//        np. n = 5
+//        Output: [0, 10, 200, 3000, 40000]
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe n");       //  a)
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+        int temp = 1;
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 0; j < i; j++) {
+                temp *= 10; // 1 , 10, 100, 1000, 10000
+            }
+            temp *= i; // 0,1,2,3,4,
+            // =>  0, 10, 200, 3000, 40000
+            array[i] = temp; // zamaist temp mozna dac tutaj temp*i i wtedy linijka wyzej temp*=1 jest zbedna....
+            //wartosc tymczasowa musi byc zresetowana..... by wewnetrzna petla mogla wykonac sie prawdilowa ilosc razy.....
+            temp = 1;
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
+
+//
+//    int temp = 1;
+//    int[] array = new int[n];
+//        for (int i = 0; i < n; i++) {
+//        for (int j = 0; j < i; j++) {
+//            temp *= 10;
+//        }
+//        array[i] = temp * i;
+//        temp = 1;
+//    }
+//        System.out.println(Arrays.toString(array));
+
+    private static void zad2Mod3() {
+//        Napisz program który wyświetli na ekranie kwadrat o zadanym boku n
+//        Output: n=4
+//                *  *  *  *
+//                *        *
+//                *        *
+//                *  *  *  *
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe n");       //  a)
+        int n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("*  ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < n - 2; i++) {
+            System.out.print("*  ");
+            for (int j = 0; j < n - 2; j++) {
+                System.out.print("   ");
+            }
+            System.out.print("*  ");
+            System.out.println();
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("*  ");
+        }
+
+    }
+
+    private static void zad5Mod2() {
+//        5. Napisz program, w którym:
+//        a) stworzysz zmienną int i nadasz jej wartość pobraną od użytkownika
+//        b) narysujesz tabliczkę mnożenia od 1 do wartości z a).
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe n");       //  a)
+        int n = scanner.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(j * i + " \t");
+            }
+            System.out.println();
+        }
+
+    }
+
+    private static void zad4Mod2() {
+        //    Napisz program liczący silnię dla n wskazanego przez użytkownika
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe n");
+        int n = scanner.nextInt();
+        int factorial = 1;
+        // 4! = 1*2*3*4
+        // n! = 1*2*...*(n-1)*n
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        System.out.println("Wartosc silni to " + factorial);
+
+    }
+
+
+    private static void zad2Mod2() {
+        //    Napisz program który:
+//    a) za pomocą pętli wyświetli na ekranie kolejne liczby naturalne od 1 do 10
+//    b) dla liczb podzielnych przez 2 wyświetli stosowny komunikat
+//    c) wyświetli na ekranie sumę liczb podzielnych przez 3
+
+        int sum = 0;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+            if (i % 2 == 0) {
+                System.out.println("Liczba " + i + " jest podzielna przez 2!!");
+            }
+            if (i % 3 == 0) {
+                sum += i; // sum = sum + i
+            }
+        }
+        System.out.println("Suma to: " + sum);
+
+    }
+
+    private static void zad5Mod1() {
+        //    5.  Napisz program wypisujący elementy tablicy arr={1,5,2,7,3} począwszy od końca za pomocą pętli
+        int[] arr = {1, 5, 2, 7, 3};
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[arr.length - 1 - i]);            //to podejscie jest zalecane.... poniewaz zdecydowanie czesciej petle sa inkrementowane
+        }
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
+    }
+
+    private static int[] getArray2(int... arr) {
         // w tym miejscu java patrzy na ilosc argumnetow wyslanych do metody...
         // nastepnie tworzy tablice stworzona z tych elementow
         // teraz arr oznacza to samo wlasciwie co int[]
@@ -492,4 +721,6 @@ public class Zajecia4 {
 //    public static void equals(){
 //
 //    }
+
+
 }
