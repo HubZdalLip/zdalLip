@@ -2,23 +2,58 @@ package weekend3;
 
 public class Zajecia5 {
     public static void main(String[] args) {
-        //foreach....
-        //petla foreach sluzy do szybkiego przechodzenia po kolekcjach ale takze i po tablicach!!!!
-        int[] array = {5, 6, 1, 9, 0};
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
 
-        for (int element : array) {     // nie podajemy warunku wykonywania.... ZAWSZE iterujemy po wszystkich elementach...
-            // w kazdej iteracji element staje sie obecnym elementem w tablicy po ktorej iterujemy...
-            System.out.println(element);
-        }
+//        foreache();
+//      printfIStringFormat();
+        overloadedMethods();
+    }
 
-        //skladnia
-        // for(typ element : tablica/kolekcja){
-        //
-        // }
+    private static void overloadedMethods() {
 
+        //metoda przeciążone....
+
+        //stare podejscie
+        int sum = add(5, 10);
+        System.out.println(sum);
+//        double sumD = addDouble(5.1, 10.9);
+//        System.out.println(sumD);
+
+        // podejscie z metodami przeciazonymi....
+        // mozna stworzyc wiele metod o tej samej nazwie!!! ALE z warunkiem takim ze zestaw argumentow ma byc rozny....
+        // typ zwracany nie ma znaczenia....
+        // kompilator jest w stanie rozroznic argumenty ktore sa przekazywane....
+
+        double sumD = add(5.1, 10.9);
+        System.out.println(sumD);
+        System.out.println(add(5.13, 5));
+        System.out.println(add(5, "10.1"));
+
+        // zadanie napisz metode welcomeUser
+//         a) bedzie przyjmowac imie i zwracac komunikat witajacy
+//         b) bedzie przyjmowac imie i wiek i zwracac podstawowe ifnormacje
+//         c) bedzie przyjmowac imie, wiek i nazwisko i zwracac te informacje
+
+        // zadanie. Napisz metode ktora przyjmie nieokreslona liczbe elementow int oraz jeden element typu String zaweirajacy liczbe. Zwroc roznice....
+
+
+    }
+
+    private static double add(int i, String string) {
+        int number = Integer.parseInt(string);          //istnieje rowniez parseDouble.....
+        return i + number;
+    }
+
+
+    private static double add(double v, double v1) {
+        return v + v1;
+    }
+
+    private static int add(int i, int i1) {
+        return i + i1;
+    }
+
+
+    private static void printfIStringFormat() {
         // printf
 //        System.out.println();
 //        System.out.print();
@@ -62,8 +97,29 @@ public class Zajecia5 {
         //zad. podaj liczbe i wyswietl ja z jednym miejscem po przecinku.
 //             Podaj dwie liczby i wyswietl je w zadanym przez siebie odstepie
 
-        
-
+        System.out.printf("Liczby: %.1f %10d %n", 1234.13152, 6000); // odstep liczony jest od lewej....
 
     }
+
+    private static void foreache() {
+        //foreach....
+        //petla foreach sluzy do szybkiego przechodzenia po kolekcjach ale takze i po tablicach!!!!
+        int[] array = {5, 6, 1, 9, 0};
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+
+        for (int element : array) {     // nie podajemy warunku wykonywania.... ZAWSZE iterujemy po wszystkich elementach...
+            // w kazdej iteracji element staje sie obecnym elementem w tablicy po ktorej iterujemy...
+            System.out.println(element);
+        }
+
+        //skladnia
+        // for(typ element : tablica/kolekcja){
+        //
+        // }
+
+    }
+
+
 }
