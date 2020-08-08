@@ -124,6 +124,33 @@ public class Zajecia5 {
 //        d) stworzyc pole statyczne ktore zlicza ilosc utworzonych prostokatow ktorych ktorys bok ma wartosc wieksza niz 5
 //        e) stworzyc metode ktora obliczy obwod prostokata
 
+//        Zadanie
+//        stworzyc klase UserFactory ktora
+//        a) bedzie posiadac metode createUser
+//              wewnatrz metody program spyta sie uzytkownika o wartosci imienia oraz adresu... metoda ma zwrocic nowego usera
+//        b) dodac walidacje ktora sprawdzi czy user ma imie ktore nie jest puste. Jesli jest to zamiast nowego usera program ma zwrocic pusta referencje...
+//        c) dodac walidacje na etapie klasy w ktorej obiekt jest tworzony np Zajecia5, w ktorym srpawdzasz czy dany obiekt istnieje... jesli tak to wyswietl inforamcje
+//            jesli nie - umiesc komunikat
+//
+//        Zadanie
+//        stworzyc klase A i B
+//        - klasa A ma posiadac metoda statyczna przyjmujaca tekst i zwracajaca pierwsza i ostatnia litere
+//        - klasa B ma posiadac metode niestatyczna przyjmujaca tekst i zwracajaca tekst od tylu...
+//
+
+//        konwencja - tworzenie klas
+//        kazda klasa tworzona
+//        - musi nie posiadac bialych znakow
+//        - powinna zgodnie z konwencja zaczynac sie od wielkeij litery , nastepne wyrazy z malej
+//
+//        CuteDogo
+//        Employee
+//        SalaryEmployee
+//        VeryLongNameOfClass
+//
+
+        
+
 
     }
 
