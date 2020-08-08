@@ -5,6 +5,8 @@ public class Dog {
     // zmienne instancji (obiektu) sa inicjalizowane automatycznie wartoscia domyslnia
     String name;
     int age = 5;
+    static int counter;
+    static String info = "Wszystkie pieski sa fajne";
 
     //skladnia kosntruktora
     //nazwa_klasy (arguemnty....)
@@ -15,11 +17,13 @@ public class Dog {
     //natomiast gdy tworzymy wlasne kosnturktory to domyslny przestaje istniec....
     Dog() {
         System.out.println("Tworzę dogo");
+        counter++;
     }
 
     Dog(int age1, String name1) {
         name = name1;
         age = age1;
+        counter++;
     }
 
     // NIE MA SLOWA STATIC

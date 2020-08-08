@@ -3,7 +3,7 @@ package weekend3;
 import java.util.Random;
 
 public class Zajecia5 {
-
+    String var ="blabla";
     public static void main(String[] args) {
 
 //        foreache();
@@ -71,6 +71,59 @@ public class Zajecia5 {
 //    d) stworzyc dwa obiekty takiej klasy i wywolac metode(czyli najpierw ja stworzyc) ktora wyswietli informacje o userze
 //    e) zmodyfikowac na poziomie klasy Zajecia5 wartosci miasta pochodzenia, ponownie wyswietlic informacje
 //    f) stworzyc metode statyczna ktora zwroci komunikat "Jestem metoda statyczna ale jeszcze nic nie robie", wyswietlic po przypisaniu do zmiennej na pozoiomie klasy Zajecia5
+
+        User user1 = new User();
+        user1.showInfoAboutUser();
+        User user2 = new User("Zbyszek", 60, "Gdansk");
+        user2.showInfoAboutUser();
+        user1.originCity = "Radom";
+        user2.originCity = "Wroclaw";
+        user1.showInfoAboutUser();
+        user2.showInfoAboutUser();
+
+        String stringVariable = User.staticMethod();
+        System.out.println(stringVariable);
+
+//      Przyklad
+        Point point1 = new Point(2, 3);
+        Point point2 = new Point(4, 1);
+
+        // generowanie szybkie w klasie... alt+insert...
+
+        System.out.println(point1.x);
+        System.out.println(point1.y);
+        System.out.println();
+        System.out.println(point2.x);
+        System.out.println(point2.y);
+
+        double distance = Point.distance(point1, point2);
+        System.out.printf("Odlegosc miedzy punktami wynosi: %.3f %n", distance);
+
+        thisKeyword();
+
+
+    }
+
+    private static void thisKeyword() {
+        //this - wieloznaczeniowe slowo kluczowe...
+        // odnoszace sie do doslownie tego (obecnego) obiektu
+        Point point = new Point(5, 4);
+        point.showX();
+
+        System.out.println(Dog.counter);
+        System.out.println(Dog.info);
+        Dog dog = new Dog();
+//        dog.info; // nie da sie dostac do tych pol.... sa statyczne....
+//        dog.counter;
+
+//        Zadanie
+//        stworzyc klase Rectangle
+//        a) stworzyc konstruktor ustawiajacy wartosci bokow prostokata
+//        b) stwprzyc metoda niestatyczna obliczajaca pole
+//        c) stworzyc metoda statyczna obliczajaca pole
+//        d) stworzyc pole statyczne ktore zlicza ilosc utworzonych prostokatow ktorych ktorys bok ma wartosc wieksza niz 5
+//        e) stworzyc metode ktora obliczy obwod prostokata
+
 
     }
 

@@ -41,6 +41,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="weekend3" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -142,7 +147,7 @@
       <workItem from="1595790343452" duration="599000" />
       <workItem from="1596037554635" duration="710000" />
       <workItem from="1596820430768" duration="492000" />
-      <workItem from="1596870167338" duration="13839000" />
+      <workItem from="1596870167338" duration="16248000" />
     </task>
     <servers />
   </component>
