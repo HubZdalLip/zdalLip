@@ -41,6 +41,29 @@ public class Zajecia5 {
         name = "Piotrek";
         System.out.println("Mieszkam w " + city + ". Jestem tutaj od " + years + " lat. Moj brat na imie " + name);
 
+        System.out.printf("Mieszkam w %s. Jestem tutaj od %d lat. Moj brat ma na imie %s", city, years, "Piotr");
+        System.out.println();
+        // jest mozliwosc okreslenia precyzji danej liczby
+        double x = 123.456789;
+        System.out.printf("Liczba x to %.3f %n", x);       // %._LICZBA_MIEJSC_f
+
+        // istnieje takze mozliwosc okreslenia odstepu miedzy argumentami....
+        for (int i = 1; i <= 30; i++) {
+            for (int j = 1; j <= 30; j++) {
+                System.out.printf("%5d", i * j);                   //odstep tworzymy piszac % ODSTEP d
+            }
+            System.out.println();
+        }
+
+        //dziala tak samo jak printf.....
+        System.out.println("Magiczna liczba! Wynois ona " + String.format("%5d", 10));
+
+
+        //zad. podaj liczbe i wyswietl ja z jednym miejscem po przecinku.
+//             Podaj dwie liczby i wyswietl je w zadanym przez siebie odstepie
+
+        
+
 
     }
 }
