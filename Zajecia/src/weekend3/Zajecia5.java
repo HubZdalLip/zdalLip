@@ -1,11 +1,109 @@
 package weekend3;
 
+import java.util.Random;
+
 public class Zajecia5 {
+
     public static void main(String[] args) {
 
 //        foreache();
-//      printfIStringFormat();
-        overloadedMethods();
+//        printfIStringFormat();
+//        overloadedMethods();
+//        randomNumbers();
+        classes();
+
+    }
+
+    private static void classes() {
+        //klasa - jest to po prostu typ "zmiennej" (dotychczas) obiektu....
+        //klasa - reprezentacja danego obiektu
+        int var = 0; // jest to zmienna, ( wartosc ukladana na stosie ), nic sie nie kryje jakby pod slowem kluczowym int orpocz tego ze wskazuje na liczbe
+        String text = ""; // jest to obiekt, text to referencja do obiektu.... jest to zlozony typ.... (wartosc ukaldana jest na stercie...)
+//        text.length();  // mozna odwolac sie do infromacji ktore sa czescia tego obiektu
+//        String string = new String();
+        Dog dog1 = new Dog();
+        System.out.println(dog1); // wyswietlenie da jedynie reprezentacje pamieciowa....
+        int age = dog1.age;
+        System.out.println(age);
+
+        Dog owczarek = new Dog();
+        owczarek.name = "Owczarek";
+        System.out.println(owczarek.age);
+        Dog husky = new Dog();
+        husky.name = "Husky";
+        System.out.println(husky.age);
+
+        owczarek.age = 3;
+        husky.age = 1;
+        System.out.println("Halo jestem owczarek. Mam " + owczarek.age + " lat");
+        System.out.println("Halo jestem husky. Mam " + husky.age + " lat");
+
+        new Dog(); //konsturktor..... (domyslny!)
+
+//        Dog york = null; // null => slowo kluczowe oznaczajace referencje do niczego....
+////        gdy chcemy odwolac sie do obiektu ktory nie isntieje to dostajemy NullPointerException
+//        System.out.println(york.age);
+
+        Dog anotherDoggo = new Dog();
+        System.out.println(anotherDoggo.name);
+
+        Dog jamnik = new Dog(2, "Max"); // wywolujemy konstruktor PRZECIAZONY!!!!
+        System.out.println("Mam na imie " + jamnik.name + ". Mam " + jamnik.age + " lat ");
+
+
+//        text.length()
+//        text.indexOf(blabla)
+
+        owczarek.bark(); //metoda NIEstatyczna
+        husky.bark();
+        jamnik.bark();
+
+        owczarek.sleep(3); //metoda NIEstatyczna
+        husky.sleep(10);
+        jamnik.sleep(1);
+
+        Dog.meetAllDoggos(); // metoda statyczna jest to metoda ktora jest zwiazana z istnieniem klasy, nie danego obiektu
+
+//    Zadanie.... stworzyc klase User....
+//    a) stworzyc pola okreslajace imie, wiek, miasto pochodzenia
+//    b) stworzyc konstruktor bezparametrowy, który ustawia domyslnie wartosc imienia na "Nie podano" i wieku na -1. Miasto pochodzenia - Nie podano
+//    c) stowrzyc konstruktor parametrowy ktory ustawia imie w zaleznosci od przeslanego parametru.... i inne parametry
+//    d) stworzyc dwa obiekty takiej klasy i wywolac metode(czyli najpierw ja stworzyc) ktora wyswietli informacje o userze
+//    e) zmodyfikowac na poziomie klasy Zajecia5 wartosci miasta pochodzenia, ponownie wyswietlic informacje
+//    f) stworzyc metode statyczna ktora zwroci komunikat "Jestem metoda statyczna ale jeszcze nic nie robie", wyswietlic po przypisaniu do zmiennej na pozoiomie klasy Zajecia5
+
+    }
+
+    private static void randomNumbers() {
+        Random random = new Random(); // deklaracja obiektu klasy Random, obiekt ma nazwe random
+        int randomNumber = random.nextInt(10); //losowanie ZAWSZE (przynajmniej w tej postaci) odbywa sie od 0 do
+//        a) jesli brak argumentow to wartosci max typu
+//        b) jesli arguemnt to jakas gorna granica....
+//        System.out.println(randomNumber);
+//
+////         zadanie: wyswietl na ekranie n (liczba podanada przez uzytkownika) losowych liczb
+////
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Podaj n");
+//        int n = scanner.nextInt();
+//        for (int i = 0; i < n; i++) {
+//            int rand = random.nextInt(40);  // w kazdej iteracji jest losowanie, przypisanie do zmiennej rand
+//            System.out.println(rand);   // wyswietlenie!
+//        }
+
+        // zadanie wylosuj wartosc w przedzialu 10 ; 20
+//        int anotherRandomNumber = random.nextInt(10) + 10; // od 0 do 10
+////        System.out.println(anotherRandomNumber);
+//        // sposob na losowanie od innej wartosci niz 0 do po prostu dodanie tej wartosci
+//        anotherRandomNumber = random.nextInt(100); // od 0 do 100
+//        System.out.println(anotherRandomNumber);
+//        // jakbysmy chcieli od 50 do 100
+//        int bottom = 50;
+//        anotherRandomNumber = random.nextInt(100 - bottom) + bottom;
+//        System.out.println(anotherRandomNumber);
+
+
     }
 
     private static void overloadedMethods() {
@@ -55,7 +153,37 @@ public class Zajecia5 {
         // zadanie. Napisz metode ktora przyjmie nieokreslona liczbe elementow int oraz jeden element typu String zaweirajacy liczbe. Zwroc roznice....
 
         System.out.println("Roznica to : " + subEx("7", 5, 6, 1, 8));
+
+        //uwaga do przeciazenia
+
     }
+
+    private static int multiply() {
+        return 0;
+    }
+
+    private static int multiply(int a) {
+        return 0;
+    }
+
+    private static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    private static int multiply(int a, int b, int c) {
+        return a * b * c;
+    }
+
+    private static int multiply(int a, int b, int c, int d) {
+        return a * b * c * d;
+    }
+//
+//    unikac! (typ...) moze powodowac bledu przy przeciazaniu
+//    private static int multiply(int... ints){
+//        //logic
+//        return 0;
+//    }
+//
 
     private static int subEx(String s, int... ints) {
         int numberFromString = Integer.parseInt(s); // parsowanie wartosci string na int w tym miejscu
