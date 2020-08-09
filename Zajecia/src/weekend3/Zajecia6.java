@@ -60,8 +60,8 @@ public class Zajecia6 {
 //            System.out.println("Nie udalo sie odnalezc koloru");
 //        }
 //
-////        Car car = CarFactory.createCar(CarsEnum.BMW);
-////        System.out.println(car);
+        Car car = CarFactory.createCar(CarsEnum.BMW);
+        System.out.println(car);
 
         colors(Kolory.NIEBIESKI);
 
@@ -87,7 +87,7 @@ public class Zajecia6 {
 //        c) kazdy rodzaj powinien miec krotki opis oraz cene
 //        d) stworz metode buyBike, ktora jako argumnet przyjmie enuma wybranego przez uzytkownika - tzn uzytwkonik wpisuje wawrtosc i nastepuje
 //        sprawdzenie czy taki rower istnieje w sklepie... jesli nie to daj komunikat o tym, daj szanse sprobowac ponownie...
-//        e) jesli tak to pokaz cene i spytaj czy na pewno zakup ma sie odbyc
+//        e) jesli tak to pokaz cene, opis i spytaj czy na pewno zakup ma sie odbyc
 
 
 
