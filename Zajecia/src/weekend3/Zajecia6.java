@@ -18,8 +18,27 @@ public class Zajecia6 {
 //        e) dodaj metode run  => modyfikuj pole isRunning
 //        f) dodaj metode stop => modyfikuj pole isRunning
 //        g) wyswietl informacje czy komputer jest wlaczony a takze swtorz metode wyswietlajaca jego parametry....
-//        h) dostan sie do nich rowneiz za pomcoa getterow,.....
-        
+//        h) dostan sie do nich rowneiz za pomcoa getterow.....
+
+        Computer computer = new Computer("89.43.29.10", "dell", 3500);
+        System.out.println("Marka tego komputera to: " + computer.brand);
+//        computer.brand = "123234"; // nie moge bo pole jest final....
+        System.out.println("Hmmm czy komputer jest domyslnie wlaczony?? "+ computer.isRunning());
+        System.out.println("Siadam do pracy.");
+        computer.run();
+        System.out.println("Moj komputer jest wlaczony??? "+ computer.isRunning());
+        System.out.println("Skonczylem prace...");
+        computer.stop();
+        System.out.println("Czy przypadkiem moj komputer pzoostal wlcaozny???" + computer.isRunning());
+
+        System.out.println("Parametry mojego komputera to...");
+        computer.showSpecification();
+
+        Computer computer1 = new Computer("asdasd","",10000000);
+        computer1.showSpecification();
+
+        System.out.println();
+
     }
 
     private static void privateVsPublicVsDefault() {
