@@ -52,7 +52,7 @@ public class Zajecia6 {
 //        constains - sprawdza czy lista zawiera....        nie ma... nalezy uzyc petli do iteracji (liniowej lub binarnej(wydajna))
 //        remove - usuwa element listy - uwaga! metoda jest przeciazona, moze przyjac element lub indeks... // nie posiada tablica... mozna ustawic element na null
 
-        listOfIntegers.set(2,100); // listOfIntegers[2] = 100
+        listOfIntegers.set(2, 100); // listOfIntegers[2] = 100
         System.out.println(listOfIntegers);
 
         // zadanie
@@ -60,15 +60,53 @@ public class Zajecia6 {
 //        a) dodaj do niej trzy napisy
 //        b) pokaz liste
 //        c) pokaz element o indeksie 2
-//        d) zwwroc rozmiar listy
+//        d) podaj rozmiar listy
 //        e) sprawdz czy lista zawiera element "lista"
 //        f) usun ostatni element
 //        g) dodaj trzy inne elementy
 //        h) wyswietl liste z uzyciem petli foreach....
 //        i) wyswietl lsite o indeskach parzystych - dla nieparzystych ustaw ciag znakow "NIEPARZYSTY"
-//        j) wyswietl liste 
+//        j) wyswietl liste
 
+        List<String> stringList = new ArrayList<>();  // deklracja listy z jej definicja
+        stringList.add("Pierwszy napis");               //podpunkt a)
+        stringList.add("lista");
+        stringList.add("Trzeci napis");
+        System.out.println(stringList);                 //podpunkt b)
+        System.out.println(stringList.get(2));          //c)
+        System.out.println(stringList.size());          //d)
+        System.out.println(stringList.contains("lista"));   //e)
+        System.out.println(stringList.remove(stringList.size() - 1));           //f)
+        stringList.add("Ktorys napis");         //g)
+        stringList.add("lista 100");
+        stringList.add("Trzeci dum dum");
+        for (String element : stringList) {
+            System.out.println(element);            //h)
+        }
+        for (int i = 0; i < stringList.size(); i++) {
+            if (i % 2 == 0) {
+                System.out.println(stringList.get(i));          //i)
+            } else {
+                stringList.set(i, "NIEPARZYSTY");
+            }
+        }
+        System.out.println(stringList);
 
+        List<Car> cars = new ArrayList<>();         // tworze liste z obiektami cars
+        cars.add(new Car("bmw"));               // dodaje nowe auto marki bmw
+        cars.add(CarFactory.createCar(CarsEnum.FORD));      // uzywam CarsFactory, ktore tworzy mi nowe auto marki ford i zwraca
+        System.out.println(cars);                       // wyswietlam liste
+        System.out.println(cars.get(0).getBrand());     // odwoluje sie do elememntu 0 czyli Car BMW i uzyskuje marke
+        Car car = cars.get(1);                      // zwracany element  o indeksie 1 przyposuje do referencji car typu Car
+        System.out.println(car.toString());          // wyswietlam auto w postaci toString()
+
+        List<Double> doubles = new ArrayList<>();
+        doubles.add(5.4);
+        System.out.println(doubles);
+        doubles.add(5.5);
+        System.out.println(doubles);
+        doubles.add(1.4);
+        System.out.println(doubles);
 
     }
 
@@ -159,7 +197,7 @@ public class Zajecia6 {
                 System.out.println("Nie istnieje taki rower");
             } else {
                 isValid = buyBike(choosenBike);
-                if(isValid){
+                if (isValid) {
                     System.out.println("Zakupiono rower!!! ");
                 }
             }
@@ -180,8 +218,8 @@ public class Zajecia6 {
 
     public static boolean buyBike(BikesEnum bikesEnum) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Cena: "+ bikesEnum.getPrice());
-        System.out.println("Opis: "+ bikesEnum.getDescription());
+        System.out.println("Cena: " + bikesEnum.getPrice());
+        System.out.println("Opis: " + bikesEnum.getDescription());
 
         System.out.println("Czy na pewno ten rower Cie interesuje \n 1. Tak \n 2. Nie");
         String choice = scanner.nextLine();
