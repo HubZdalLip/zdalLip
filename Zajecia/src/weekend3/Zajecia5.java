@@ -1,16 +1,22 @@
 package weekend3;
 
+import java.util.Arrays;
+import java.util.Locale;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Zajecia5 {
-    String var ="blabla";
+    String var = "blabla";
+
     public static void main(String[] args) {
 
 //        foreache();
 //        printfIStringFormat();
 //        overloadedMethods();
 //        randomNumbers();
-        classes();
+//        classes();
+//        staticFields();
+        microHomeWork();
 
     }
 
@@ -110,13 +116,21 @@ public class Zajecia5 {
         Point point = new Point(5, 4);
         point.showX();
 
+
+    }
+
+    private static void staticFields() {
         System.out.println(Dog.counter);
         System.out.println(Dog.info);
         Dog dog = new Dog();
 //        dog.info; // nie da sie dostac do tych pol.... sa statyczne....
 //        dog.counter;
 
-//        Zadanie
+    }
+
+    private static void microHomeWork() {
+
+        //        Zadanie
 //        stworzyc klase Rectangle
 //        a) stworzyc konstruktor ustawiajacy wartosci bokow prostokata
 //        b) stwprzyc metoda niestatyczna obliczajaca pole
@@ -148,8 +162,56 @@ public class Zajecia5 {
 //        SalaryEmployee
 //        VeryLongNameOfClass
 //
+//
+        System.out.println();
+        System.out.println();
+        System.out.println();
+//        System.out.println("Zadanie z UserFactory");
+//        User createdUser = UserFactory.createUser();
+//        if (createdUser != null) {  // w przypadku nullow uzywamy porownania ==
+//            createdUser.showInfoAboutUser();
+//        } else {
+//            System.out.println("Blad przy tworzenia Usera. Referencja ma wartosc null. Obiekt nie istnieje!! ");
+//        }
+//
+//        //wyrazenie z koniunkcja wywolywane jest od lewej do prawej. Jesli warunek kolejno z lewej strony bedzie falszem to anstepne nie zostnaa wywolane nawet.....
+//        //wyrazenie z alternatywea wywolywane jest od lewej do prawej. Jesli warunek kolejno z lewej strony bedzie prawda to anstepne nie zostnaa wywolane nawet.....
+//
+//        if (createdUser != null && createdUser.age > 15) {
+//            // warto zapamietac taki sposob walidowania!
+//            //
+//        }
+//        //aby w koniunkcji wszystkie warunki zostaly wywolane to nalezy uzyc zamiast operatora && => &
+//        //aby w alternatywie wszystkie warunki zostaly wywolane to nalezy uzyc zamiast operatora || => |
 
-        
+//        System.out.println("Zadanie z prostokatem");
+//        Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH);
+//        System.out.println("Podaj parametry a i b !");
+//        double a = scanner.nextDouble();
+//        double b = scanner.nextDouble();
+//        Rectangle rectangle = new Rectangle(a, b);
+//        System.out.println("Pole obliczone indywidualnie dla danego obiektu " + rectangle.calculateArea());
+//        new Rectangle(5, 7);
+//        new Rectangle(50, 7);
+//        new Rectangle(556, 7);
+//        new Rectangle(2, 3);
+//        new Rectangle(1, 3);
+//        System.out.println("Utworzono " + Rectangle.counter + " obiektow ktorych jakis bok maja wartosc wieksze od 5");
+//        System.out.println("Pole obliczone statycznie, po prostu metoda obliczeniowa... " + Rectangle.calculateAreaForSentParameters(6, 9));
+//        System.out.println("Obwod dla obiketu nowego jest rowny " + new Rectangle(6, 1).calculateCircumreference());
+
+
+        System.out.println("Pierwszy i ostatni znak to " + Arrays.toString(A.getSomeChars("SentText")));
+        B b1 = new B(); // odowlanie do konsturtkora domyslnego
+
+//        public B(){
+//            //domyslny kosntrutkor dla B
+//        }
+
+        System.out.println("Odwcrony tekst dla \"jakisTekst\" to " + b1.getInvertedText("jakisTekst"));
+
+
+
 
 
     }
