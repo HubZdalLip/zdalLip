@@ -1,5 +1,7 @@
 package weekend3;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Zajecia6 {
@@ -9,7 +11,65 @@ public class Zajecia6 {
 //        thisAsAnotherConstrucotr();
 //        privateVsPublicVsDefault();
 //        classExercise();
-        enumTheory();
+//        enumTheory();
+        introToCollection();
+
+    }
+
+    private static void introToCollection() {
+        //                               Kolekcje                                             Mapy
+        //         Set                    Listy                 Kolejki                       - HashMap
+        //        -HashSet               - ArrayList           - priorytetowe                 - TreeMap
+        //        -LinkedHashSet         - LinkedList          - stosy                        - LinkedHashMap
+
+        // Listy - tablice na sterydach
+        // lista to taka jakby tablica (tak naprawed to klasa) ktora przechowuje elementy, nie msui byc miec okreslonej liczby elementow... zwieksza pojemnosc na biiezaco....
+
+        // kazdy typ podstawowy posiada odpowiednik obiektowy....
+//        Integer - int
+//        Double - double
+//        Character - char
+//        itd....
+
+//        do kolekcji mozemy wysylac TYLKO obiekty..... przykald listy
+        List<Integer> listOfIntegers = new ArrayList<>(); //mechanizm poliformizmu.... omowimy za 2 tyg
+
+//        skladnia
+//        typ <typ ktory bedzie przechowywany wewnatrz listy... > nazwa = konstruktor<>();
+
+        listOfIntegers.add(5);
+        listOfIntegers.add(10);
+        listOfIntegers.add(0);
+        System.out.println(listOfIntegers);
+        for (Integer listOfInteger : listOfIntegers) {
+            System.out.println(listOfInteger);
+        }
+
+//        add(element) - dodawnai elementu ktory MUSI sie zgadzac z typem okreslonym przy deklarcji wenwatrz <>
+//        add(index,element) - dodaje element na indeksie o wartosci element... nastepne wszystkie elementy sie przesuwaja....
+//        size() - rozmiar listy            // array.length
+//        get(index) - element listy o indeksie....         array[index]
+//        constains - sprawdza czy lista zawiera....        nie ma... nalezy uzyc petli do iteracji (liniowej lub binarnej(wydajna))
+//        remove - usuwa element listy - uwaga! metoda jest przeciazona, moze przyjac element lub indeks... // nie posiada tablica... mozna ustawic element na null
+
+        listOfIntegers.set(2,100); // listOfIntegers[2] = 100
+        System.out.println(listOfIntegers);
+
+        // zadanie
+//        Stworz liste Stringow...
+//        a) dodaj do niej trzy napisy
+//        b) pokaz liste
+//        c) pokaz element o indeksie 2
+//        d) zwwroc rozmiar listy
+//        e) sprawdz czy lista zawiera element "lista"
+//        f) usun ostatni element
+//        g) dodaj trzy inne elementy
+//        h) wyswietl liste z uzyciem petli foreach....
+//        i) wyswietl lsite o indeskach parzystych - dla nieparzystych ustaw ciag znakow "NIEPARZYSTY"
+//        j) wyswietl liste 
+
+
+
     }
 
     private static void enumTheory() {
@@ -60,16 +120,16 @@ public class Zajecia6 {
 //            System.out.println("Nie udalo sie odnalezc koloru");
 //        }
 //
-        Car car = CarFactory.createCar(CarsEnum.BMW);
-        System.out.println(car);
-
-        colors(Kolory.NIEBIESKI);
-
-        System.out.println(Liczby.ZERO);
-        System.out.println(Liczby.ZERO.getValue());
-        System.out.println(Liczby.TRZY.getTextInEnglish());
-
-        System.out.println(Kolory.NIEBIESKI.getDescription());
+//        Car car = CarFactory.createCar(CarsEnum.BMW);
+//        System.out.println(car);
+//
+//        colors(Kolory.NIEBIESKI);
+//
+//        System.out.println(Liczby.ZERO);
+//        System.out.println(Liczby.ZERO.getValue());
+//        System.out.println(Liczby.TRZY.getTextInEnglish());
+//
+//        System.out.println(Kolory.NIEBIESKI.getDescription());
 
         //posidanie wielu enumow jest rekomendowane....
 //        - pozwala unikac bledow
@@ -89,7 +149,44 @@ public class Zajecia6 {
 //        sprawdzenie czy taki rower istnieje w sklepie... jesli nie to daj komunikat o tym, daj szanse sprobowac ponownie...
 //        e) jesli tak to pokaz cene, opis i spytaj czy na pewno zakup ma sie odbyc
 
+        boolean isValid = false;
+        while (!isValid) {
+            System.out.println("Jaki chcesz rower? \n1.Miejski \n2.Gorski \n3.Wyczynowy");
+            String choice = scanner.nextLine();
 
+            BikesEnum choosenBike = checkIfExists(choice);
+            if (choosenBike == null) {
+                System.out.println("Nie istnieje taki rower");
+            } else {
+                isValid = buyBike(choosenBike);
+                if(isValid){
+                    System.out.println("Zakupiono rower!!! ");
+                }
+            }
+
+        }
+    }
+
+    private static BikesEnum checkIfExists(String choice) {
+//        iterujemy po wszystkich elementach enuma....
+//        jesli nazwa konkretnego enuma jest taka sama jak wybrana przez uzytkownika to zwroc tego enuma
+        for (BikesEnum bike : BikesEnum.values()) {
+            if (bike.getName().equals(choice)) {
+                return bike;
+            }
+        }
+        return null;
+    }
+
+    public static boolean buyBike(BikesEnum bikesEnum) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Cena: "+ bikesEnum.getPrice());
+        System.out.println("Opis: "+ bikesEnum.getDescription());
+
+        System.out.println("Czy na pewno ten rower Cie interesuje \n 1. Tak \n 2. Nie");
+        String choice = scanner.nextLine();
+
+        return choice.toLowerCase().equals("tak");
 
     }
 
