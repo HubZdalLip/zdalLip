@@ -1,5 +1,7 @@
 package weekend2;
 
+import weekend3.Computer;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -419,8 +421,11 @@ public class Zajecia4 {
 //        zad2Mod3();
 //        zad5Mod3();
 //        zad1Mod4();
-        zad2Mod4(); // malejaco....
+//        zad2Mod4(); // malejaco....
 
+//        Computer computer = new Computer("","",0);
+//        computer.ip; // nie moglbym bo dostep prywatny/defaultowy.... uzpelnienie do zajecia6
+//
 
     }
 

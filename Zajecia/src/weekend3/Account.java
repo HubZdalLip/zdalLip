@@ -49,4 +49,13 @@ public class Account {
     public String getPesel() {
         return pesel;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "balance=" + balance +
+                ", pesel='" + pesel + '\'' +
+                ", NAME_OF_BANK='" + NAME_OF_BANK + '\'' +
+                '}';
+    }
 }

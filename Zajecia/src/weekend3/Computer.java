@@ -3,7 +3,8 @@ package weekend3;
 public class Computer {
     public final String brand;
 
-    private String ip;
+
+    String ip; // dostep deafultowy..... pakietowy
     private int price;
     private boolean isRunning = false;
 
@@ -67,5 +68,15 @@ public class Computer {
         System.out.println("Marka komputera to: " + brand);
         System.out.println("Cena komputera to: " + price);
         System.out.println("IP komputera to: " + ip);
+    }
+
+    @Override       // adnotacja oznaczajaca przeslonieice
+    public String toString() {          //przesloniecie.... dowiemy sie co to a propos dziedziczenia i poliformizmu....
+        return "Computer{" +
+                "brand='" + brand + '\'' +
+                ", ip='" + ip + '\'' +
+                ", price=" + price +
+                ", isRunning=" + isRunning +
+                '}';
     }
 }

@@ -1,12 +1,102 @@
 package weekend3;
 
+import java.util.Scanner;
+
 public class Zajecia6 {
     public static void main(String[] args) {
 //        finalExamplesWithOneBiggerEx();
 //        solid();
 //        thisAsAnotherConstrucotr();
-        privateVsPublicVsDefault();
-        classExercise();
+//        privateVsPublicVsDefault();
+//        classExercise();
+        enumTheory();
+    }
+
+    private static void enumTheory() {
+        // istnieje pewny specjalny rodzaj klasy.... jest to enum. inna nazwa to typ wyliczeniowy....
+        //dalsza czesc wewnatrz enuma Liczby
+
+        System.out.println(Liczby.DWA.ordinal());   // czyli po wywolaniu metody ordinal dostajemy wartosc liczbowa....
+
+//        System.out.println("Podaj liczbe");
+        Scanner scanner = new Scanner(System.in);
+//        int number = scanner.nextInt();
+
+//        final int number2 = Liczby.DWA.ordinal();
+
+//        switch (number){
+//            case number2:
+//
+//        }
+//
+
+//        // zaleta enuma jest taka ze od razu na poziomie wywolania uzystkujemy inforamcje na temat tego czego enum dotyczy
+//        if(number == Liczby.DWA.ordinal()){
+//            System.out.println("Jest to liczba 2");
+//        }
+//
+//        String color = scanner.nextLine();
+//
+//        // enum sluzy w takim razie do przechowywania stalych ....
+////        zaleta jest taka ze wiemy ktorych infromacji mozemy uzyc
+//        if (Kolory.ZIELONY.toString().toLowerCase().equals(color.toLowerCase())) {
+//            System.out.println("Jest to kolor zielony");
+//        }
+//        if (Kolory.CZERWONY.toString().toLowerCase().equals(color.toLowerCase())) {
+//            System.out.println("Jest to kolor czerwony");
+//        }
+//        if (Kolory.NIEBIESKI.toString().toLowerCase().equals(color.toLowerCase())) {
+//            System.out.println("Jest to kolor niebieski");
+//        }
+//
+//        boolean isContaining = false;
+//        for (Kolory colour : Kolory.values()) {
+//            if (colour.toString().equals(color)) {
+//                System.out.println("Enum posiada taka stala");
+//                isContaining = true;
+//            }
+//        }
+//        if (!isContaining) {
+//            System.out.println("Nie udalo sie odnalezc koloru");
+//        }
+//
+////        Car car = CarFactory.createCar(CarsEnum.BMW);
+////        System.out.println(car);
+
+        colors(Kolory.NIEBIESKI);
+
+        System.out.println(Liczby.ZERO);
+        System.out.println(Liczby.ZERO.getValue());
+        System.out.println(Liczby.TRZY.getTextInEnglish());
+
+        System.out.println(Kolory.NIEBIESKI.getDescription());
+
+        //posidanie wielu enumow jest rekomendowane....
+//        - pozwala unikac bledow
+//        - pozwala przechowywac kilka inforamcji wewnatrz jednej stalej
+//        - pozwala wyeliminowac wpisywanie informacji z palca
+
+//       sytaucja w ktorej trzeba wybrac static final vs enum
+//        statci final gdy stalych jest malo, maja jedna wartosc np LAGER = "lager", nie uzywamy za czesto w innych klasach
+//        enum gdy chcemy by stala przechowywala opis, kilka wartosci w roznych postaciach, uzywamy czeseto w innych klasach
+
+
+//        zadanie: stworz enuma ktory
+//        a) bedzie okreslal rodzaje rowerow....
+//        b) beda wystepowaly rowery miejskie, gorskie, wyczynowe....
+//        c) kazdy rodzaj powinien miec krotki opis oraz cene
+//        d) stworz metode buyBike, ktora jako argumnet przyjmie enuma wybranego przez uzytkownika - tzn uzytwkonik wpisuje wawrtosc i nastepuje
+//        sprawdzenie czy taki rower istnieje w sklepie... jesli nie to daj komunikat o tym, daj szanse sprobowac ponownie...
+//        e) jesli tak to pokaz cene i spytaj czy na pewno zakup ma sie odbyc
+
+
+
+    }
+
+    private static void colors(Kolory colour) {
+        if (colour == Kolory.NIEBIESKI) { // enumy porownujemy ==
+            System.out.println("Jest to neibieski kolor");
+        }
     }
 
     private static void classExercise() {
@@ -23,10 +113,10 @@ public class Zajecia6 {
         Computer computer = new Computer("89.43.29.10", "dell", 3500);
         System.out.println("Marka tego komputera to: " + computer.brand);
 //        computer.brand = "123234"; // nie moge bo pole jest final....
-        System.out.println("Hmmm czy komputer jest domyslnie wlaczony?? "+ computer.isRunning());
+        System.out.println("Hmmm czy komputer jest domyslnie wlaczony?? " + computer.isRunning());
         System.out.println("Siadam do pracy.");
         computer.run();
-        System.out.println("Moj komputer jest wlaczony??? "+ computer.isRunning());
+        System.out.println("Moj komputer jest wlaczony??? " + computer.isRunning());
         System.out.println("Skonczylem prace...");
         computer.stop();
         System.out.println("Czy przypadkiem moj komputer pzoostal wlcaozny???" + computer.isRunning());
@@ -34,11 +124,24 @@ public class Zajecia6 {
         System.out.println("Parametry mojego komputera to...");
         computer.showSpecification();
 
-        Computer computer1 = new Computer("asdasd","",10000000);
+        Computer computer1 = new Computer("asdasd", "", 10000000);
         computer1.showSpecification();
 
         System.out.println();
 
+        System.out.println(computer); // domyslnie przy wywolaniu obiektu dostaniemy nazwa_pakietu_nazwa_klasy_@_adres_w_hex
+//        po przeslonieciu toString() => ppm => generate => toString() => wybrane pola ktore chcemy by byly widoczne....
+
+
+        // istnieje jeszcze modyfikator dostepu defaultowy .... jest to dostep pakietowy....
+
+//        computer.ip; // moglbym odwolac sie bo dostep jest pakietowy
+
+//        defaultowy  .... => private dla innych pakietow oraz public dla swojego pakietu
+
+//        PRZYKLAD uzycia defaultowego modyfikatora dostepu....
+//       jest pakiet oblusgi konta bankoweg w ktorym sa klasy bank, konto, uzytkownik i np transfer .... na tym etapie moze byc przydatnym aby pewne zmienne
+//       instancji byly widoczne dla innych klas w obrebie pakietu.... natomiast niepozadanym jest aby te pola byly widoczne z jakiegokowliek innego meijsca
     }
 
     private static void privateVsPublicVsDefault() {
@@ -75,7 +178,7 @@ public class Zajecia6 {
 //        accountKowalskiego.saveTransaction(0); // niewykonalne I DOBRZE bo klasa Account udostepnia jedynie uslugi.... dodaj do konta, wyplac, transfer.....
 //        accountKowalskiego.doImportantCalculationsKnownOnlyForBank();
 
-
+        System.out.println(accountKowalskiego);
     }
 
     private static void thisAsAnotherConstrucotr() {
