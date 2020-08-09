@@ -38,6 +38,23 @@ public class Zajecia6 {
 //        e) Stworz klase Person posiadajaca pole permills i metode statyczna drink przyjmujaca jako parametr obiekt Beer. Pole permills ma byc zwiekszane o wartosc %alkoholu / 10
 //        f) wyswietl poziom alkoholu we krwi dla osob
 
+        Beer lager = new Beer(Beer.LAGER, Beer.LAGER_ALCOHOL);
+        System.out.println(lager.alcohol);
+        Beer pils = new Beer(Beer.PILS, Beer.PILS_ALCOHOL);
+        Beer free = new Beer(Beer.FREE, Beer.FREE_ALCOHOL);
+
+        int amountOfDrunkBeers = 0;
+        Person person = new Person();
+        System.out.println("Stan po " + amountOfDrunkBeers + " piwach: " + person.permills);
+        person.drink(lager);
+        amountOfDrunkBeers++;
+        System.out.println("Stan po " + amountOfDrunkBeers + " piwach: " + person.permills);
+        person.drink(pils);
+        amountOfDrunkBeers++;
+        System.out.println("Stan po " + amountOfDrunkBeers + " piwach: " + person.permills);
+        person.drink(free);
+        amountOfDrunkBeers++;
+        System.out.println("Stan po " + amountOfDrunkBeers + " piwach: " + person.permills);
 
 
     }
