@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b96016b-5438-4016-b91a-61aa07524bc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Zajecia/weekend1/Zajecia2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Zajecia/weekend1/Zajecia2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weekend1/Zajecia2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weekend1/Zajecia2.java" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="0b96016b-5438-4016-b91a-61aa07524bc1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -26,6 +21,10 @@
   </component>
   <component name="ProjectId" id="1eV30RDUnNgbKV6N1G5U8dVkSlZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -48,25 +47,13 @@
       <recent name="weekend3" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Zajecia6">
-    <configuration name="Zajecia2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend1.Zajecia2" />
+  <component name="RunManager" selected="Application.Zad2Mod4">
+    <configuration name="Zad2Mod4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad2Mod4" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend1.*" />
+          <option name="PATTERN" value="pracadomowa3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,12 +61,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Zajecia3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend2.Zajecia3" />
+    <configuration name="Zad3Mod4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad3Mod4" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend2.*" />
+          <option name="PATTERN" value="pracadomowa3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,12 +74,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Zajecia4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend2.Zajecia4" />
+    <configuration name="Zad4Mod4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad4Mod4" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend2.*" />
+          <option name="PATTERN" value="pracadomowa3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Zajecia5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend3.Zajecia5" />
+    <configuration name="Zad6Mod3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad6Mod3" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend3.*" />
+          <option name="PATTERN" value="pracadomowa3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,29 +100,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Zajecia6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend3.Zajecia6" />
+    <configuration name="Zad7Mod3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad7Mod3" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend3.*" />
+          <option name="PATTERN" value="pracadomowa3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Zajecia6" />
-        <item itemvalue="Application.Zajecia5" />
-        <item itemvalue="Application.Zajecia4" />
-        <item itemvalue="Application.Zajecia3" />
-        <item itemvalue="Application.Zajecia2" />
+        <item itemvalue="Application.Zad2Mod4" />
+        <item itemvalue="Application.Zad4Mod4" />
+        <item itemvalue="Application.Zad3Mod4" />
+        <item itemvalue="Application.Zad7Mod3" />
+        <item itemvalue="Application.Zad6Mod3" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -156,24 +155,49 @@
       <workItem from="1596037554635" duration="710000" />
       <workItem from="1596820430768" duration="492000" />
       <workItem from="1596870167338" duration="17925000" />
-      <workItem from="1596956332890" duration="17343000" />
+      <workItem from="1596956332890" duration="20999000" />
+      <workItem from="1597078309259" duration="3214000" />
+      <workItem from="1597586963223" duration="1266000" />
+      <workItem from="1597674636615" duration="608000" />
+      <workItem from="1598021785999" duration="4860000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1598025495152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598025495152" />
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1598026330973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
+    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1598026330973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
+    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1598026330973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
+    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1598026330973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
   </component>
 </project>
