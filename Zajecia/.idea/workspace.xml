@@ -47,13 +47,13 @@
       <recent name="weekend3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Zad2Mod4">
-    <configuration name="Zad2Mod4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad2Mod4" />
+  <component name="RunManager" selected="Application.Zajecia7">
+    <configuration name="Zad1Mod3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad1Mod3" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pracadomowa3.*" />
+          <option name="PATTERN" value="pracadomowa3.cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -61,12 +61,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Zad3Mod4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad3Mod4" />
+    <configuration name="Zad3Mod3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad3Mod3" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pracadomowa3.*" />
+          <option name="PATTERN" value="pracadomowa3.cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,24 +75,11 @@
       </method>
     </configuration>
     <configuration name="Zad4Mod4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad4Mod4" />
+      <option name="MAIN_CLASS_NAME" value="pracadomowa3.cardsAtHome.Zad4Mod4" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pracadomowa3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Zad6Mod3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad6Mod3" />
-      <module name="Zajecia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pracadomowa3.*" />
+          <option name="PATTERN" value="pracadomowa3.cards.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,7 +92,20 @@
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pracadomowa3.*" />
+          <option name="PATTERN" value="pracadomowa3.cards.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Zajecia7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend4.Zajecia7" />
+      <module name="Zajecia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="weekend4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Zad2Mod4" />
+        <item itemvalue="Application.Zajecia7" />
         <item itemvalue="Application.Zad4Mod4" />
-        <item itemvalue="Application.Zad3Mod4" />
         <item itemvalue="Application.Zad7Mod3" />
-        <item itemvalue="Application.Zad6Mod3" />
+        <item itemvalue="Application.Zad3Mod3" />
+        <item itemvalue="Application.Zad1Mod3" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +159,10 @@
       <workItem from="1597078309259" duration="3214000" />
       <workItem from="1597586963223" duration="1266000" />
       <workItem from="1597674636615" duration="608000" />
-      <workItem from="1598021785999" duration="4860000" />
+      <workItem from="1598021785999" duration="5538000" />
+      <workItem from="1598036999597" duration="38000" />
+      <workItem from="1598079576938" duration="1000" />
+      <workItem from="1598079600205" duration="6774000" />
     </task>
     <servers />
   </component>
@@ -179,25 +182,45 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1598025495152">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1598085885514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598025495152" />
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom" timestamp="1598026330973">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598085885514" />
+    <state width="1877" height="271" key="GridCell.Tab.0.bottom" timestamp="1598085967874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
-    <state width="1877" height="227" key="GridCell.Tab.0.center" timestamp="1598026330973">
+    <state width="1877" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598085967874" />
+    <state width="1877" height="271" key="GridCell.Tab.0.center" timestamp="1598085967874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
-    <state width="1877" height="227" key="GridCell.Tab.0.left" timestamp="1598026330973">
+    <state width="1877" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598085967874" />
+    <state width="1877" height="271" key="GridCell.Tab.0.left" timestamp="1598085967873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
-    <state width="1877" height="227" key="GridCell.Tab.0.right" timestamp="1598026330973">
+    <state width="1877" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598085967873" />
+    <state width="1877" height="271" key="GridCell.Tab.0.right" timestamp="1598085967874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="227" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598026330973" />
+    <state width="1877" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598085967874" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1598082689738">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598082689738" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1598082689738">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598082689738" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1598082689738">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598082689738" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1598082689738">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598082689738" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1598083997711">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598083997711" />
   </component>
 </project>

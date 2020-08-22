@@ -14,6 +14,12 @@ public class Zad7Mod3 {
 
 
 }
+//    Napisz enuma, który będzie nawiązywał do mebli domowych.
+//        a) enum musi posiadać co najmniej 5 pozycji. Każdy element ma posiadać w sobie atrybuty będące wiekiem przedmiotu oraz krajem pochodzenia.
+//        b) dodaj atrybut ID oraz stwórz statyczną metodę wewnątrz enuma pozwalająca wyszukać danego enuma po ID
+//        c) przetestuj działanie enuma próbując dowiedzieć się o wieku mebla i kraju pochodzenia na podstawie jego ID ( nie jest potrzebne tworzenie żadnych dodatkowych metod !)
+
+
 
 enum Furniture {
     //elementy enuma...
@@ -46,9 +52,16 @@ enum Furniture {
         return originCountry;
     }
 
+
+    // ten spsoob wyszukiwania elementow to wyszukiwanie liniowe
+
     // metoda pozwalajaca znalezc po ID
     public static Furniture findById(long id) {
+        // id = 3
         for (Furniture furniture : Furniture.values()) {
+            //gdy pierwszy mebel (CHAIR) to jego id = 1 => 1=/3
+            //gdy drugi mebel (DESK) to jego id = 2 => 2=/3
+            //gdy trzeci mebel (LAMP) to jego id = 3 => 3=3
             if (furniture.getId() == id) {
                 return furniture;
             }

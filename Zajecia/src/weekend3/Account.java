@@ -1,5 +1,7 @@
 package weekend3;
 
+import weekend4.Employee;
+
 public class Account {
     private int balance; // private - dostep tylko na poziomie kalsy......
     private String pesel;

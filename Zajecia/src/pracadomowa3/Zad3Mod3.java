@@ -3,6 +3,25 @@ package pracadomowa3;
 import java.util.Arrays;
 
 public class Zad3Mod3 {
+//    Stwórz klasę Book oraz klasę Author. Klasa Author powinna zawierać prywatne pola surname ,mail typu String oraz pole gender typu char.
+//    Klasa Book powinna zawierać:
+//    a) prywatne pola name oraz authors będące tablicą typu Author
+//    b) statyczne pole amountOfBooks zliczające ilość wydanych książek
+//    c) gettery do pol name,authors,price
+//    d) setter do pola price
+//    e) metodę getAuthorNames() zwracającą nazwiska autorów danej książki po przecinku
+//    f) przesłoniętą metodę toString() zwracającą String w postaci "Book[name=?,authors={Author[name=?,email=?,gender=?],...},price=?]"
+//    g) odpowiednie konstruktory
+//    h) stwórz kilka obiektów które będą reprezentować nastepujące książki:
+//            "Java.Podstawy" Cay S. Horstmann, Gary Cornell - 89 zł
+//    maile: caySHorstmann@gmail.com [M], garyCornell@gmail.com [M]
+//            "Java jest łatwa" R.Wiśniewska -100 zł
+//    mail:rWiśniewska@wp.pl [F]
+//            "Programowanie w Javie" J.Kowalski,R.Nowak,K.Ornatowski - 120 zł
+//    maile: jKowalski@wp.pl [M], rNowak@interia.pl [F], kOrnatowski@gmail.com [M]
+//    i) wyświetl liczbe książek za pomocą statycznego pola amountOfBooks
+
+
     public static void main(String[] args) {
         Author author1 = new Author("Horstmann", "caySHorstmann@gmail.com", 'M');
         Author author2 = new Author("Cornell", "garyCornell@gmail.com", 'M');
@@ -36,7 +55,7 @@ public class Zad3Mod3 {
 }
 
 class Author {
-    private final String surname;
+    private final String surname; // pola sa finalne - zakldamy że autor nie zmieni sie w miedzyczasie
     private final String mail;
     private final char gender;
 
@@ -73,7 +92,7 @@ class Author {
 class Book {
     public static int amountOfBooks;
     private final Author[] authors;
-    private final String name;
+    private final String name; // title
     private int price;
 
     // zmienna statyczna (nieprzydzielona do zadnego obiektu tylko do klasy) zostaje zwiekszana
@@ -92,10 +111,20 @@ class Book {
     // na rzecz ktorego wywolywana jest metoda append, a ostateczny ciag znakow przypisywany jest jednorazowo i na samym koncu operacji.
     // Aby jednak typ zwracany był zgodny z typem String, nalezy na zmiennej result wywolac metode toString().
     public String getAuthorNames() {
+//        String a = "a";
+//        String b = "b";
+//        String c = "c";
+//        c += b;
+//        c += a;
         StringBuilder result = new StringBuilder();
         for (Author author : authors) {
             result.append(author.getSurname()).append(", ");
         }
+//        result.deleteCharAt(result.length() - 1);
+//        result.deleteCharAt(result.length() - 1);
+
+        // poneiwaz przedzial jest zamknieto-otwarty (jak zawsze) to drugi arugment bedacy koncem musi byc dlugoscia stringubildera
+        result.delete(result.length() - 2, result.length());
         return result.toString();
     }
 

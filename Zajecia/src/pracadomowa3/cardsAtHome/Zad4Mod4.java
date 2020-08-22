@@ -1,4 +1,4 @@
-package pracadomowa3;
+package pracadomowa3.cardsAtHome;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,6 +19,7 @@ public class Zad4Mod4 {
 //        podpowiedź:
 //        - jeden ze sposobów to stworzyć kilka stosów - stos kart (talia w dłoni) gracza i komputera oraz pomocnicze stosy będące kartami zgarniętymi ze stołu
 //        - porownywanie z enuma getValue - stąd wiadome będzie że król jest wyżej niż dama bo 13>12
+
 
     }
 
@@ -59,6 +60,14 @@ class Card {
     public String getInfo() {
         return color.getType() + " - " + figure.getRepresentation();
     }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "figure=" + figure +
+                ", color=" + color +
+                '}';
+    }
 }
 
 enum Color {
@@ -88,10 +97,10 @@ enum Figure {
     NUMBER8(8, "8"),
     NUMBER9(9, "9"),
     NUMBER10(10, "10"),
-    NUMBER11(12, "Walet"),
-    NUMBER12(12, "Dama"),
-    NUMBER13(13, "Król"),
-    NUMBER14(14, "As");
+    JACK(12, "Walet"),
+    QUEEN(12, "Dama"),
+    KING(13, "Król"),
+    ACE(14, "As");
 
     private final int value;
     private final String representation;
