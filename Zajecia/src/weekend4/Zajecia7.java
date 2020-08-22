@@ -1,5 +1,8 @@
 package weekend4;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Zajecia7 {
     public static void main(String[] args) {
 
@@ -46,6 +49,65 @@ public class Zajecia7 {
 //        c) stworz kilka pol ktore beda dziedziczone (protected) lub nie....
 //        d) stworz kilka metod, ktore przeslonisz, niektorych nie przeslonisz
 //        e) zaprezentuj mechanizm na przykladzie kilka obiektow w klasie testowej
+
+
+        // zgodnie z zasadami SOLID powinno być tak że każdy element podklasy może korzystać z metod z nadklasy....
+        // klasa ma rozszerzac nadklase ale byc rowniez poniekąd nią samą
+
+        // Alcohol -> Drink -> DrinkWithVodka
+
+        // polimorfizm - wielopostaciowosc....
+
+//        boss.work();
+//        boss2.work();
+//        boss3.work();
+//        boss4.work();
+//        boss5.work();
+//        socialEmployee.work();
+//        socialEmployee2.work();
+//        socialEmployee3.work();
+//        socialEmployee4.work();
+//        socialEmployee5.work();
+//        socialEmployee6.work();
+
+        //problem jest taki że np chcę stworzyć klasę Company ktora będzie mieć listę pracowników
+        // musimy tworzyc pola dla kazdego typu rpacownika i oddzielna obsluge....
+        // nie idziemy za zasadmi solid poneiwaz nasza klasa nie jest otwarta na rozszerzenie (wymaga przerobki implementacji)
+
+        List<Employee> employeeList = new ArrayList<>(); // tutaj troche inaczej poniewaz List to najbardziej abstrakcyjny typ (interfejs)
+
+        Employee boss1 = new Boss("Jacek",15000, 3);
+        Employee socialEmp = new SocialEmployee("Marlena", 7000, 50);
+
+        employeeList.add(boss1);
+        employeeList.add(socialEmployee);
+        employeeList.add(boss);
+        employeeList.add(socialEmp);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        for (Employee employee1: employeeList) {
+            // na poczatku employee jest bossem
+            // jest to w tej chwili rownoznaczne z Blokiem kodu
+//            (sytaucja wczesniej) => Boss boss1 = new Bos(blabla);
+//            boss1.getName();.... itd
+            System.out.println("Jestem " + employee1.getName()+ ". Oto moja pensja: "+employee1.getSalary());
+            employee1.work();
+
+//             nalezy unikac tego.... poczytac na stackoverflow czemu instanceOf i downcasting jest zly
+//            nalezaloby albo zmienic mechanizm dziedziczenia, albo zrobic oddzielna obsluge albo najlepiej uzyc wzorca visitator
+            if(employee1 instanceof Boss){
+                Boss boss2 = (Boss) employee1;
+                boss2.meetVIP();
+            }
+
+        }
+
+
+
+
+
 
 
     }

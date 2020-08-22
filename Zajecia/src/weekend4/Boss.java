@@ -6,7 +6,7 @@ public class Boss extends Employee {
 
     public Boss(String name, double salary, int numberOfMeetings) {
         // w tym miejscu mozemy rownie dobrze uruchomic kosntruktor z nadklasy (czyli klasy z ktorej sie dziedziczy)
-        super(name, salary); // to to samo co this ale dziala na nadklasie
+        super("Szef " + name, salary); // to to samo co this ale dziala na nadklasie
         this.numberOfMeetings = numberOfMeetings;
     }
 
