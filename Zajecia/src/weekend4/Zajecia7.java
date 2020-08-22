@@ -1,7 +1,6 @@
 package weekend4;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Zajecia7 {
     public static void main(String[] args) {
@@ -124,9 +123,9 @@ public class Zajecia7 {
         // klasy abstrakcyjne
 
 //        Instrument instrument = new Instrument(1000,1,4,"flet");
-        Instrument guitar = new Guitar(1000,5,6,"my cool guitar!");
-        Instrument violin = new Violin(10300,55,2,"my cool violin!!!!");
-        Instrument piano = new Piano(100000,52,10,"my amazing piano!!");
+        Instrument guitar = new Guitar(1000, 5, 6, "my cool guitar!");
+        Instrument violin = new Violin(10300, 55, 2, "my cool violin!!!!");
+        Instrument piano = new Piano(100000, 52, 10, "my amazing piano!!");
 
         List<Instrument> instrumentList = new ArrayList<>();
 //        instrumentList.add(instrument);
@@ -163,7 +162,30 @@ public class Zajecia7 {
 //        d) stworz w klasie Zajecia7 petle ktora 10x wywola metody produce...
 //        e) sprawdz ile produktow zostalo utworzonych i jakiego typu, przez jaka fabryke....
 
+        Factory factoryGuitars = new FactoryOfGuitars("Gitarownia", Factory.GUITARS);
+        Factory factoryMedicines = new FactoryOfMedicines("Apteka dla człowieka", Factory.MEDICINES);
+        Factory[] factories = new Factory[2];
+        factories[0] = factoryGuitars;
+        factories[1] = factoryMedicines;
 
+        for (Factory factory : factories) {
+            if (!validateType(factory)) {
+                return;
+            }
+        }
+
+        for (int i = 0; i < 10 * factories.length; i++) {
+            if (i % 2 == 0) {
+                factories[0].setAmountOfProducts(factories[0].getAmountOfProducts() + factories[0].produce());
+            } else {
+                factories[1].setAmountOfProducts(factories[1].getAmountOfProducts() + factories[1].produce());
+            }
+        }
+
+        for (Factory factory : factories) {
+            System.out.println(factory.toString());
+
+        }
 
 //        a) zadanie stworz interfejs Alcohol z metoda drink.
 //        b) stworz ponadto klasy okreslajace jaki to jest alkohol, np Whisky, Vodka, Beer
@@ -171,15 +193,75 @@ public class Zajecia7 {
 //        d) stworz metode ktora bedzie losowo pila dany alkohol, dodawaj ilosc % do puli ktora wyswietlisz na koncu
 //        e) stworz licznik sprawdzajacy ile razy dany alkohol sie pojawil
 
-
 //      Stworz interfejs Shape z metoda getArea i getPerimeter
-//        a) stworz dodatkowo klasy Rectangle,Square ktory bedzie dziedziczyc po Rectangle, Triangle oraz Circle
+//        a) stworz dodatkowo klasy Rectangle, Square ktory bedzie dziedziczyc po Rectangle, Triangle oraz Circle
 //           ktore beda odppwiednio implementowac ten interfejs
 //        b) stworz tablice ksztaltow i wyswietl wyniki!
 
 
+        // kolekcje.... ciag dalszy
+
+        List<String> stringList = new ArrayList<>();                    //tutaj zastosowano polimorfizm...
+        List<String> stringList1 = new LinkedList<>();
+        ArrayList<Integer> integers = new ArrayList<>();                //tutaj nie....
+        LinkedList<Integer> integers1 = new LinkedList<>();
+//        integers. posiada jakies wlasne metody....
+
+        // Set<typ> set = new HashSet<>();              // set to jest to zbior....
 
 
+        // wyroznia go to że nie zawiera duplikatow....
+
+        Set<String> stringSet = new HashSet<>(); // hashset dodaje losowo do zbioru....
+        // linkedHashSet zapamietuje kolejnosc
+        // TreeSet() sortuje alfabetycznie
+
+        stringSet.add("Hubert");
+        stringSet.add("Hubert");
+        stringSet.add("Hubert");
+        stringSet.add("Hubert");
+        stringSet.add("Hubert");
+        stringSet.add("Magda");
+        stringSet.add("Magda");
+        stringSet.add("Magda");
+        stringSet.add("Agnieszka");
+        stringSet.add("Karol");
+        stringSet.add("Rafal");
+
+
+        System.out.println(stringSet);
+
+//        zadanko : stworz strukture ktora doda do siebie 10 losowych liczb
+//        a) liczby moga sie powtarzać
+//        b) liczby nie mogą się powtarzać
+//        c) wyświetl struktury danych
+
+        Random random = new Random();
+        List<Integer> integerList = new ArrayList<>(); // arrayList jeste zdecydowanie bardziej popularny od linkedList
+
+        for (int i = 0; i < 10; i++) {
+            integerList.add(random.nextInt(10)); // a)
+        }
+
+        Set<Integer> integerSet = new HashSet<>();
+        int counter = 0;
+
+        while (integerSet.size() <= 10) {
+            integerSet.add(random.nextInt(50));
+            counter++;
+        }
+
+        System.out.println("Licznik: "+ counter);
+        System.out.println(integerSet);
+        System.out.println(integerList); // c)
+
+
+
+
+    }
+
+    private static boolean validateType(Factory factory) {
+        return !factory.getType().equals(Factory.UNDEFINED);
     }
 
     public static void write(Pencil... pencils) {
