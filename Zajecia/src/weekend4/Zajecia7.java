@@ -163,7 +163,20 @@ public class Zajecia7 {
 //        d) stworz w klasie Zajecia7 petle ktora 10x wywola metody produce...
 //        e) sprawdz ile produktow zostalo utworzonych i jakiego typu, przez jaka fabryke....
 
-        
+
+
+//        a) zadanie stworz interfejs Alcohol z metoda drink.
+//        b) stworz ponadto klasy okreslajace jaki to jest alkohol, np Whisky, Vodka, Beer
+//        c) dodaj pola okreslajace % alkoholu w danych klasach
+//        d) stworz metode ktora bedzie losowo pila dany alkohol, dodawaj ilosc % do puli ktora wyswietlisz na koncu
+//        e) stworz licznik sprawdzajacy ile razy dany alkohol sie pojawil
+
+
+//      Stworz interfejs Shape z metoda getArea i getPerimeter
+//        a) stworz dodatkowo klasy Rectangle,Square ktory bedzie dziedziczyc po Rectangle, Triangle oraz Circle
+//           ktore beda odppwiednio implementowac ten interfejs
+//        b) stworz tablice ksztaltow i wyswietl wyniki!
+
 
 
 
