@@ -120,6 +120,53 @@ public class Zajecia7 {
         PencilWithRubber pencilWithRubber = new PencilWithRubber(6, Pencil.PencilType.HB);
         write(pencil, brokenPencil, pencilWithRubber);
 
+        // abstrakcja....
+        // klasy abstrakcyjne
+
+//        Instrument instrument = new Instrument(1000,1,4,"flet");
+        Instrument guitar = new Guitar(1000,5,6,"my cool guitar!");
+        Instrument violin = new Violin(10300,55,2,"my cool violin!!!!");
+        Instrument piano = new Piano(100000,52,10,"my amazing piano!!");
+
+        List<Instrument> instrumentList = new ArrayList<>();
+//        instrumentList.add(instrument);
+        instrumentList.add(guitar);
+        instrumentList.add(violin);
+        instrumentList.add(piano);
+
+        for (int i = 0; i < instrumentList.size(); i++) {
+            System.out.println(instrumentList.get(i).getAge());
+            System.out.println(instrumentList.get(i).getPrice());
+            System.out.println(instrumentList.get(i).getHowCool());
+
+            instrumentList.get(i).play();
+        }
+
+        Vehicle bike = new Bike();
+        Vehicle car = new Car();
+        Vehicle skateboard = new Skateboard();
+
+        bike.run();
+        bike.stop();
+        car.run();
+        car.stop();
+        skateboard.run();
+        skateboard.stop();
+
+        Bike bike1 = new Bike();
+        bike1.run();
+
+//        zadanie stworz abstrakcyjna klase Factory i nieabstrakycjne klasy FactoryOfGuitars oraz FactoryOfMedicines
+//        a) do klasy Factory dodaj pole okreslajace nazwe fabryki i dzienna produkcje oraz typ produktu
+//        b) dodaj rowniez metode abstrakcyjna produce ktorej implementacje okreslisz w klasach pochodnych
+//        c) stworz maly algorytm ktory wyliczy ile produktow zostanie stworzonych podczas jednego wywolania...
+//        d) stworz w klasie Zajecia7 petle ktora 10x wywola metody produce...
+//        e) sprawdz ile produktow zostalo utworzonych i jakiego typu, przez jaka fabryke....
+
+        
+
+
+
     }
 
     public static void write(Pencil... pencils) {
