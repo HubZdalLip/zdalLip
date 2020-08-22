@@ -76,7 +76,7 @@ public class Zajecia7 {
 
         List<Employee> employeeList = new ArrayList<>(); // tutaj troche inaczej poniewaz List to najbardziej abstrakcyjny typ (interfejs)
 
-        Employee boss1 = new Boss("Jacek",15000, 3);
+        Employee boss1 = new Boss("Jacek", 15000, 3);
         Employee socialEmp = new SocialEmployee("Marlena", 7000, 50);
 
         employeeList.add(boss1);
@@ -87,17 +87,17 @@ public class Zajecia7 {
         System.out.println();
         System.out.println();
         System.out.println();
-        for (Employee employee1: employeeList) {
+        for (Employee employee1 : employeeList) {
             // na poczatku employee jest bossem
             // jest to w tej chwili rownoznaczne z Blokiem kodu
 //            (sytaucja wczesniej) => Boss boss1 = new Bos(blabla);
 //            boss1.getName();.... itd
-            System.out.println("Jestem " + employee1.getName()+ ". Oto moja pensja: "+employee1.getSalary());
+            System.out.println("Jestem " + employee1.getName() + ". Oto moja pensja: " + employee1.getSalary());
             employee1.work();
 
 //             nalezy unikac tego.... poczytac na stackoverflow czemu instanceOf i downcasting jest zly
 //            nalezaloby albo zmienic mechanizm dziedziczenia, albo zrobic oddzielna obsluge albo najlepiej uzyc wzorca visitator
-            if(employee1 instanceof Boss){
+            if (employee1 instanceof Boss) {
                 Boss boss2 = (Boss) employee1;
                 boss2.meetVIP();
             }
@@ -114,11 +114,20 @@ public class Zajecia7 {
 
         // korzystaj z poznanych technik....
 
-
-
-
-
-
+        System.out.println();
+        Pencil pencil = new Pencil(1, Pencil.PencilType.B4);
+        BrokenPencil brokenPencil = new BrokenPencil(4, Pencil.PencilType.H8);
+        PencilWithRubber pencilWithRubber = new PencilWithRubber(6, Pencil.PencilType.HB);
+        write(pencil, brokenPencil, pencilWithRubber);
 
     }
+
+    public static void write(Pencil... pencils) {
+        for (Pencil pencil : pencils) {
+            pencil.writeSth();
+            System.out.println("Rodzaj ołowka to: " + pencil.getPencilType().toString() + ". A jego grubośc to: " + pencil.getPencilType().getThickness());
+            System.out.println("Cena: " + pencil.getPrice());
+        }
+    }
+
 }

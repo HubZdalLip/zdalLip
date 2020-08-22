@@ -162,7 +162,7 @@
       <workItem from="1598021785999" duration="5538000" />
       <workItem from="1598036999597" duration="38000" />
       <workItem from="1598079576938" duration="1000" />
-      <workItem from="1598079600205" duration="9867000" />
+      <workItem from="1598079600205" duration="10869000" />
     </task>
     <servers />
   </component>
@@ -182,10 +182,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1598085885514">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1598091524021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598085885514" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598091524021" />
     <state width="1877" height="311" key="GridCell.Tab.0.bottom" timestamp="1598088204781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -218,9 +218,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598082689738" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1598083997711">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1598091246107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598083997711" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598091246107" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598090944794">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598090944794" />
   </component>
 </project>
