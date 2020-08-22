@@ -105,11 +105,12 @@ public class Zajecia7 {
         }
 
         //zadanie
-//        a) stworz klase Pencil, klase PencilWithRubber i BrokenPencil ktore bedadziedziczyc po niej
+//        a) stworz klase Pencil, klase PencilWithRubber i BrokenPencil ktore beda dziedziczyc po niej
 //        b) dodaj do klas odpwoiednie pola okreslajace rodzaj olowka (może być enum), cene olowka oraz metody writeSth()
 //        c) nadpisz impelmentacje w poszczegolnych podklasach tak aby odwzierceidlay poprawnie to co robią
 //        d) dodaj do klasy PencilWithRubber metode wipeWithRubber sciarającą napis
-//        e) stworz metode z klasie Zajecia7 ktora jako argument przyjmie dowolna liczbe olowkow i wewnatrz tej metody wywolaj metode writeSth()
+//        e) stworz metode z klasie Zajecia7 ktora jako argument przyjmie dowolna liczbe olowkow i wewnatrz tej metody wywolaj metode writeSth() dla kazdego arguemntu...
+//        wywolaj metody ktore mowia o cenie i rodzaju olowka....
 
         // korzystaj z poznanych technik....
 
