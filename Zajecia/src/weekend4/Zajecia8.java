@@ -17,7 +17,100 @@ public class Zajecia8 {
     private static void collections() {
 //        exWithList1();
 //        exWithList2();
-        exWithSet1();
+//        exWithSet1();
+//        exWithSet2();
+//        exWithSet3();
+        mapTheory();
+
+
+    }
+
+    private static void mapTheory() {
+
+        //mapa jest to struktura danych o postaci klucz-wartosc
+        // wyswtepuja trzy najpopularniejsze postaci map gdzie KLUCZ musi byc unikalny
+//        - HashMap        => kolejnosc losowa,
+//        - LinkedHashMap  => kolejnosc zachowana
+//        - TreeMap        => kolejnosc wg komparatora
+
+        Map<String, String> map = new HashMap<>();
+        //aby dodac element do mapy nalezy uzyc metody put()
+        map.put("Java Podstawy", "Calkiem niezla ksiazka dla poczatkujacych!");
+        map.put("Dziady", "Nudna lektura ktorej bardzo nei lubilem kiedys w liceum");
+        map.put("Dziady", "Nudna lektura ktorej bardzo nei lubilem kiedys w liceum");
+        map.put("Spring w akcji", "Ksiazka do frameworka spring, którego będizecie chcieli poznać przy dalszej nauce javy");
+
+        //aby wyswietlic element nalezy podac klucz - wyswietlamy elementy podajac klucz a nie wartosc
+        System.out.println(map.get("Java Podstawy"));
+        String valueOfKeyDziady = map.get("Dziady");
+        System.out.println(valueOfKeyDziady);
+
+        //rozmiar
+        System.out.println(map.size());
+
+        //zbior kluczy
+        Set<String> keys = map.keySet();
+
+        //iteracja po kluczach
+        for (String key : keys) {
+            System.out.println(key);
+        }
+
+        // iteracja po parach klucz-wartosc
+        //Entry to klasa statyczna wewnatrz Mapy dlatego aby sie do neij odwolac nalezy Wywolac ja po kropce Map.Entry<K,V>
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println("Wartosc klucza: " + entry.getKey() + " to " + entry.getValue());
+        }
+
+        // klasyczne wyswietlenie
+        System.out.println(map);
+
+        //postac
+//        element 1: klucz = wartosc
+//        element 2: klucz = wartosc
+//        .
+//        .
+//        element 3: klucz = wartosc
+
+
+    }
+
+    private static void exWithSet3() {
+        //treeSet moze w konstruktorze przyjac comparator
+
+        //przydatna rzecz przy wlasnych klasach!!!!
+
+        Comparator<String> ownComp = new ComparatorByNameLength();
+        Set<String> names = new TreeSet<>(ownComp);
+        names.add("Hubert");
+        names.add("Wojciech");
+        names.add("Magda");
+        names.add("Anna");
+
+        System.out.println(names);
+
+    }
+
+    private static void exWithSet2() {
+        //zad wlosowac do seta 5 wartosci i usunac element srodkowy
+        Set<Integer> integerSet = new HashSet<>();
+        while (integerSet.size() < 5) {
+            integerSet.add(random.nextInt(10) + 1);
+        }
+
+        System.out.println(integerSet);
+//        integerSet.remove()
+        Iterator<Integer> iterator = integerSet.iterator();     // iterator sluzy do przechodzenia po strukturze danych w zadanych warunkach, usuwania elementow itd
+
+        int index = 0;
+        while (iterator.hasNext()) {            // dopoki posiada nastepny element....
+            System.out.println("Element o indeksie " + index + " to " + iterator.next());       // pokaz element nastepny
+            if (index == 2) {
+                iterator.remove();              //usun obecny element
+            }
+            index++;
+        }
+        System.out.println(integerSet);
 
 
     }
@@ -30,6 +123,42 @@ public class Zajecia8 {
         // d) jesli set zawiera element bedacy srednia ze wszsytkich elementow to zwroc komunikat: jest ok!
         // e) wlosuj do seta 3 wartości i sprawdz czy rozmiar bedzie rowny 8: jesli tak to zwroc komunikat, jesli nie to tez
 
+        Set<Double> doubleSet = new HashSet<>();
+        doubleSet.add(1.0);
+        doubleSet.add(1.1);
+        doubleSet.add(1.2);                         //a)
+        doubleSet.add(1.3);
+        doubleSet.add(1.4);
+
+        double sum = 0;
+        for (double elem : doubleSet) {
+            sum += elem;                            //b)
+        }
+        double average = sum / doubleSet.size();
+        System.out.println("Srednai to: " + average);
+
+        System.out.println(doubleSet.size());       //c)
+
+        if (doubleSet.contains(average)) {
+            System.out.println("Jest ok!");         //d)
+        }
+
+        for (int i = 0; i < 3; i++) {
+            int randomNum = random.nextInt(2);
+            // powyzsze losowanie jest wazne poniewaz nextDouble losuje wartosc od 0 do 1
+            // String.format zwroci wylosowanego double z dwoma miejscami po przecinku ale w postaci String, nastepnei zparsujemy to na double
+            doubleSet.add(randomNum + Double.parseDouble(String.format("%.1f", random.nextDouble()).replace(",", ".")));
+        }
+
+        if (doubleSet.size() == 8) {
+            System.out.println("Wlosowane liczby były unikatowe");
+        } else {
+            System.out.println("WLosowane liczby nie byly unikatowe");
+        }
+
+        for (double elem : doubleSet) {
+            System.out.println(elem);
+        }
 
 
     }
@@ -137,7 +266,7 @@ public class Zajecia8 {
             half.add(integerList.get(i));
         }
         double average = calculateAverage(half);
-        System.out.println("Oto średnia dla elementow "+ half+" : " + average);
+        System.out.println("Oto średnia dla elementow " + half + " : " + average);
 
     }
 
