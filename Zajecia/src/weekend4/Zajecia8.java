@@ -16,8 +16,13 @@ public class Zajecia8 {
     }
 
     private static void exceptions() {
-        exceptionsTheory();
-        exWithException1();
+        try {
+            exceptionsTheory();
+        }catch (InputMismatchException e){
+            System.out.println("Podales litere");
+        }
+
+//        exWithException1();
 
     }
 
@@ -27,35 +32,162 @@ public class Zajecia8 {
 //        c)wylosuj kilka wartosci, losuj zawsze w zakresie od 1 do 50
 //        d)losuj do chwili az wylosujesz 3 elementy, ktore zwrocisz w nowej strukturze.
 
-    }
-
-    private static void exceptionsTheory() {
-        //przyklad bez wyjatku...
-        List<Integer> integerList = new ArrayList<>();
-        int counter = 0;
+        System.out.println("Ile ma być elem w tablicy");
+        int numberOfElements;
+        try {
+            //niebezpiczena operacja - uzytwkonik moze dac np litere
+            numberOfElements = scanner.nextInt();       // mozna dac ale trzeba miec na uwadze ze try zajmuje troche czasu wykonania daltego w miejscach gdzie nei jest on koneiczny (moze byc obslizony ifami), niech go tam nie bedzie
+        } catch (InputMismatchException e) {
+            System.out.println("Rozmiar niepoprawny!");
+            scanner.nextLine();
+            return;
+        }
+        Integer[] array = new Integer[numberOfElements];        // integer a nie int poniewaz w moim rozwiazaniu nadajmey wartosci az nie bedzie zadnych nullow
+        int indexOfArray = 0;
         while (true) {
-            //w przypadku nieprzechwycenia wyjatku, zostanie on rzucony dalej w bardziej zewnetrzna warstwe. Gdy nigdzie nei zostanie zlapany: blad
-            System.out.println("Podaj liczbę. Wpisz -1 by zakonczyc");
+            System.out.println("Podaj wartosc!");
+            int value;
             try {
-                // w bloku try umieszczamy niebezpieczne instrukcje,
-                // try jest bardiej kosztowny niz if
-                int number = scanner.nextInt();         // w bloku try jesli wyjatek zostanie rzucony to reszta bloku sie nie wykonuje
-                if (number == -1) {
+                value = scanner.nextInt();  //niebezpiczena operacja, uzytkownik moze wpisac litere... po rzuceniu wyjatku nie dochodzimy do insturkcji zwiekszania indeksu
+                array[indexOfArray++] = value;
+                if (!checkIfContainsNull(array)) {
                     break;
                 }
-                System.out.println("Dodano liczbę " + number);
-                integerList.add(number);
-
-            } catch (InputMismatchException e) { // e od exception
-                scanner.nextLine();
-                //wyjatek zostal zlapany i obsluzony, program uznaje ze mozna pracowac dalej poniewaz blad zostal "wyjasniony"
-                System.out.println("Blad! Podaj liczbę!");
-            } finally {
-                // ten blok jest wywolany bez wzgledu na to czy wyjatek zostal rzucony czy tez nie....
-                System.out.println("Próbowałeś już: " + (++counter) + " razy");
+            } catch (InputMismatchException e) {
+                scanner.nextLine();         //czytamy entera gdy to bedzie jakis tam string, char....
+                System.out.println("Zla wartosc!");
             }
         }
-        System.out.println(integerList);
+        int numberOfValidElements = 0;                  //ile elementow jest poprawnych
+        List<Integer> list = new ArrayList<>();         // nowa struktura
+        while (numberOfValidElements < 3) {
+            int randomNumber = random.nextInt(50);          //lsoowanie od 0 do 49
+            try {
+                int element = array[randomNumber];      //niebezpiczena operacja, mozna wyjsc poza indeks tablicy.....
+                numberOfValidElements++;            //gdy sie uda to zwieksz liczbe poprawnych elementow
+                list.add(element);                  // i dodaj do listy
+            } catch (ArrayIndexOutOfBoundsException e) {            //w przypadku gdy np indeks jest 20, 40, 35....
+                System.out.println("Indeks byl poza tablica....");
+            }
+        }
+        System.out.println(list);           // wyswietlamy porpawne elementy
+    }
+
+    private static boolean checkIfContainsNull(Integer[] array) {       //sprawdzamy czy tablica juz nie posiada nullow....
+        for (Integer i : array) {
+            if (i == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    private static void exceptionsTheory() throws InputMismatchException{
+        //przyklad bez wyjatku...
+//        List<Integer> integerList = new ArrayList<>();
+//        int counter = 0;
+//        while (true) {
+//            //w przypadku nieprzechwycenia wyjatku, zostanie on rzucony dalej w bardziej zewnetrzna warstwe. Gdy nigdzie nei zostanie zlapany: blad
+//            System.out.println("Podaj liczbę. Wpisz -1 by zakonczyc");
+//            try {
+//                // w bloku try umieszczamy niebezpieczne instrukcje,
+//                // try jest bardiej kosztowny niz if
+//                int number = scanner.nextInt();         // w bloku try jesli wyjatek zostanie rzucony to reszta bloku sie nie wykonuje
+//                if (number == -1) {
+//                    break;
+//                }
+//                System.out.println("Dodano liczbę " + number);
+//                integerList.add(number);
+//
+//            } catch (InputMismatchException e) { // e od exception
+//                scanner.nextLine();
+//                //wyjatek zostal zlapany i obsluzony, program uznaje ze mozna pracowac dalej poniewaz blad zostal "wyjasniony"
+//                System.out.println("Blad! Podaj liczbę!");
+//            } catch (Exception e) {
+//                System.out.println("Niezdefiniowany błąd");
+//            } finally {
+//                // ten blok jest wywolany bez wzgledu na to czy wyjatek zostal rzucony czy tez nie....
+//                System.out.println("Próbowałeś już: " + (++counter) + " razy");
+//            }
+//        }
+//        System.out.println(integerList);
+
+
+//        1.bardzo zla praktyka (chyba ze koneicznie jest taki przypadek) jest lapanie wyjaktu NullPointerException
+//        powod: moze byc obsluszony za pomoca ifa i od razu wiadomo w ktorym jest to meijscu....
+//        2. bloki try-catch powinny byc raczej zwiezle tj jesli caly program jest w try catch to jest to zly program....
+//        3. blok try moze byc tylko jeden natomaist blokow catch moze byc kilka....
+
+//        int[] array = new int[]{1, 2, 3};
+//
+//        try {
+//            System.out.println("Podaj liczbe");
+//            int number = scanner.nextInt();     //gdy wpiszmey k to rzucamy wyjatek....
+//            System.out.println("Podaj indeks tablicy a zwroce wartosc...");
+//            int index = scanner.nextInt();
+//
+//            System.out.println("Liczba to " + number);
+//            System.out.println("Element o indeksie " + index + " to " + takeElement(array, index));
+//        }
+////        } catch (InputMismatchException e) {        //wyjatek z k zostal zlaapny tutaj....
+////            System.out.println("Zla liczba");       // nie jest to wyjatek arrayindex takze jest on omijany
+////        } catch (ArrayIndexOutOfBoundsException e) {    // arrayIndexOut.... zlapany wyjatek....
+////            System.out.println("Zly index");
+////        }
+//        catch (InputMismatchException | ArrayIndexOutOfBoundsException e) {      // pojedyczny znak (dwa to alternatywa) oznacza ze wykonaja sie oba sprawdzenia...
+//            System.out.println("Blad");
+//        }
+
+        //dobra praktyka.... unikac bardziej ogolnych wyjatkow....
+//        jesli wiemy jaki wyjatek moze byc rzuczony (mozna dowiedziec sie o tym usuwajac blok try-catch) to przechwcycmy ten wyjatek a nie np Exception aklbo RuntimeException
+
+        // oprocz try-catch mozna uzyc wyrazu kluczowego throws
+        // rzucamy wyjatek recznie za pomoca wyrazu kluczowego throw
+//
+//        System.out.println("Podaj liczbe! Uwazaj na liczbe 10");
+//        //obsluga mozliwa....
+//        try {
+//            int someNumber = scanner.nextInt();
+//            if (someNumber == 10) {
+//                throw new IllegalArgumentException("Mówiłem byś nie dawał liczby 10!!!"); //rzucamy recznie dowolny wyjatek.... w kosntruktorze dajemy napis kroy ukaze sie przy stacktrace
+//            }
+//        } catch (IllegalArgumentException e) {
+//            System.out.println("Przechwycilem wyjatek!");
+//        }
+
+//        tworzenie wlasnych wyjatkow...
+//        customowe wyjatki tworzymy jak klase.... jedyny warunek aby stala sie ona wyjatkiem jest to aby dziedziczyla po Exception, RunTimeException albo implementaowala Throwable
+
+        System.out.println("Podaj kwote ktora chcesz wyplacic");
+        int limit = 1000;
+        try {
+            int money = scanner.nextInt();
+            if (money < 0) {
+                throw new NagativeMoneyException("Podales ujemna kwote!!!");
+            } else if (money > limit) {
+                throw new BankLimitAccountException("Podaj liczbe ponad limit ktory sam przeciez ustaliles!!!");
+            }
+        } catch (BankLimitAccountException | NagativeMoneyException e) {
+            System.out.println(e.getMessage());
+        }
+
+
+        //zadanie: napisac program ktory poprosi uzytkwonika o podanie godziny (nbez minut).
+//        Jesli bedzie ona niepoprawna pod katem wpisanych znakow to przechwyc wyjatek
+//        Jesli bedzie ona nieporpawna pod katem godziny tj godzina -3 itp to przechwyc wlasny wyjatek
+//        Dodaj blok ktory tak czy inaczej pozegna Cie komunikatem: Do zobaczenia jutro!
+//        Stworz wlasne komunikaty!
+
+
+
+
+
+    }
+
+    private static int takeElement(int[] array, int index) throws ArrayIndexOutOfBoundsException {
+        // sa niektore wyjatki tkore trzeba obsluzyc np IOException albo SqlException - wtedy musi byc try-catch albo throws
+        return array[index];        // rzucamy wyjatek dalej.....
     }
 
     private static void collections() {
