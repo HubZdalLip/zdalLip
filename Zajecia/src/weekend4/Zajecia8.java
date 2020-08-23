@@ -1,19 +1,40 @@
 package weekend4;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Zajecia8 {
-    public static void main(String[] args) {
-        exWithShape();
+    public static final Scanner scanner = new Scanner(System.in);
+    public static final Random random = new Random();
 
-        lists();
+
+    public static void main(String[] args) {
+//        exWithShape();
+
+        collections();
 
     }
 
-    private static void lists() {
+    private static void collections() {
+//        exWithList1();
+//        exWithList2();
+        exWithSet1();
 
+
+    }
+
+    private static void exWithSet1() {
+        //zadanie
+        // a) dodaj do seta 5 elementow typu double
+        // b) oblicz srednia z tych elem
+        // c) zwroc rozmiar seta
+        // d) jesli set zawiera element bedacy srednia ze wszsytkich elementow to zwroc komunikat: jest ok!
+        // e) wlosuj do seta 3 wartości i sprawdz czy rozmiar bedzie rowny 8: jesli tak to zwroc komunikat, jesli nie to tez
+
+
+
+    }
+
+    private static void exWithList1() {
         // zadanie
         // a) stworz liste String a nastepnie dodaj do niej 3 elementy
         // b) wyswietl tylko te ktore maja wiecej niz 3 znaki
@@ -59,13 +80,15 @@ public class Zajecia8 {
 
         System.out.println(stringList);
         for (int i = 0; i < stringList.size(); i++) {
-            if (i % 2 == 0){
+            if (i % 2 == 0) {
                 System.out.println(stringList.get(i));      //h)
             }
         }
         System.out.println(stringList.size());          //i)
 
+    }
 
+    private static void exWithList2() {
         // zadanie
 //        a) stworz liste integerow
 //        b) dodawaj liczby od uzytkownika w petli az wpisze -1 - ta liczba nie powinna sie znalezc w liscie
@@ -74,7 +97,93 @@ public class Zajecia8 {
 //        e) gdy uzytkownik wpisze remove to spytaj sie o indeks do usuniecia i usun ten element
 //        f) gdy uzytkownik wpisze average to zwroc srednia arytmetyczna dla drugiej polowy listy
 
+//        gdy exit to wyjdzie
 
+        List<Integer> integerList = new ArrayList<>();      //a)
+
+        getElements(integerList);                   //b)
+
+        scanner.nextLine();
+        while (true) {
+            System.out.println("Podaj operacje");
+
+            switch (scanner.nextLine()) {
+                case "replace":
+                    replaceElements(integerList);
+                    System.out.println(integerList);
+                    break;
+                case "insert":
+                    insertOnBeg(integerList);
+                    System.out.println(integerList);
+                    break;
+                case "remove":
+                    removeAtIndex(integerList);
+                    System.out.println(integerList);
+                    break;
+                case "average":
+                    averageForHalf(integerList);
+                    break;
+                case "exit":
+                default:
+                    return;
+            }
+        }
+
+    }
+
+    private static void averageForHalf(List<Integer> integerList) {
+        List<Integer> half = new ArrayList<>();
+        for (int i = integerList.size() / 2; i < integerList.size(); i++) {
+            half.add(integerList.get(i));
+        }
+        double average = calculateAverage(half);
+        System.out.println("Oto średnia dla elementow "+ half+" : " + average);
+
+    }
+
+    private static double calculateAverage(List<Integer> half) {
+        double sum = 0;
+        for (int elem : half) {
+            sum += elem;
+        }
+        return sum / half.size();
+    }
+
+    private static void removeAtIndex(List<Integer> integerList) {
+        System.out.println("Podaj indeks do usuniecia!");
+        int index = scanner.nextInt();
+        if (index <= integerList.size()) {
+            integerList.remove(index);
+        } else {
+            System.out.println("Index jest poza lista!");
+        }
+        scanner.nextLine();
+    }
+
+    private static void insertOnBeg(List<Integer> integerList) {
+        for (int i = 0; i < 3; i++) {
+            integerList.add(0, random.nextInt(20));
+        }
+    }
+
+    private static void replaceElements(List<Integer> integerList) {
+        for (int i = 0; i < integerList.size(); i++) {
+            if (integerList.get(i) > 4) {
+                integerList.set(i, integerList.get(i) / 2);
+            }
+        }
+    }
+
+    private static void getElements(List<Integer> integerList) {
+//        List<Integer> integerList = new ArrayList<>();
+        while (true) {
+            System.out.println("Podaj liczbę! Wpisz -1 jeśli chcesz zakończyć!");
+            int number = scanner.nextInt(); // w javie wystepuje mechanizm autoboxingu i autounboxingu....
+            if (number == -1) {                             //b)
+                break;
+            }
+            integerList.add(number);
+        }
     }
 
     private static void exWithShape() {
