@@ -3,7 +3,7 @@ package weekend4;
 import java.util.*;
 
 public class Zajecia8 {
-    public static final Scanner scanner = new Scanner(System.in);
+    public static final Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH);
     public static final Random random = new Random();
 
 
@@ -20,7 +20,8 @@ public class Zajecia8 {
 //        exWithSet1();
 //        exWithSet2();
 //        exWithSet3();
-        mapTheory();
+//        mapTheory();
+        exWithMaps1();
 
 
     }
@@ -73,15 +74,43 @@ public class Zajecia8 {
 //        element 3: klucz = wartosc
 
 
+    }
 
+    private static void exWithMaps1() {
         // zadanie
-//        Dodaj kilka elementów do mapy - produkty.
-//        Przestan dodawac gdy uzytkownik wpisze exit
-//        Kazdy produkt powinien miec swoja wartosc => mleko - 2zł
-//        Wyswietl elementy mapy
-//        Zwroc informacje ile mapa elementow
-//        Zwroc informacje w postaci: Mleko jest warte 2zl
+//        a)Dodaj kilka elementów do mapy - produkty.
+//          Przestan dodawac gdy uzytkownik wpisze exit
+//          Kazdy produkt powinien miec swoja wartosc => mleko - 2zł
+//        b) Wyswietl elementy mapy
+//        c) Zwroc informacje ile mapa elementow
+//        d) Zwroc informacje w postaci: Mleko jest warte 2zl
 
+        // kluczem jest nazwa produktu czyli, np: mleko, chleb, platki
+//        warrtoscia jest cena produktu, np 2,3,4 zl daltego musi byc to integer
+        Map<String, Double> mapOfProducts = new LinkedHashMap<>();
+        while (true) {
+            System.out.println("Podaj nazwę produktu");
+            String nameOfProduct = scanner.nextLine();
+            //jak uzytownik wpisze exit to juz nie martwimy sie o cene, po prostu opuszczamy petle
+            if (nameOfProduct.equals("exit")) {
+                System.out.println("Koniec pętli...");
+                break;
+            }
+            System.out.println("Podaj cenę");
+            double price = scanner.nextDouble();
+
+            //uwaga! enter musi byc zczytany!
+            scanner.nextLine();
+
+            //dodajemy zmienne do mapy
+            mapOfProducts.put(nameOfProduct, price);
+        }
+        System.out.println(mapOfProducts);
+        System.out.println("Rozmiar tej mapy to: " + mapOfProducts.size());
+
+        for (Map.Entry<String, Double> pair : mapOfProducts.entrySet()) {
+            System.out.println(pair.getKey() + " jest warte " + pair.getValue() + " zl");
+        }
 
     }
 
@@ -224,6 +253,7 @@ public class Zajecia8 {
             }
         }
         System.out.println(stringList.size());          //i)
+
 
     }
 
