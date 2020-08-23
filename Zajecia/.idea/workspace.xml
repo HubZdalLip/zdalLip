@@ -48,20 +48,7 @@
       <recent name="weekend3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Zajecia7">
-    <configuration name="Zad1Mod3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad1Mod3" />
-      <module name="Zajecia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pracadomowa3.cards.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Zajecia8">
     <configuration name="Zad3Mod3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pracadomowa3.Zad3Mod3" />
       <module name="Zajecia" />
@@ -114,6 +101,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Zajecia8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend4.Zajecia8" />
+      <module name="Zajecia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="weekend4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -127,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Zajecia8" />
         <item itemvalue="Application.Zajecia7" />
         <item itemvalue="Application.Zad4Mod4" />
         <item itemvalue="Application.Zad7Mod3" />
         <item itemvalue="Application.Zad3Mod3" />
-        <item itemvalue="Application.Zad1Mod3" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +163,7 @@
       <workItem from="1598021785999" duration="5538000" />
       <workItem from="1598036999597" duration="38000" />
       <workItem from="1598079576938" duration="1000" />
-      <workItem from="1598079600205" duration="17644000" />
+      <workItem from="1598079600205" duration="22853000" />
     </task>
     <servers />
   </component>
@@ -183,26 +183,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1598095669033">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1598167625616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598095669033" />
-    <state width="1877" height="309" key="GridCell.Tab.0.bottom" timestamp="1598097538678">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598167625616" />
+    <state width="1877" height="538" key="GridCell.Tab.0.bottom" timestamp="1598168993692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598097538678" />
-    <state width="1877" height="309" key="GridCell.Tab.0.center" timestamp="1598097538678">
+    <state width="1877" height="538" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598168993692" />
+    <state width="1877" height="538" key="GridCell.Tab.0.center" timestamp="1598168993692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598097538678" />
-    <state width="1877" height="309" key="GridCell.Tab.0.left" timestamp="1598097538678">
+    <state width="1877" height="538" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598168993692" />
+    <state width="1877" height="538" key="GridCell.Tab.0.left" timestamp="1598168993692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598097538678" />
-    <state width="1877" height="309" key="GridCell.Tab.0.right" timestamp="1598097538678">
+    <state width="1877" height="538" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598168993692" />
+    <state width="1877" height="538" key="GridCell.Tab.0.right" timestamp="1598168993692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="309" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598097538678" />
+    <state width="1877" height="538" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598168993692" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1598082689738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -219,10 +219,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598082689738" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1598091246107">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1598166435532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598091246107" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598166435532" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598090944794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

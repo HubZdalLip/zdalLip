@@ -251,11 +251,9 @@ public class Zajecia7 {
             counter++;
         }
 
-        System.out.println("Licznik: "+ counter);
+        System.out.println("Licznik: " + counter);
         System.out.println(integerSet);
         System.out.println(integerList); // c)
-
-
 
 
     }
