@@ -16,14 +16,43 @@ public class Zajecia8 {
     }
 
     private static void exceptions() {
-        try {
-            exceptionsTheory();
-        }catch (InputMismatchException e){
-            System.out.println("Podales litere");
-        }
+//        try {
+//        exceptionsTheory();
+//        } catch (InputMismatchException e) {
+//            System.out.println("Podales litere");
+//        }
 
 //        exWithException1();
+        exWithException2();
 
+    }
+
+    private static void exWithException2() {
+
+        //zadanie: napisac program ktory poprosi uzytkwonika o podanie godziny (bez minut).
+//        Jesli bedzie ona niepoprawna pod katem wpisanych znakow to przechwyc wyjatek
+//        Jesli bedzie ona nieporpawna pod katem godziny tj godzina -3 itp to przechwyc wlasny wyjatek
+//        Dodaj blok ktory tak czy inaczej pozegna Cie komunikatem: Do zobaczenia jutro!
+//        Stworz wlasne komunikaty!
+
+        System.out.println("Podaj godzine ");
+
+        int hour;
+        try {
+            hour = scanner.nextInt();
+
+            if (hour < 0 || hour > 24) {
+                throw new InvalidHourException("Podales zla godzine!");
+            }
+            System.out.println("Podana godzina to " + hour);
+
+        } catch (InvalidHourException e) {
+            System.out.println(e.getMessage());
+        } catch (InputMismatchException e) {
+            System.out.println("Zla godzina!!");
+        } finally {
+            System.out.println("Do zoabczenia jutro!");
+        }
     }
 
     private static void exWithException1() {
@@ -83,7 +112,7 @@ public class Zajecia8 {
     }
 
 
-    private static void exceptionsTheory() throws InputMismatchException{
+    private static void exceptionsTheory() throws InputMismatchException {
         //przyklad bez wyjatku...
 //        List<Integer> integerList = new ArrayList<>();
 //        int counter = 0;
@@ -171,16 +200,6 @@ public class Zajecia8 {
         } catch (BankLimitAccountException | NagativeMoneyException e) {
             System.out.println(e.getMessage());
         }
-
-
-        //zadanie: napisac program ktory poprosi uzytkwonika o podanie godziny (nbez minut).
-//        Jesli bedzie ona niepoprawna pod katem wpisanych znakow to przechwyc wyjatek
-//        Jesli bedzie ona nieporpawna pod katem godziny tj godzina -3 itp to przechwyc wlasny wyjatek
-//        Dodaj blok ktory tak czy inaczej pozegna Cie komunikatem: Do zobaczenia jutro!
-//        Stworz wlasne komunikaty!
-
-
-
 
 
     }
