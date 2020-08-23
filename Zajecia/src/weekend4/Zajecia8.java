@@ -9,9 +9,53 @@ public class Zajecia8 {
 
     public static void main(String[] args) {
 //        exWithShape();
+//        collections();
+        exceptions();
 
-        collections();
 
+    }
+
+    private static void exceptions() {
+        exceptionsTheory();
+        exWithException1();
+
+    }
+
+    private static void exWithException1() {
+//        a)Stwórz tablice tylu elementow ile chce uzytkownik
+//        b)Zainicjalizuj je wartosciami int (w petli)
+//        c)wylosuj kilka wartosci, losuj zawsze w zakresie od 1 do 50
+//        d)losuj do chwili az wylosujesz 3 elementy, ktore zwrocisz w nowej strukturze.
+
+    }
+
+    private static void exceptionsTheory() {
+        //przyklad bez wyjatku...
+        List<Integer> integerList = new ArrayList<>();
+        int counter = 0;
+        while (true) {
+            //w przypadku nieprzechwycenia wyjatku, zostanie on rzucony dalej w bardziej zewnetrzna warstwe. Gdy nigdzie nei zostanie zlapany: blad
+            System.out.println("Podaj liczbę. Wpisz -1 by zakonczyc");
+            try {
+                // w bloku try umieszczamy niebezpieczne instrukcje,
+                // try jest bardiej kosztowny niz if
+                int number = scanner.nextInt();         // w bloku try jesli wyjatek zostanie rzucony to reszta bloku sie nie wykonuje
+                if (number == -1) {
+                    break;
+                }
+                System.out.println("Dodano liczbę " + number);
+                integerList.add(number);
+
+            } catch (InputMismatchException e) { // e od exception
+                scanner.nextLine();
+                //wyjatek zostal zlapany i obsluzony, program uznaje ze mozna pracowac dalej poniewaz blad zostal "wyjasniony"
+                System.out.println("Blad! Podaj liczbę!");
+            } finally {
+                // ten blok jest wywolany bez wzgledu na to czy wyjatek zostal rzucony czy tez nie....
+                System.out.println("Próbowałeś już: " + (++counter) + " razy");
+            }
+        }
+        System.out.println(integerList);
     }
 
     private static void collections() {
@@ -91,13 +135,20 @@ public class Zajecia8 {
         anotherMap.replace("mleko", 3);
         System.out.println(anotherMap);
 
-        anotherMap.replace("mleko",10, 4);  // nie dostalismy potwierdzenia o starej wartosci....
+        anotherMap.replace("mleko", 10, 4);  // nie dostalismy potwierdzenia o starej wartosci....
         System.out.println(anotherMap);
 
         System.out.println(anotherMap.get("ser"));
-        System.out.println(anotherMap.getOrDefault("ser",0));
+        System.out.println(anotherMap.getOrDefault("ser", 0));
 
 
+//        List<Map<String, String>> mapList = new ArrayList<>();
+
+//        <img src="dog.jpg" alt="Pies" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
     }
 
     private static void exWithMaps1() {
@@ -136,13 +187,6 @@ public class Zajecia8 {
             System.out.println(pair.getKey() + " jest warte " + pair.getValue() + " zl");
         }
 
-//        List<Map<String, String>> mapList = new ArrayList<>();
-
-//        <img src="dog.jpg" alt="Pies" th:src="@{}"/>
-//        <img src="" alt="" th:src="@{}"/>
-//        <img src="" alt="" th:src="@{}"/>
-//        <img src="" alt="" th:src="@{}"/>
-//        <img src="" alt="" th:src="@{}"/>
 
     }
 
