@@ -73,6 +73,16 @@ public class Zajecia8 {
 //        element 3: klucz = wartosc
 
 
+
+        // zadanie
+//        Dodaj kilka elementów do mapy - produkty.
+//        Przestan dodawac gdy uzytkownik wpisze exit
+//        Kazdy produkt powinien miec swoja wartosc => mleko - 2zł
+//        Wyswietl elementy mapy
+//        Zwroc informacje ile mapa elementow
+//        Zwroc informacje w postaci: Mleko jest warte 2zl
+
+
     }
 
     private static void exWithSet3() {
