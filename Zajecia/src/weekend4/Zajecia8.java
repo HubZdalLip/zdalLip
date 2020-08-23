@@ -21,9 +21,18 @@ public class Zajecia8 {
 //        exWithSet2();
 //        exWithSet3();
 //        mapTheory();
-        exWithMaps1();
+//        exWithMaps1();
+        exWithMaps2();
 
 
+    }
+
+    private static void exWithMaps2() {
+        // stworz mape zachowuajca kolejnosc
+//        a) dodaj do niej miasta w petli i informacje czy bylo ono przez Ciebie zwiedzono berlin =true
+//        b) po wpisaniu exit wychodzimy z petli
+//        c) podmien co drugi element na odwrotna wartosc
+//        d) wyswietl elementy
     }
 
     private static void mapTheory() {
@@ -74,6 +83,21 @@ public class Zajecia8 {
 //        element 3: klucz = wartosc
 
 
+        //replace
+        Map<String, Integer> anotherMap = new HashMap<>();
+
+        anotherMap.put("mleko", 2);
+        System.out.println(anotherMap);
+        anotherMap.replace("mleko", 3);
+        System.out.println(anotherMap);
+
+        anotherMap.replace("mleko",10, 4);  // nie dostalismy potwierdzenia o starej wartosci....
+        System.out.println(anotherMap);
+
+        System.out.println(anotherMap.get("ser"));
+        System.out.println(anotherMap.getOrDefault("ser",0));
+
+
     }
 
     private static void exWithMaps1() {
@@ -111,6 +135,14 @@ public class Zajecia8 {
         for (Map.Entry<String, Double> pair : mapOfProducts.entrySet()) {
             System.out.println(pair.getKey() + " jest warte " + pair.getValue() + " zl");
         }
+
+//        List<Map<String, String>> mapList = new ArrayList<>();
+
+//        <img src="dog.jpg" alt="Pies" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
+//        <img src="" alt="" th:src="@{}"/>
 
     }
 
