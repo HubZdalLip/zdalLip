@@ -1,14 +1,12 @@
 package weekend5.FileTheory;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class MyFilesInfo {
 
     private static String name = "plikUtworoznyWdgDobrychPraktyk.txt";
-    private static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH);
 
     public static void main(String[] args) {
         // podstawy, informacje o pliku
@@ -104,22 +102,164 @@ public class MyFilesInfo {
         // b) stworz metode zapisujaca tekst do pliku w petli wg tego co wpisze uzytkownik
         // c) gdy uzytkwonik wpisze exit wyjdz
 
-        File file = createNewFile(); //metoda ktora tworzy plik
+//        File file = createNewFile(); //metoda ktora tworzy plik
 ////        writeToNewFile(file);
 //        writeToNewFileTryWithResources(file);
 //
 
 //        appendToFile(file);
 
-        readFromFile(file);
+//        readFromFile(file);
+
+        fileEx();
+
+        ex1();
+
+        ex2Home();
 
 
+    }
+
+    private static void ex2Home() {
+//        Napisz program, który wczyta plik tekstowy o nazwie dane.txt (znaki ASCII),
+//        a następnie wypisze pobrane znaki w konsoli.
+//        A. Następnie stwórz histogram wystąpienia znaków w tekście. Wyniki zapisz do pliku
+//        wyniki.txt
+//              Histogram - popularny wykres statystyczny służący do przedstawienia
+//              wyników.
+//        B. Zamień miejscami dwa najczęściej występujące znaki w tekście i zapisz cały
+//        zmieniony ciąg do pliku podmiana.txt
+//        C. Odwróć kolejnością wszystkie znaki, a następnie zapisz je do pliku wspak.txt
+//        D. ** zamień pierwszy znak z drugim, trzeci z czwartym, itd.
+
+    }
+
+    private static void ex1() {
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+//        zadanie
+//        cz I
+//            a) stworz plik, nadaj nazwe od uzytwkonika
+//            b) pytaj uzytkownika od liczby
+//            c) jesli są większe od 0 to wpisz je do pliku, a jesli mniejsze to do listy
+//        cz II
+//            d) odczytaj plik i wypisz najwiekszy oraz najmniejszy element
+//            e) wylicz srednia ze wszystkich liczb (tych z listy dla ujemnych liczb tez)
 
 
+        File file = createNewFile(); //a)
+        List<Integer> integerList = appendToFileOrReturnList(file); //b,c)
+        List<Integer> readElementsFromFile = readListFromFile(file); //d)
+
+        int max = calcMax(readElementsFromFile);        //d)..
+        int min = calcMin(readElementsFromFile);
+
+        List<Integer> listWithWholeContent = new ArrayList<>();
+        listWithWholeContent.addAll(integerList);
+        listWithWholeContent.addAll(readElementsFromFile);
+
+        double average = calcAverage(listWithWholeContent); //e)
+
+        System.out.println("Lista z ujemnymi liczbami: " + integerList);
+        System.out.println("Lista z liczbami ktore zostaly zapsiane w pliku : " + readElementsFromFile);
+        System.out.println("Lista ze wszystkimi liczbami : " + listWithWholeContent);
+
+        System.out.println("Element max to: " + max);
+        System.out.println("Element min to: " + min);
+        System.out.println("Srednia ogolna to :" + average);
+
+
+    }
+
+    private static double calcAverage(List<Integer> listWithWholeContent) {
+        double total = 0;
+        for (Integer tempInt : listWithWholeContent) {
+            total += tempInt;
+        }
+        return total / listWithWholeContent.size();
+
+    }
+
+    private static int calcMax(List<Integer> readElementsFromFile) {
+        int max = Integer.MIN_VALUE;
+        for (Integer tempInt : readElementsFromFile) {
+            if (tempInt > max) {
+                max = tempInt;
+            }
+        }
+        return max;
+    }
+
+    private static int calcMin(List<Integer> readElementsFromFile) {
+        int min = Integer.MAX_VALUE;
+        for (Integer tempInt : readElementsFromFile) {
+            if (tempInt < min) {
+                min = tempInt;
+            }
+        }
+        return min;
+    }
+
+    private static List<Integer> readListFromFile(File file) {
+        try (Scanner scanner = new Scanner(file)) {
+            List<Integer> tempList = new ArrayList<>();
+            while (scanner.hasNext()) {
+                tempList.add(scanner.nextInt());
+            }
+            return tempList;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return Collections.emptyList();
+    }
+
+    private static List<Integer> appendToFileOrReturnList(File file) {
+        List<Integer> integerList = new ArrayList<>();
+        try (PrintWriter writer = new PrintWriter(file)) {
+            while (true) {
+                System.out.println("Podaj liczbe");
+                int intValue = scanner.nextInt();
+                if (intValue == -1) {
+                    break;
+                }
+                if (intValue > 0) {
+                    writer.println(intValue);
+                } else {
+                    integerList.add(intValue);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return integerList;
+
+    }
+
+    private static void fileEx() {
 
         // zadanie stworz plik o nazwie napisy.txt
         // zczytaj wszystkie linijki jakie sa w tekscie
         // wyswietl liczbe linijek
+
+
+        try (Scanner scanner = new Scanner(new File("napisy.txt"))) {
+            List<String> lines = new ArrayList<>();
+            while (scanner.hasNext()) {
+                lines.add(scanner.nextLine());
+            }
+            System.out.println(lines);
+            System.out.println(lines.size());       // liczba linijke czyli rozmiar listy
+
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -127,7 +267,7 @@ public class MyFilesInfo {
         try (Scanner scannerForFiles = new Scanner(file)) { // konstrukcja try-with-resources tworze scannera tylkod la pliku. Tego scannera do niczego innego nie uzyejmy
 //            po koncu try zostanie on zamkniety
             List<String> textsFromFile = new ArrayList<>(); // lista dolecowo przechowujaca elementy z pliku
-            while(scannerForFiles.hasNext()){           //dopoki istnieje nastepna linijka
+            while (scannerForFiles.hasNext()) {           //dopoki istnieje nastepna linijka
                 textsFromFile.add(scannerForFiles.next()); //dodaj do listy
             }
             System.out.println(textsFromFile);
