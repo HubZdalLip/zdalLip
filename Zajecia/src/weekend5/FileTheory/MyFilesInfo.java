@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class MyFilesInfo {
+
+    private static String name = "plikUtworoznyWdgDobrychPraktyk.txt";
+
     public static void main(String[] args) {
         // podstawy, informacje o pliku
         File file = new File("data.txt");
@@ -84,7 +87,31 @@ public class MyFilesInfo {
 //         c) wydziel metode do stworzoenia pliku,
 //         d) stworz metode wpisujaca do pliku
 
+        File newFile = createFile();
+        writeToFile(newFile);
 
+        // zadanie:
+        // a) stwórz metode pytającą o nazwę pliku i stwórz plik o tej nazwie
+        // b) stworz metode zapisujaca tekst do pliku w petli wg tego co wpisze uzytkownik
+        // c) gdy uzytkwonik wpisze exit wyjdz
 
+    }
+
+    private static void writeToFile(File newFile) {
+        try {
+            PrintWriter printWriter = new PrintWriter(newFile);
+            printWriter.println("Some texts");
+            printWriter.println("Another texts");
+            printWriter.println("Another texts");
+            printWriter.println("Another texts");
+            printWriter.println("Another texts");
+            printWriter.close();
+        }catch (FileNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static File createFile() {
+        return new File(name);
     }
 }
