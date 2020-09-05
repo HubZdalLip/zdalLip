@@ -99,6 +99,17 @@ public class AnonymousClasses {
 
         playable.play("Magda", 300);
 
+        // Stworzyć 1 nieabstrakcyjną klasę Game z przeciążoną metodą start
+        // - int start(Movable movable)
+        // - int start(Pawn pawn)
+        // - int start(Pawn pawn, Playable playable, Movable movable, Beatable beatable)
+        // Wywołać wszystkie wersje metody start nie tworząc zewnętrznych klas
+        // za pomocą słowa kluczowego class.
+        // Kiedy to możliwe użyj lambdy.
+
+
+
+
     }
 
     private static void anonEx2() {
