@@ -1,13 +1,12 @@
 package weekend5.FileTheory;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.util.Scanner;
 
 public class MyFilesInfo {
 
     private static String name = "plikUtworoznyWdgDobrychPraktyk.txt";
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         // podstawy, informacje o pliku
@@ -87,14 +86,89 @@ public class MyFilesInfo {
 //         c) wydziel metode do stworzoenia pliku,
 //         d) stworz metode wpisujaca do pliku
 
-        File newFile = createFile();
-        writeToFile(newFile);
+//        File newFile = createFile();
+//        writeToFile(newFile);
+
+
+        fileExercise();
+
+
+    }
+
+    private static void fileExercise() {
 
         // zadanie:
         // a) stwórz metode pytającą o nazwę pliku i stwórz plik o tej nazwie
         // b) stworz metode zapisujaca tekst do pliku w petli wg tego co wpisze uzytkownik
         // c) gdy uzytkwonik wpisze exit wyjdz
 
+        File file = createNewFile(); //metoda ktora tworzy plik
+////        writeToNewFile(file);
+//        writeToNewFileTryWithResources(file);
+//
+
+
+        appendToFile(file);
+
+    }
+
+    private static void appendToFile(File file) {
+        try (FileWriter fileWriter = new FileWriter(file, true)) {
+            scanner.nextLine();
+            while (true) {
+                System.out.println("Podaj tekst");
+                String textFromUser = scanner.nextLine();
+                if ("exit".equals(textFromUser.toLowerCase())) {
+                    break;
+                }
+                fileWriter.append(textFromUser).append("\n");
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void writeToNewFileTryWithResources(File file) {
+        //tworzac printwritera w ten sposob zadamy aby z chwila wyjscia z bloku try-catch zostal on zamkniety .close() i wszelkie dane na jego temat zostaly wyczyszczone
+        try (PrintWriter printWriter = new PrintWriter(file)) {
+            scanner.nextLine();
+            while (true) {
+                System.out.println("Podaj tekst");
+                String textFromUser = scanner.nextLine();
+                if ("exit".equals(textFromUser.toLowerCase())) {
+                    break;
+                }
+                printWriter.println(textFromUser);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("NIe udalo sie odnalezc pliku");
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void writeToNewFile(File file) {
+        try {
+            scanner.nextLine();
+            PrintWriter printWriter = new PrintWriter(file);
+            while (true) {
+                System.out.println("Podaj tekst");
+                String textFromUser = scanner.nextLine();
+                if ("exit".equals(textFromUser.toLowerCase())) {
+                    break;
+                }
+                printWriter.println(textFromUser);
+            }
+            printWriter.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static File createNewFile() {
+        System.out.println("Podaj nazwę pliku");
+        String name = scanner.next();
+        return new File(name + ".txt");
     }
 
     private static void writeToFile(File newFile) {
@@ -106,7 +180,7 @@ public class MyFilesInfo {
             printWriter.println("Another texts");
             printWriter.println("Another texts");
             printWriter.close();
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
     }
