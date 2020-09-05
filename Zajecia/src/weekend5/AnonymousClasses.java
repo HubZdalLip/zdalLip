@@ -14,6 +14,7 @@ public class AnonymousClasses {
 
         int value = 500;
         int anotherValue = 1000;
+        
 
         Employee employee = new Employee() {
             private double salary = 2500;          // moge tworzyc pola poniewaz jest to zwykla klasa implementujaca interfejs z tym ze nie psoiada nazwy
@@ -106,8 +107,6 @@ public class AnonymousClasses {
         // Wywołać wszystkie wersje metody start nie tworząc zewnętrznych klas
         // za pomocą słowa kluczowego class.
         // Kiedy to możliwe użyj lambdy.
-
-
 
 
     }
