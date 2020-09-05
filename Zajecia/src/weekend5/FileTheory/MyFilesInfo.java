@@ -1,6 +1,8 @@
 package weekend5.FileTheory;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MyFilesInfo {
@@ -107,9 +109,31 @@ public class MyFilesInfo {
 //        writeToNewFileTryWithResources(file);
 //
 
+//        appendToFile(file);
 
-        appendToFile(file);
+        readFromFile(file);
 
+
+
+
+
+        // zadanie stworz plik o nazwie napisy.txt
+        // zczytaj wszystkie linijki jakie sa w tekscie
+        // wyswietl liczbe linijek
+
+    }
+
+    private static void readFromFile(File file) {
+        try (Scanner scannerForFiles = new Scanner(file)) { // konstrukcja try-with-resources tworze scannera tylkod la pliku. Tego scannera do niczego innego nie uzyejmy
+//            po koncu try zostanie on zamkniety
+            List<String> textsFromFile = new ArrayList<>(); // lista dolecowo przechowujaca elementy z pliku
+            while(scannerForFiles.hasNext()){           //dopoki istnieje nastepna linijka
+                textsFromFile.add(scannerForFiles.next()); //dodaj do listy
+            }
+            System.out.println(textsFromFile);
+        } catch (FileNotFoundException e) {
+            System.out.println("Nie znaleziono pliku");
+        }
     }
 
     private static void appendToFile(File file) {
