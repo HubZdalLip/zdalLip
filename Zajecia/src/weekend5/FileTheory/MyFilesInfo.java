@@ -9,6 +9,29 @@ public class MyFilesInfo {
     private static Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH);
 
     public static void main(String[] args) {
+//        filesIntro();
+//        saveToFileExample();
+//        fileExercises();
+
+
+    }
+
+    private static void saveToFileExample() {
+        PrintWriter writer = null;
+        try {
+            //zapis do pliku....
+            File file1 = new File("newFile.txt");
+            writer = new PrintWriter(file1);
+            writer.println("Jakas linijka");
+            writer.println("Another text");
+            writer.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    private static void filesIntro() {
         // podstawy, informacje o pliku
         File file = new File("data.txt");
         // jest to postac abstrakcyjna.... czyli jakby szkielet plik zostal utworozny, jest on przygotowany do tego by go boslugiiwac ale jeszcze nie istnieje
@@ -63,23 +86,9 @@ public class MyFilesInfo {
         } catch (IOException e) {
             System.out.println(e);
         }
+    }
 
-//
-//        try{
-//
-//        }
-        PrintWriter writer = null;
-        try {
-            //zapis do pliku....
-            File file1 = new File("newFile.txt");
-            writer = new PrintWriter(file1);
-            writer.println("Jakas linijka");
-            writer.println("Another text");
-            writer.close();
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        }
-
+    private static void fileExercises() {
         // zadanie:
 //         a) stworz plik,
 //         b) stworz pole statyczne okresjace nazwe pliku,
@@ -89,13 +98,6 @@ public class MyFilesInfo {
 //        File newFile = createFile();
 //        writeToFile(newFile);
 
-
-        fileExercise();
-
-
-    }
-
-    private static void fileExercise() {
 
         // zadanie:
         // a) stwórz metode pytającą o nazwę pliku i stwórz plik o tej nazwie
@@ -112,9 +114,7 @@ public class MyFilesInfo {
 //        readFromFile(file);
 
         fileEx();
-
         ex1();
-
         ex2Home();
 
 
