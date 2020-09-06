@@ -4,9 +4,80 @@ public class AnonymousClasses {
     // klasa anonimowa - klasa bez nazwy.... uzyc jej mozna jedynie raz
 
     public static void main(String[] args) {
-        anonEx1();
-        anonEx2();
-        anonEx3();
+//        anonEx1();
+//        anonEx2();
+//        anonEx3();
+        anonEx4();
+
+    }
+
+    private static void anonEx4() {
+
+        // Stworzyć 1 nieabstrakcyjną klasę Game z przeciążoną metodą start
+        // - int start(Movable movable)
+        // - int start(Pawn pawn)
+        // - int start(Pawn pawn, Playable playable, Movable movable, Beatable beatable)
+        // Wywołać wszystkie wersje metody start nie tworząc zewnętrznych klas
+        // za pomocą słowa kluczowego class.
+        // Kiedy to możliwe użyj lambdy.
+
+        Game game = new Game() {                //game jest interfejsem, co oznacza ze posiada same metody abstarkcyjne....
+            //oznacza to ze do Game mozemy stworzyc klase anonimowa
+            @Override
+            public void start(Movable movable) { //podalismy juz obiekt w psotaci kalsy anonimowej
+                movable.move();     // wywolujemy metody move i stop tak jak zostaly okreslone w klasie anonimowej
+                movable.stop();
+            }
+
+            @Override
+            public void start(Pawn pawn) {
+                pawn.move();            //odwolujemy sie do labmdy utworzonej ponziej w chwili wysylania do metody!
+            }
+
+            @Override
+            public void start(Pawn pawn, Playable playable, Movable movable, Beatable beatable) {
+                pawn.move();
+                playable.play("Ktos", 30);
+                movable.move();
+                movable.stop();
+                beatable.beat();
+            }
+        };
+
+        // intefejs wyslany musi byc klasa anonimowa albo implementacja tego interfejsu
+        game.start(new Movable() {
+            @Override
+            public void move() {
+                System.out.println("Metoda move, movable");
+            }
+            //okreslamy implementacje metod do Moveable w tym przypadku!
+            @Override
+            public void stop() {
+                System.out.println("Metoda stop, movable");
+            }
+        });
+
+
+        // poniewaz interfejs Pawn posiada jedynie jedna metode, moze on byc funkcjonalnym interfejsem, czyli moze byc przedstawiony za pomoca lambdy
+        game.start(() -> System.out.println("Metoda move z Pawna"));
+
+        game.start(
+                () -> System.out.println("Metoda move z Pawn (wersja 4 parametry)"),
+                (who, howLong) -> System.out.println(who + " gra " + howLong + " minut. WERSJA 4 PARAM"),
+                new Movable() {
+                    @Override
+                    public void move() {
+                        System.out.println("Metoda move z Moveable, wersja 4 param");
+                    }
+
+                    @Override
+                    public void stop() {
+                        System.out.println("Metoda stop z Moveable, wersja 4 param");
+                    }
+                },
+                () -> System.out.println("Gryzę! WERSJA 4 PARAM")
+        );
+
 
     }
 
@@ -14,7 +85,7 @@ public class AnonymousClasses {
 
         int value = 500;
         int anotherValue = 1000;
-        
+
 
         Employee employee = new Employee() {
             private double salary = 2500;          // moge tworzyc pola poniewaz jest to zwykla klasa implementujaca interfejs z tym ze nie psoiada nazwy
@@ -99,14 +170,6 @@ public class AnonymousClasses {
         };
 
         playable.play("Magda", 300);
-
-        // Stworzyć 1 nieabstrakcyjną klasę Game z przeciążoną metodą start
-        // - int start(Movable movable)
-        // - int start(Pawn pawn)
-        // - int start(Pawn pawn, Playable playable, Movable movable, Beatable beatable)
-        // Wywołać wszystkie wersje metody start nie tworząc zewnętrznych klas
-        // za pomocą słowa kluczowego class.
-        // Kiedy to możliwe użyj lambdy.
 
 
     }

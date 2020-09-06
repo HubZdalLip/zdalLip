@@ -3,6 +3,20 @@ package pracadomowa4.course;
 import java.util.Scanner;
 
 public class MainTest {
+//    Miniprojekt II Stwórz strukturę danych reprezentującą fiszki polsko-angielskie. Dodaj funkcjonalności:
+//    a) dodanie słowa po polsku wraz z definicją po angielsku
+//    b) dostęp do danego słowa w języku angielskim wpisując słowo po polsku
+//    c) dodaj możliwość sortowania alfabetycznie
+//    d) dodaj możliwość wymieszania słówek
+//    Następnie stwórz klasę Course z konstruktorem przyjmującym parametr określający czy kurs jest podstawowy czy rozszerzony.
+//    a) Dodaj metodę practise, która będzie odpytywać użytkownika ze znajomości języka.
+//    b) W kursie podstawowym będzie wyświetlana połowa słówek. Dane słówko będzie wyświetlane do chwili udzielenia poprawnej odpowiedzi.
+//    c) W kursie rozszerzonym wyświetlany będzie cały zestaw, a znajomość słówka jest zaliczana dopiero przy 3-krotnej poprawnej odpowiedzi
+//    d) W klasie course dodaj metodę exam, która odpyta użytkownika z wiedzy o języku. Wyniki wyświetli dopiero po zakończonym egzaminie.
+//    e) Zaliczenie powinno być wyświetlane od 50%. DLA CHĘTNYCH: dodaj opcję odwrotu struktury na ang-pol.
+
+
+
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -31,7 +45,7 @@ public class MainTest {
                     setModeOfCourse(course);
                     break;
                 case 7:
-                    course.updateFlashcards(flashcards);
+                    course.updateFlashcards(flashcards); // zakladamy ze ktos mogl dodac fiszki w miedzyczaise, musimy je updatowac w kursie
                     course.practise();
                     break;
                 case 8:
