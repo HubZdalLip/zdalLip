@@ -2,6 +2,7 @@ package weekend5;
 
 import java.io.File;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Zajecia10 {
@@ -57,9 +58,44 @@ public class Zajecia10 {
                 .forEach(s -> System.out.println(s));
         System.out.println(IntStream.range(5, 15).sum());
 
-        mapping();
-        someExamplesOfEagerOperations();
+//        mapping();
+//        someExamplesOfEagerOperations();
+        filters();
 
+
+    }
+
+    private static void filters() {
+        int[] ints = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        IntStream.of(ints)
+                .filter(s -> s % 2 == 0) // puszczamy tylko te elementy ktore sa podzielne przez 2
+                .forEach(System.out::println);
+
+        User user = new User(1L, "Hubert", "Kowalski", "");
+        User user2 = new User(2L, "Karolina", "Nowak", "");
+        User user3 = new User(3L, "Wojtek", "But", "");
+        User user4 = new User(4L, "Henryk", "Becki", "");
+
+        List<User> users = new ArrayList<>(Arrays.asList(user, user2, user3, user4));
+        System.out.println(users);
+
+        users.stream()      // tworze strumien userów
+                .filter(s -> s.getName().startsWith("H"))     //odfiltrowanie do obiektow tylko tych ktorych imie zaczyna sie na Hub
+                .forEach(System.out::println);
+
+        List<String> namesStartingWithHub = users.stream()
+                .filter(s -> s.getName().startsWith("H"))
+                .map(User::getName)
+                .collect(Collectors.toList());      // collect to operacja konczaca zwracajaca wynik wg arg kolektora
+        //do tablicy toArray
+        System.out.println(namesStartingWithHub);
+
+//        List<Integer> integerList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+        //zad1 stworz liste integerow, wyswietl tylko te, ktorych wartosc jest wieksza od 5
+        //zad2 stworz liste Stringow, wyswietl tylko te, ktore zawieraja litere A oraz ilosc dlugosc jest wieszka od 6 znakow
+        //zad3 stworz obiekt dowolnej klasy, odfiltruj i zmapuj ją a nastepnei przypisz do listy i wyswietl
 
     }
 
@@ -98,10 +134,37 @@ public class Zajecia10 {
 
         System.out.println(statistics);
 
+
+//        exStats();
+
+
+    }
+
+    private static void exStats() {
         // zadanie
 //        stworz liste elementow int. Beda one uzupelniane w petli losowymi wartosciami 5 razy. Nastepnie w losowe indeksy wstaw 5 elementow ktore
-//        sam dodasz. Nastepnie wyswietl max, min i srednia tych elementow
+//        sam dodasz. Nastepnie wyswietl max, min i srednia tych elementow  (BEZ .stream())
 
+        List<Integer> integerList = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        for (int i = 0; i < 5; i++) {
+            integerList.add(random.nextInt(50));
+        }
+        for (int i = 0; i < 5; i++) {
+            int randomIndex = random.nextInt(integerList.size() + i - 1); // i powoduje blad, indeks spoza listy poniewaz na poczatku zwiekszam mozliwy wylsowoany indeks przed zwiekszseniem rozmiaru listy jeszcze
+            integerList.add(randomIndex, scanner.nextInt());
+        }
+        ////////////               zamiana listy na tablice intow
+        int[] tempList = new int[integerList.size()];
+        for (int i = 0; i < integerList.size(); i++) {
+            tempList[i] = integerList.get(i);
+        }
+        ////////////
+
+        System.out.println(IntStream.of(tempList).max().getAsInt());
+        System.out.println(IntStream.of(tempList).min().getAsInt());
+        System.out.println(IntStream.of(tempList).average().getAsDouble());
 
     }
 

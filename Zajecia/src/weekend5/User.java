@@ -15,6 +15,22 @@ public class User {
         this.pesel = pesel;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getPesel() {
+        return pesel;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -29,5 +45,16 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, surname, pesel);
+    }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", pesel='" + pesel + '\'' +
+                '}';
     }
 }
