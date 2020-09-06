@@ -56,6 +56,41 @@ public class Zajecia10 {
         // a) wygenerować strumień 10 liczb zaczynając od 5 i wyświetlić je na ekranie
         // b) zsumować taki sam strumień
 
+        IntStream.range(5, 15)
+                .forEach(s -> System.out.println(s));
+        System.out.println(IntStream.range(5, 15).sum());
+
+        mapping();
+
+
+    }
+
+    private static void mapping() {
+        System.out.println("Mapowanie");
+        IntStream.rangeClosed(1, 10)              // instrukcja tworzenia strumienia
+                .map(s -> s * 2)            // instrukcja mapowania, czyli kazdy element ktory wejdzie do mapy jest zamieniany na to co sie dzieje w lambdzie
+                .forEach(s -> System.out.println(s));       // instrukcja wysweitlania, jest to rowniez instrukcja konczaca czyli gorliwa
+
+        IntStream.rangeClosed(1, 15)
+                .map(s -> s * 2)
+                .mapToObj(s -> "Liczba " + s)
+                .forEach(s -> System.out.println(s));
+
+        IntStream.rangeClosed(10, 100)
+                .asDoubleStream() // sprawiamy by strumien by nie intow juz a doubli
+                .map(s -> s / 5)        // dzielenie kazdego elementu przez 5
+                .forEach(s -> System.out.println(s));
+
+        IntStream.rangeClosed(0,10)
+                .mapToDouble(s-> s*2)
+                .forEach(s-> System.out.println(s));
+        
+
+        //zadanie
+//        a) stworz IntStream skladajacy sie z 10 liczb
+//        b) zmapuj ten stream tak aby kazdy element byl dzielony przez 5 i dodatkowo byl dodawany tekst : Mapuję!
+//        c) wyświetl strumień
+//
 
     }
 
