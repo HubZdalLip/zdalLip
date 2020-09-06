@@ -4,19 +4,73 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.TreeSet;
+import java.util.stream.IntStream;
 
 public class Zajecia10 {
     public static void main(String[] args) {
 //        exWithChangingChars();
-        exWithFiles();
-        exWithFiles2();
+//        exWithFiles();
+//        exWithFiles2();
+        streams();
+
+    }
+
+    private static void streams() {
+//        strumien - struktura danych uzywajaca lambd oraz interfejsow z pakietu function udostepnionego w Javie 8
+//        ciekawostka - praktycznie cale programowanie w JS opiera sie na strumieniach, lambdach, prog. funkcyjnym
+
+        IntStream.range(0, 10).forEach(s -> System.out.println(s));
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
+        // IntStream - tworze strumien intow
+        // range - zakres ktorego ma dotyczyc stream, tzw potok
+        // w kazdej operacji strumienia brany jest kolejny element
+
+//        0 idzie do forEach i zastepuje w lambdzie zmienna s ( s=0 ). nastepneie wywolywana jest metoda sout(s);
+//        1 idzie do forEach i zastepuje w lambdzie zmienna s ( s=1 ). nastepneie wywolywana jest metoda sout(s);
+//        2 idzie do forEach i zastepuje w lambdzie zmienna s ( s=2 ). nastepneie wywolywana jest metoda sout(s);
+//        3 idzie do forEach i zastepuje w lambdzie zmienna s ( s=3 ). nastepneie wywolywana jest metoda sout(s);
+//        ..
+//        ..
+//        ..
+//        n idzie do forEach i zastepuje w lambdzie zmienna s ( s=n ). nastepneie wywolywana jest metoda sout(s); gdzie n jest w zakresie range (a,n-1)
+
+        IntStream.rangeClosed(4, 7).forEach(s -> System.out.print(s + ", "));
+        System.out.println();
+        for (int i = 4; i <= 7; i++) {
+            System.out.print(i + ", ");
+        }
+
+        int sumFromStream = IntStream.rangeClosed(1, 10).sum();          // kazdy element strumienai po kolei jest dodawany do siebie
+        int total = 0;
+        for (int i = 1; i <= 10; i++) {
+            total += i;
+        }
+        System.out.println();
+        System.out.println("Suma klasycznie: " + total);
+        System.out.println("Suma funkcyjnie: " + sumFromStream);
+
+        // zadanie:
+        // a) wygenerować strumień 10 liczb zaczynając od 5 i wyświetlić je na ekranie
+        // b) zsumować taki sam strumień
 
 
     }
 
     private static void exWithFiles2() {
         // stworz kilka plikow w dowolnej lokalizacji, a nastepnie wyswietl tylko te z roszerzeniem csv dodatkowo sortujac je alfabetycznie
-
+        String path = "C:\\Users\\Hubert\\Desktop\\folderTest";     //sciezka
+        File[] files = new File(path).listFiles(((dir, name) -> !name.startsWith(".") && name.endsWith(".csv"))); //filtrowanie
+        // 1. new File(path) => tworze "plik" (tutaj to jest folder)
+        // 2. listuje pliki by dowiedziec sie co jest w srodku
+        // 3. uzywam intefejsu FilenameFilter(dir, name) za pomoca lambdy odfiltrowywujac je do tych z roz .csv
+        if (files != null) {
+            System.out.println(new TreeSet<>(Arrays.asList(files)));
+        }
+        // uzywam TreeSet domyslnie sortujacego alfabetycznie, ktory przyjmuje kolekcje w konsturktorze (opcjonalnie)
+        // aby tablica stala sie kolekcja mozemy uzyc metody Arrays.asList();
     }
 
     private static void exWithFiles() {
@@ -60,7 +114,6 @@ public class Zajecia10 {
         System.out.println("Plik z rozszerzeniem csv");
         File[] files1 = fileDir.listFiles((dir, name) -> !name.startsWith(".") && name.endsWith("csv"));
         System.out.println(Arrays.toString(files1));
-
 
 
     }
