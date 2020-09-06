@@ -2,8 +2,11 @@ package weekend5;
 
 import java.io.File;
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Zajecia10 {
     public static void main(String[] args) {
@@ -60,7 +63,85 @@ public class Zajecia10 {
 
 //        mapping();
 //        someExamplesOfEagerOperations();
-        filters();
+//        filters();
+        anotherOps();
+
+
+    }
+
+    private static void anotherOps() {
+
+        //anyMatch
+        //allMatch
+        //sort
+        //group
+        //findFirst
+        //findAny
+
+        List<Integer> list = new ArrayList<>();
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+        list.add(5);
+
+        list.forEach(System.out::println);
+
+        boolean hasValueEquals5 = list.stream()
+                .anyMatch(s -> s == 5); //czy jakakowliek wartosc pasuje do predykatu
+
+        boolean areAllValueEqual5 = list.stream()       //czy wszystkie wartosci pasuja do predykatu
+                .allMatch(s -> s == 5);
+
+        System.out.println(hasValueEquals5);
+        System.out.println(areAllValueEqual5);
+
+        List<String> names = new ArrayList<>(Arrays.asList("Hubert", "Wojciech", "Mateusz", "Zuzanna", "Marek", "Klaudia", "Klaudiusz"));
+        Optional<String> stringOpt = names
+                .stream()
+                .filter(s -> s.length() > 6)
+                .findAny();     //znajdz jakikowliek, zwraca optionala
+
+        Predicate<String> predicateToFilter = s -> s.startsWith("Klaud");
+
+        names.stream()
+                .filter(predicateToFilter)
+                .findFirst()
+                .ifPresent(System.out::println);
+
+//        stringOpt.ifPresent(System.out::println);
+
+        if (stringOpt.isPresent()) {
+            System.out.println("Znalazłem");
+            System.out.println(stringOpt.get());
+        }
+
+        User user = new User(1L, "Hubert", "Kowalski", "");
+        User user2 = new User(2L, "Karolina", "Nowak", "");
+        User user3 = new User(3L, "Wojtek", "But", "");
+        User user4 = new User(4L, "Henryk", "Becki", "");
+        List<User> users = new ArrayList<>(Arrays.asList(user, user2, user3, user4));
+
+        Function<User,String> mapFunction = User::getSurname; // user -> user.getSurname
+
+        List<String> surnames = users.stream()
+                .map(mapFunction)
+                .collect(Collectors.toList());
+
+        for (String surname : surnames) {
+            System.out.println("Nazwisko usera : " + surname);
+        }
+
+        Stream<String> stringStream = Stream.of("Hubert","Magda","Bartek","Ania");
+        stringStream
+                .skip(2)
+                .limit(1)
+                .forEach(System.out::println);
+
+
+
+
+
 
 
     }
@@ -96,6 +177,39 @@ public class Zajecia10 {
         //zad1 stworz liste integerow, wyswietl tylko te, ktorych wartosc jest wieksza od 5
         //zad2 stworz liste Stringow, wyswietl tylko te, ktore zawieraja litere A oraz ilosc dlugosc jest wieszka od 6 znakow
         //zad3 stworz obiekt dowolnej klasy, odfiltruj i zmapuj ją a nastepnei przypisz do listy i wyswietl
+
+        List<Integer> integers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 0));
+        integers.stream()
+                .filter(s -> s > 5) // wartosci wieksze od 5
+                .forEach(System.out::println); //wysweitlamy
+
+        List<String> stringList = new ArrayList<>(Arrays.asList("aaaaa", "Aaaaaaa", "zxczxczxc", "pointa"));
+        stringList.stream()
+                .filter(s -> s.contains("a") && s.length() >= 6)
+                .forEach(System.out::println);
+
+        JakisObiekt jakisObiekt1 = new JakisObiekt("obIektnr1", 500);
+        JakisObiekt jakisObiekt2 = new JakisObiekt("innyobiekt", 200);
+        JakisObiekt jakisObiekt3 = new JakisObiekt("mojobiekt", 2000);
+        JakisObiekt jakisObiekt4 = new JakisObiekt("text", -1000);
+        JakisObiekt jakisObiekt5 = new JakisObiekt("textInny", -10000);
+
+        List<JakisObiekt> jakisObiektList = new ArrayList<>(Arrays.asList(jakisObiekt1, jakisObiekt2, jakisObiekt3, jakisObiekt4, jakisObiekt5));
+        jakisObiektList.forEach(s -> {
+            System.out.println();
+            System.out.println("Obiekt");
+            System.out.println(s);
+            System.out.println(s.getName());
+            System.out.println(s.getValue());
+            System.out.println();
+        });
+
+        List<String> listAfterOperations = jakisObiektList.stream()
+                .filter(s -> s.getValue() > 0 && s.getName().contains("i"))
+                .map(s -> "Moj obiekt posiadajacy parametry: " + s.getName() + " oraz " + s.getValue())
+                .collect(Collectors.toList());
+
+        listAfterOperations.forEach(System.out::println);
 
     }
 
