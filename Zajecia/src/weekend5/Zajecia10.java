@@ -1,10 +1,7 @@
 package weekend5;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Zajecia10 {
@@ -61,6 +58,49 @@ public class Zajecia10 {
         System.out.println(IntStream.range(5, 15).sum());
 
         mapping();
+        someExamplesOfEagerOperations();
+
+
+    }
+
+    private static void someExamplesOfEagerOperations() {
+        int sum;
+//        OptionalDouble average;         //optional to taki obiekt ktory nie moze posiadac nulla. Jesli Optional ma wartosc null to rzucany jest wyjatek NoValuePresentException
+        double average;
+        int max;
+        int min;
+        long count;
+
+        int[] ints = {1, 5, 3, 2, -9, 4, 4, 1, -4, -8};
+        sum = IntStream.of(ints)
+                .sum();
+        average = IntStream.of(ints)
+                .average()
+                .getAsDouble();
+        max = IntStream.of(ints)
+                .max()
+                .getAsInt();
+        min = IntStream.of(ints)
+                .min()
+                .getAsInt();
+        count = IntStream.of(ints)
+                .count();
+
+        System.out.println(Arrays.toString(ints));
+        System.out.println("Suma: " + sum);
+        System.out.println("Srednia: " + average);
+        System.out.println("Maximum: " + max);
+        System.out.println("Minimum: " + min);
+        System.out.println("Ilość elementów: " + count);
+
+        IntSummaryStatistics statistics = IntStream.of(ints)
+                .summaryStatistics();
+
+        System.out.println(statistics);
+
+        // zadanie
+//        stworz liste elementow int. Beda one uzupelniane w petli losowymi wartosciami 5 razy. Nastepnie w losowe indeksy wstaw 5 elementow ktore
+//        sam dodasz. Nastepnie wyswietl max, min i srednia tych elementow
 
 
     }
@@ -81,16 +121,22 @@ public class Zajecia10 {
                 .map(s -> s / 5)        // dzielenie kazdego elementu przez 5
                 .forEach(s -> System.out.println(s));
 
-        IntStream.rangeClosed(0,10)
-                .mapToDouble(s-> s*2)
-                .forEach(s-> System.out.println(s));
-        
+        IntStream.rangeClosed(0, 10)
+                .mapToDouble(s -> s * 2)
+                .forEach(s -> System.out.println(s));
+
 
         //zadanie
 //        a) stworz IntStream skladajacy sie z 10 liczb
 //        b) zmapuj ten stream tak aby kazdy element byl dzielony przez 5 i dodatkowo byl dodawany tekst : Mapuję!
 //        c) wyświetl strumień
 //
+        IntStream.rangeClosed(0, 10)                //IntStream === Stream<Integer>
+                .asDoubleStream()                   //DoubleStream === Stream<Double>
+                .mapToObj(s -> "Mapuję " + s / 2)   // Stream<String>
+                .forEach(System.out::println);    // metoda referencyjna, mozliwa do niej konwersja jest tylko wtedy, gdy
+        // metoda wywolywana w lambdzie przyjmuje tylko parametr lambdy i nic wiecej sie nei dzieje
+        // zapis ten ^^^ oznacza odwolanie sie do metody println klasy System i obiketu out z aktualnym parametrem
 
     }
 
