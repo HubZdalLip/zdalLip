@@ -44,23 +44,24 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia" />
-      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="weekend6.pd.course" />
       <recent name="weekend5" />
       <recent name="weekend4" />
       <recent name="weekend3" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia" />
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Zajecia10">
-    <configuration name="AnonymousClasses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend5.AnonymousClasses" />
+  <component name="RunManager" selected="Application.Zajecia11">
+    <configuration name="CourseTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend6.pd.course.CourseTests" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend5.*" />
+          <option name="PATTERN" value="weekend6.pd.course.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,12 +69,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pracadomowa4.course.MainTest" />
+    <configuration name="Pliki" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend6.pd.Pliki" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pracadomowa4.course.*" />
+          <option name="PATTERN" value="weekend6.pd.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyFilesInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend5.FileTheory.MyFilesInfo" />
+    <configuration name="Streamy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend6.pd.Streamy" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend5.FileTheory.*" />
+          <option name="PATTERN" value="weekend6.pd.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Zajecia9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend5.Zajecia9" />
+    <configuration name="Zajecia11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend6.Zajecia11" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend5.*" />
+          <option name="PATTERN" value="weekend6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,26 +121,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Zajecia11" />
+        <item itemvalue="Application.CourseTests" />
+        <item itemvalue="Application.Pliki" />
+        <item itemvalue="Application.Streamy" />
         <item itemvalue="Application.Zajecia10" />
-        <item itemvalue="Application.AnonymousClasses" />
-        <item itemvalue="Application.MainTest" />
-        <item itemvalue="Application.MyFilesInfo" />
-        <item itemvalue="Application.Zajecia9" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +173,8 @@
       <workItem from="1598079600205" duration="38052000" />
       <workItem from="1598378129044" duration="79000" />
       <workItem from="1599251520589" duration="19418000" />
-      <workItem from="1599324464345" duration="24127000" />
+      <workItem from="1599324464345" duration="25874000" />
+      <workItem from="1600499863412" duration="14761000" />
     </task>
     <servers />
   </component>
@@ -194,46 +194,46 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1599393512892">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1600514390074">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599393512892" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600514390074" />
     <state x="715" y="223" key="#xdebugger.evaluate" timestamp="1599327390540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="715" y="223" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1599327390540" />
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom" timestamp="1599395271627">
+    <state width="1877" height="311" key="GridCell.Tab.0.bottom" timestamp="1600515678672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599395271627" />
-    <state width="1877" height="225" key="GridCell.Tab.0.center" timestamp="1599395271626">
+    <state width="1877" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600515678672" />
+    <state width="1877" height="311" key="GridCell.Tab.0.center" timestamp="1600515678672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599395271626" />
-    <state width="1877" height="225" key="GridCell.Tab.0.left" timestamp="1599395271626">
+    <state width="1877" height="311" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600515678672" />
+    <state width="1877" height="311" key="GridCell.Tab.0.left" timestamp="1600515678672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599395271626" />
-    <state width="1877" height="225" key="GridCell.Tab.0.right" timestamp="1599395271626">
+    <state width="1877" height="311" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600515678672" />
+    <state width="1877" height="311" key="GridCell.Tab.0.right" timestamp="1600515678672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="225" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599395271626" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599392024400">
+    <state width="1877" height="311" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600515678672" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599590377378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599392024400" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1599392024399">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599590377378" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1599590377378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599392024399" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1599392024399">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599590377378" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1599590377378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599392024399" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1599392024400">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599590377378" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1599590377378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599392024400" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599590377378" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1599376082578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
