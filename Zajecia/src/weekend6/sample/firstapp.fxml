@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="214.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="386.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="labelMoney" text="Podaj kwote:" GridPane.halignment="RIGHT">
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+         <font>
+            <Font name="Californian FB" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTip" text="Napiwek: 10%" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+         <font>
+            <Font name="Californian FB" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPeople" text="Podaj liczbe osob:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+         <font>
+            <Font name="Californian FB" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelResult" text="Wynik:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+         <font>
+            <Font name="Californian FB" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBtn" text="Kliknij by obliczyc:" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+         <font>
+            <Font name="Californian FB" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfMoney" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="tfPeople" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="tfResult" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button fx:id="calcBtn" mnemonicParsing="false" onAction="#calculate" prefHeight="50.0" prefWidth="386.0" text="Oblicz" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </Button>
+      <Slider fx:id="tipSlider" max="30.0" min="10.0" value="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </Slider>
+   </children>
+</GridPane>

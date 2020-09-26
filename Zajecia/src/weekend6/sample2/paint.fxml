@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="950.0" style="-fx-background-color: #CCCCCC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample2.PaintingController">
+   <left>
+      <VBox prefHeight="366.0" prefWidth="149.0" BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane animated="false" text="Opcje">
+               <content>
+                  <VBox prefHeight="60.0" prefWidth="98.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="chooseColorBtn" mnemonicParsing="false" onAction="#chooseColor" prefHeight="25.0" prefWidth="131.0" text="Ustaw kolor" />
+                        <Button fx:id="undoBtn" mnemonicParsing="false" onAction="#undo" onMousePressed="#undoContinuously" prefHeight="25.0" prefWidth="140.0" text="Cofnij" />
+                        <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="129.0" text="Wyczyść" />
+                        <TitledPane animated="false" text="Rozmiar">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                 <children>
+                                    <RadioButton fx:id="smallRadioBtn" mnemonicParsing="false" onAction="#chooseSize" selected="true" text="Małe">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="sizeToggleGroup" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="medRadioBtn" mnemonicParsing="false" onAction="#chooseSize" text="Średnie" toggleGroup="$sizeToggleGroup" />
+                                    <RadioButton fx:id="largeRadioBtn" mnemonicParsing="false" onAction="#chooseSize" text="Duże" toggleGroup="$sizeToggleGroup" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="paintingPane" onMouseDragged="#paint" prefHeight="607.0" prefWidth="809.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Label text="Paint" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Copperplate Gothic Light" size="28.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

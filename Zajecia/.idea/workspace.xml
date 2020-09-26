@@ -13,6 +13,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -30,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/weekend6" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,15 +45,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia" />
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src\weekend6" />
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src\weekend6\FirstApp" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="weekend6.pd.course" />
       <recent name="weekend5" />
       <recent name="weekend4" />
       <recent name="weekend3" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia" />
-      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Zajecia11">
@@ -121,13 +126,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,7 +181,10 @@
       <workItem from="1598378129044" duration="79000" />
       <workItem from="1599251520589" duration="19418000" />
       <workItem from="1599324464345" duration="25874000" />
-      <workItem from="1600499863412" duration="17465000" />
+      <workItem from="1600499863412" duration="20155000" />
+      <workItem from="1600550228939" duration="16000" />
+      <workItem from="1600585611121" duration="2386000" />
+      <workItem from="1601115084717" duration="439000" />
     </task>
     <servers />
   </component>
@@ -202,22 +212,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="715" y="223" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1599327390540" />
-    <state width="1877" height="419" key="GridCell.Tab.0.bottom" timestamp="1600518147863">
+    <state width="1877" height="106" key="GridCell.Tab.0.bottom" timestamp="1600542053973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="419" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600518147863" />
-    <state width="1877" height="419" key="GridCell.Tab.0.center" timestamp="1600518147863">
+    <state width="1877" height="106" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600542053973" />
+    <state width="1877" height="106" key="GridCell.Tab.0.center" timestamp="1600542053973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="419" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600518147863" />
-    <state width="1877" height="419" key="GridCell.Tab.0.left" timestamp="1600518147863">
+    <state width="1877" height="106" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600542053973" />
+    <state width="1877" height="106" key="GridCell.Tab.0.left" timestamp="1600542053973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="419" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600518147863" />
-    <state width="1877" height="419" key="GridCell.Tab.0.right" timestamp="1600518147863">
+    <state width="1877" height="106" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600542053973" />
+    <state width="1877" height="106" key="GridCell.Tab.0.right" timestamp="1600542053973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="419" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600518147863" />
+    <state width="1877" height="106" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600542053973" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599590377378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -234,10 +244,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599590377378" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1599376082578">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1600519018191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599376082578" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600519018191" />
+    <state x="364" y="178" key="new project wizard" timestamp="1600586145179">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="364" y="178" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600586145179" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1599377844629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
