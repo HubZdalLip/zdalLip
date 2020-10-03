@@ -56,12 +56,14 @@
       <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src\weekend6\FirstApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src\weekend7" />
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src\weekend7\mockexam\task3" />
       <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia" />
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src\weekend7\mockexam\task2" />
       <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src" />
+      <recent name="C:\Users\Hubert\Documents\zdalLip\Zajecia\src\weekend7" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Calculator">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="weekend7.Calculator" />
       <module name="Zajecia" />
@@ -75,12 +77,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CourseTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend6.pd.course.CourseTests" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend7.mockexam.task2.Main" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend6.pd.course.*" />
+          <option name="PATTERN" value="weekend7.mockexam.task2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Pliki" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend6.pd.Pliki" />
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend7.mockexam.task3.Main" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend6.pd.*" />
+          <option name="PATTERN" value="weekend7.mockexam.task3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Streamy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="weekend6.pd.Streamy" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="weekend7.mockexam.task1.Main" />
       <module name="Zajecia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="weekend6.pd.*" />
+          <option name="PATTERN" value="weekend7.mockexam.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Calculator" />
         <item itemvalue="Application.Zajecia11" />
-        <item itemvalue="Application.CourseTests" />
-        <item itemvalue="Application.Pliki" />
-        <item itemvalue="Application.Streamy" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +189,7 @@
       <workItem from="1600585611121" duration="2386000" />
       <workItem from="1601115084717" duration="669000" />
       <workItem from="1601314825683" duration="2437000" />
-      <workItem from="1601709049519" duration="8065000" />
+      <workItem from="1601709049519" duration="15959000" />
     </task>
     <servers />
   </component>
@@ -211,10 +213,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601714426169" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1601716913140">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1601725849243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601716913140" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601725849243" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601710640938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -223,38 +225,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="715" y="223" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1599327390540" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1601713889474">
+    <state width="1877" height="336" key="GridCell.Tab.0.bottom" timestamp="1601726363677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601713889474" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1601713889474">
+    <state width="1877" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601726363677" />
+    <state width="1877" height="336" key="GridCell.Tab.0.center" timestamp="1601726363677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601713889474" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1601713889474">
+    <state width="1877" height="336" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601726363677" />
+    <state width="1877" height="336" key="GridCell.Tab.0.left" timestamp="1601726363677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601713889474" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1601713889474">
+    <state width="1877" height="336" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601726363677" />
+    <state width="1877" height="336" key="GridCell.Tab.0.right" timestamp="1601726363677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601713889474" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1601713806478">
+    <state width="1877" height="336" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601726363677" />
+    <state width="1877" height="2" key="GridCell.Tab.1.bottom" timestamp="1601719601111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601713806478" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1601713806478">
+    <state width="1877" height="2" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601719601111" />
+    <state width="1877" height="2" key="GridCell.Tab.1.center" timestamp="1601719601111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601713806478" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1601713806478">
+    <state width="1877" height="2" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601719601111" />
+    <state width="1877" height="2" key="GridCell.Tab.1.left" timestamp="1601719601111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601713806478" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1601713806478">
+    <state width="1877" height="2" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601719601111" />
+    <state width="1877" height="2" key="GridCell.Tab.1.right" timestamp="1601719601111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601713806478" />
+    <state width="1877" height="2" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601719601111" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1601711123025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

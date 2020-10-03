@@ -6,6 +6,6 @@ public class Kolo extends Ksztalt2D {
 
     @Override
     public double obwod() {
-        return 0;
+        return 2 * r * Math.PI;
     }
 }

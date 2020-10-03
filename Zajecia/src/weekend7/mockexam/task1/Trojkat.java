@@ -42,33 +42,33 @@ public class Trojkat extends Ksztalt2D {
 
     @Override
     public double obwod() {
-        return 0;
+        return a + b + c;
     }
 
-    public double getA() {
+    public double getABok() {
         return a;
     }
 
-    public double getB() {
+    public double getBBok() {
         return b;
     }
 
-    public double getC() {
+    public double getCBok() {
         return c;
     }
 
-    public void setA(double a) {
-        this.a = a;
+    public void setA(Punkt a) {
+        this.A = a;
         boki();
     }
 
-    public void setB(double b) {
-        this.b = b;
+    public void setB(Punkt b) {
+        this.B = b;
         boki();
     }
 
-    public void setC(double c) {
-        this.c = c;
+    public void setC(Punkt c) {
+        this.C = c;
         boki();
     }
 }

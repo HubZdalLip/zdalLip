@@ -1,0 +1,8 @@
+1. Stwórz formularz o wielkości 700x700 o nazwie Klawisz.
+2. Dodaj do formularza, panel o wielkości 500x500 i umieść go tak, by z jego lewej strony .
+3. Wstaw do panelu klawisz o wielkości 100x25 i dwa suwaki. Jeden poziomy poniżej panelu, drugi
+pionowy po jego lewej stronie i ustal im odpowiednie orientację i długości by zrównały się z
+panelem. Oprogramuj suwaki tak, aby wraz z przesunięciem suwaków klawisz przesuwał się po
+całym panelu, ale nie wychodził poza niego.
+4. Zmień etykietę klawisza na postać x, y gdzie x jest wartością pozycji suwaka poziomego, a y
+pionowego
